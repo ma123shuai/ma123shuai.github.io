@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CNN,deep learning,论文笔记," />
 
 
 
@@ -51,15 +51,24 @@
 
 
 
-<meta name="description" content="专注于深度学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shuai's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Introduction提出了一种代号为”Inception(盗梦空间电影名)”的deep CNN，在ILSVRC 2014 ImageNet数据集上是目前分类效果最好的。该框架在保持计算复杂度不变的情况下，增加网络的宽度和深度，充分利用了网络内的计算资源。GoogLeNet共有22层。
+随着移动设备和嵌入式计算的大规模普及，算法的效率，尤其是算法所需要的内存和计算资源的数目显得很重要。GoogL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep-learning论文笔记二：Going deeper with convolutions">
+<meta property="og:url" content="http://yoursite.com/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/index.html">
 <meta property="og:site_name" content="Shuai's blog">
-<meta property="og:description" content="专注于深度学习">
+<meta property="og:description" content="Introduction提出了一种代号为”Inception(盗梦空间电影名)”的deep CNN，在ILSVRC 2014 ImageNet数据集上是目前分类效果最好的。该框架在保持计算复杂度不变的情况下，增加网络的宽度和深度，充分利用了网络内的计算资源。GoogLeNet共有22层。
+随着移动设备和嵌入式计算的大规模普及，算法的效率，尤其是算法所需要的内存和计算资源的数目显得很重要。GoogL">
+<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Figure2.png">
+<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table1.png">
+<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Figure3.jpg">
+<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table3.png">
+<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table5.png">
+<meta property="og:updated_time" content="2015-12-17T06:42:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shuai's blog">
-<meta name="twitter:description" content="专注于深度学习">
+<meta name="twitter:title" content="Deep-learning论文笔记二：Going deeper with convolutions">
+<meta name="twitter:description" content="Introduction提出了一种代号为”Inception(盗梦空间电影名)”的deep CNN，在ILSVRC 2014 ImageNet数据集上是目前分类效果最好的。该框架在保持计算复杂度不变的情况下，增加网络的宽度和深度，充分利用了网络内的计算资源。GoogLeNet共有22层。
+随着移动设备和嵌入式计算的大规模普及，算法的效率，尤其是算法所需要的内存和计算资源的数目显得很重要。GoogL">
 
 
 
@@ -71,7 +80,7 @@
   };
 </script>
 
-  <title> Shuai's blog </title>
+  <title> Deep-learning论文笔记二：Going deeper with convolutions | Shuai's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -92,9 +101,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -191,15 +198,9 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -219,10 +220,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/" itemprop="url">
-                  Deep-learning论文笔记二：Going deeper with convolutions
-                </a>
+                Deep-learning论文笔记二：Going deeper with convolutions
               
             
           </h1>
@@ -277,10 +275,7 @@
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>提出了一种代号为”Inception(盗梦空间电影名)”的deep CNN，在ILSVRC 2014 ImageNet数据集上是目前分类效果最好的。该框架在保持计算复杂度不变的情况下，增加网络的宽度和深度，充分利用了网络内的计算资源。GoogLeNet共有22层。</p>
+        <span itemprop="articleBody"><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>提出了一种代号为”Inception(盗梦空间电影名)”的deep CNN，在ILSVRC 2014 ImageNet数据集上是目前分类效果最好的。该框架在保持计算复杂度不变的情况下，增加网络的宽度和深度，充分利用了网络内的计算资源。GoogLeNet共有22层。</p>
 <p>随着移动设备和嵌入式计算的大规模普及，算法的效率，尤其是算法所需要的内存和计算资源的数目显得很重要。GoogLeNet虽然增加了层数，但是所消耗的计算资源并没有增加，因此这不仅有学术价值，而且可以应用到实际应用中，即使在很大的数据集上，也会保持在一个合适的代价。<br>GoogLeNet中deep 有两个意思：</p>
 <ol>
 <li>Introduce a new level of organization in the form of the “Inception module”</li>
@@ -316,166 +311,69 @@
 <p>结果如Table2和Table3所示，结果是Top-16.67%，排在第一名。<br><img src="/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table3.png" alt="Figure3"></p>
 <h2 id="ILSVRC_2014_Detection_Results"><a href="#ILSVRC_2014_Detection_Results" class="headerlink" title="ILSVRC 2014 Detection Results"></a>ILSVRC 2014 Detection Results</h2><p>GoogLeNet detection方法类似于R-CNN，但是regional proposal 通过将Selective search和multi-box预测结合用于更高级的对象选择。为了降低正样本错误的数目，将superpixel size变为２倍，然后再从multi-box结果增加了２００个 region proposals。最后在对每个region进行分类的时候对６个网络进行了集成。结果如Table5所示。<br><img src="/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table5.png" alt="Table5"></p>
 <h2 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h2><p>结果显示将最优稀疏结构组成现成的稠密块是一个可行的在计算机视觉领域提高神经网络的方法。该方法优点是在较低计算复杂度的情况下取得了比浅层网络更好的效果。该方法表面稀疏结构是有可用性的，下一阶段会研究在现在的基础上如果创造更稀疏和精确的结构。</p>
-
-            
-          </span>
-        
+</span>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" itemprop="url">
-                  Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-15T15:07:16+08:00" content="2015-12-15">
-              2015-12-15
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/CNN/" rel="tag">#CNN</a>
           
-
+            <a href="/tags/deep-learning/" rel="tag">#deep learning</a>
           
+            <a href="/tags/论文笔记/" rel="tag">#论文笔记</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" itemprop="commentsCount"></span>
+              <a href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" rel="next" title="Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks">
+                <i class="fa fa-chevron-left"></i> Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks
               </a>
-            </span>
             
-          
+          </div>
 
-          
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。</p>
-<p> 这篇文章的主要贡献如下：</p>
-<ol>
-<li>训练了一个大型的卷积神经网络并且效果是目前为止所有方法里面最好的；</li>
-<li>实现了一个基于GPU的2D卷积网络，并且我们使用该框架进行了CNN的训练。文章对CNN进行了很多的优化，提高了网络的训练速度和分类效果。</li>
-</ol>
-<p>实验数据集使用ImageNet。ImageNet拥有超过1500万张高清图片，图片有22000多个类别。从2010年开始，ILSVRC(ImageNet Large-Scale Visual Recognition Challenge)每年都会举行一次。在ImageNet数据集上，我们使用两个评价标准:top-1和top5。top-1错误率是指测试的图片的真正标签没有出现在所预测出的前五个标签中的图片的比例，也就是说，连续预测5次都没有预测正确的图片的比例。ImageNet里面的图片分辨率不一，需要将图片通过缩小和裁剪得到256x256像素的图片，除此之外不对图片进行任何处理。</p>
-<h2 id="u67B6_u6784"><a href="#u67B6_u6784" class="headerlink" title="架构"></a>架构</h2><p>框架架构如下图所示，共8层，五个卷积层和三个全连接层，最后是一个1000-way的softmax分类器，将图片分成1000个类别。该实验在两个GPU上进行运算，从图中可以看到，第二，第四和第五个卷积层只和在同一块GPU上的上层连接，因此减少了GPU之间数据的交换，提高了运算效率。全连接层的神经元与上一层的全部神经元相连接。局部响应正则化层在第一和第二卷积层之后，pooling层在第一第二响应正则化层之后和第五卷积层之后。ReLU用于五个卷积层和三个全连接层的输出。</p>
-<p>第一个卷积层使用96个11x11x3的卷积核处理输入的224x224x3的图片，步长为4个像素；第二个卷积层使用256个5x5x48大小的卷积核。第三个卷积层有384个3x3x256的卷积核；第四个卷积层有3843x3x192的卷积核。第五个卷积层使用256个3x3x192的卷积核。全连接层每层有4096个神经元。<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/architecture" alt="architecture"></p>
-<p><strong> ReLU </strong> ：对神经元输出进行建模的标准方法是将它的输入x看成是f的函数：$f(x)=tanh(x)$或者sigmod函数，在用梯度下降法训练的时候，这些饱和非线性函数要比非饱和非线性函数慢很多，比如$f(x)=max(0,x)$，我们称这类非线性神经元为改正的线性单元（Rectified Linear Units），如下图所示，其训练速度比tanh函数要快很多<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/ReLU_and_tanh.png" alt="architecture"><br><strong> Training on Multiple GPUs </strong>: 框架使用多个GPU并行计算，并且GPU之间可以直接访问对方memory，不用经过主机内存。此外，框架还有一个trick：GPU通信只在某些层进行，因此可以提高运算效率。</p>
-<p><strong> Local Response Normalization </strong>: 局部响应归一化有助于提高泛化能力，计算公式如下：<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/LRN.png" alt="architecture"></p>
-<p><strong> Overlapping pooling </strong>: 传统的pooling方法只对相邻单元处理并且有重合，本文对pooling层进行了部分重合，减少了过拟合，提高了分类效果。</p>
-<h2 id="Reducing_Overfitting"><a href="#Reducing_Overfitting" class="headerlink" title="Reducing Overfitting"></a>Reducing Overfitting</h2><p>该方法的神经网络有6000万个参数，虽然ILSVRC有1000个类别，但是还是无法避免过拟合的问题，因此本文采用了两种方式来避免过拟合。</p>
-<h3 id="Data_Augmentation"><a href="#Data_Augmentation" class="headerlink" title="Data Augmentation"></a>Data Augmentation</h3><p>本文使用了两种方法来实现数据扩展，两种方法只需要很小的计算量，而且是在CPU上运算的，并不会占用GPU的计算资源。</p>
-<p>第一种是图片平移和水平翻转（image translations and horizontal reflections）,我们从246*256的图片中提取出来5个224x224的图片（四个角+一个中心），同时水平翻转后再提取出来五个子图片，共10个图片，在softmax层对这些图片分别进行预测，对预测结果求平均值作为图片的预测结果。</p>
-<p>第二种是改变图片的RGB通道的强度，对图片进行PCA分析，图片的像素值<em>（与之对应的特征值）</em>（服从均值为0标准为0.1的高斯分布的随机数），因此，对于每个RGB像素<br>Ixy=<img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/pixel.png" alt="architecture"><br>对它们添加如下量：其中，pi和是3*3协方差矩阵的RGB像素值的特征向量和特征值，a是前面提到的随机变量，一张图片在训练过程中a是固定的，这个方法能够捕捉到自然图片的重要属性，并且使top-1错误率降低了1%。</p>
-<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>后面会细讲。</p>
-<h2 id="u8BAD_u7EC3_u8FC7_u7A0B"><a href="#u8BAD_u7EC3_u8FC7_u7A0B" class="headerlink" title="训练过程"></a>训练过程</h2><p>使用随机梯度下降法进行训练，batch=128，momentum=0.9， weight decay=0.0005，权重w的更新方式如下：<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/weight_update.png" alt="architecture"></p>
-<p>i是迭代系数，v是动量值<br>每层权值的初始值为服从均值为0，标准差为0.01的高斯分布的随机数，第二，四，五卷积层和三个全连接层的biases均设置为1，其他设为0。所有层的学习率都是一样的，在训练时会调整，调整的启发式算法是：如果当前学习率下验证集的错误率不在改变时，就将学习率除以10，总共调整三次后停止，用120万张照片训练了大约90个循环。</p>
-<p>训练结果如下图所示：</p>
-<p><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/result.png" alt="architecture"></p>
-<h2 id="u7ED3_u679C_u5206_u6790"><a href="#u7ED3_u679C_u5206_u6790" class="headerlink" title="结果分析"></a>结果分析</h2><p>如下图所示，是网络学习到的卷积核，网络学习到了不同频率，方向和颜色块的核，框架中的GPU连接方式，使得GPU产生了特化，上半部分的核是GPU1学习得到的，下半部分的核是GPU2学习得到的，两者有很大的区别，GPU2 感知到了颜色而GPU1没有，这种现象每次均会发生。<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/Con.png" alt="architecture"></p>
-<p>我们可以通过计算两张图片最后一层生成的4096维向量的欧氏距离的大小来确定他们的相似度，距离越小，图片的相似度越高。</p>
-<p>此外，通过欧式距离计算向量的相似度效率不高，我们可以通过训练一个auto-encoder来将这些向量压缩为短的二值编码来提高计算效率。这种图片搜索方式比直接将auto-encoder用于原始的像素效果要好，因为后者没有利用图片的标签信息只是检索有相似的边的模式，而不是检索语义上的相似。</p>
-<p>此外，为了简化实验，本文并没有采用任何非监督的预训练，因为我们已经有足够的计算能力来增大网络的大小，因此不需要增加有标记数据的数量。</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
 
-  </section>
-
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
         </div>
 
         
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
         
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    
+  </div>
+
 
       </div>
 
@@ -496,8 +394,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="Ma Shuai" itemprop="image"/>
           <p class="site-author-name" itemprop="name">Ma Shuai</p>
@@ -561,6 +468,23 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Related_Work"><span class="nav-number">2.</span> <span class="nav-text">Related Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Motivation_and_High_Level_Considerations"><span class="nav-number">3.</span> <span class="nav-text">Motivation and High Level Considerations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Architectural_Details"><span class="nav-number">4.</span> <span class="nav-text">Architectural Details</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GoogLeNet"><span class="nav-number">5.</span> <span class="nav-text">GoogLeNet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training_Methodology"><span class="nav-number">6.</span> <span class="nav-text">Training Methodology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ILSVRC_2014_Classification_Results"><span class="nav-number">7.</span> <span class="nav-text">ILSVRC 2014 Classification Results</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ILSVRC_2014_Detection_Results"><span class="nav-number">8.</span> <span class="nav-text">ILSVRC 2014 Detection Results</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusions"><span class="nav-number">9.</span> <span class="nav-text">Conclusions</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -613,9 +537,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'ma123shuai-github-io';
-      var disqus_identifier = 'index.html';
-      var disqus_title = '';
-      var disqus_url = '';
+      var disqus_identifier = '2015/12/16/Deep learning论文笔记：Going deeper with convolutions/';
+      var disqus_title = 'Deep-learning论文笔记二：Going deeper with convolutions';
+      var disqus_url = 'http://yoursite.com/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -626,6 +550,8 @@
       }
 
       run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
       
     </script>
   
@@ -649,6 +575,167 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 
@@ -681,6 +768,10 @@
 
   
   
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"3","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
 
 </body>
 </html>
