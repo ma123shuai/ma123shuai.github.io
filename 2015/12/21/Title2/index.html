@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CNN,classification,deep learning,论文笔记," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -51,32 +51,24 @@
 
 
 
-<meta name="description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。
- 这篇文章的主要贡献如下：
-
-训练了一个大型的卷积神经网络并且效果是目前为止所">
+<meta name="description" content="#Fully Convolutional Networks for Semantic Segmentation这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic seg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks">
-<meta property="og:url" content="http://yoursite.com/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/index.html">
+<meta property="og:title" content="Shuai's blog">
+<meta property="og:url" content="http://yoursite.com/2015/12/21/Title2/index.html">
 <meta property="og:site_name" content="Shuai's blog">
-<meta property="og:description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。
- 这篇文章的主要贡献如下：
-
-训练了一个大型的卷积神经网络并且效果是目前为止所">
-<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/architecture">
-<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/ReLU_and_tanh.png">
-<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/LRN.png">
-<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/pixel.png">
-<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/weight_update.png">
-<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/result.png">
-<meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/Con.png">
-<meta property="og:updated_time" content="2015-12-17T06:44:18.000Z">
+<meta property="og:description" content="#Fully Convolutional Networks for Semantic Segmentation这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic seg">
+<meta property="og:image" content="http://yoursite.com/Figure1.png">
+<meta property="og:image" content="http://yoursite.com/Figure2.png">
+<meta property="og:image" content="http://yoursite.com/Filter.png">
+<meta property="og:image" content="http://yoursite.com/Table1.png">
+<meta property="og:image" content="http://yoursite.com/Figure3.png">
+<meta property="og:image" content="http://yoursite.com/Figure4.png">
+<meta property="og:image" content="http://yoursite.com/Table3.png">
+<meta property="og:image" content="http://yoursite.com/Figure3.png">
+<meta property="og:updated_time" content="2015-12-20T13:54:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks">
-<meta name="twitter:description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。
- 这篇文章的主要贡献如下：
-
-训练了一个大型的卷积神经网络并且效果是目前为止所">
+<meta name="twitter:title" content="Shuai's blog">
+<meta name="twitter:description" content="#Fully Convolutional Networks for Semantic Segmentation这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic seg">
 
 
 
@@ -88,7 +80,7 @@
   };
 </script>
 
-  <title> Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks | Shuai's blog </title>
+  <title>  | Shuai's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -228,7 +220,7 @@
             
             
               
-                Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks
+                
               
             
           </h1>
@@ -237,34 +229,19 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-15T15:07:16+08:00" content="2015-12-15">
-              2015-12-15
+            <time itemprop="dateCreated" datetime="2015-12-21T16:34:31+08:00" content="2015-12-21">
+              2015-12-21
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" itemprop="commentsCount"></span>
+              <a href="/2015/12/21/Title2/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/21/Title2/" itemprop="commentsCount"></span>
               </a>
             </span>
             
@@ -283,60 +260,45 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。</p>
-<p> 这篇文章的主要贡献如下：</p>
-<ol>
-<li>训练了一个大型的卷积神经网络并且效果是目前为止所有方法里面最好的；</li>
-<li>实现了一个基于GPU的2D卷积网络，并且我们使用该框架进行了CNN的训练。文章对CNN进行了很多的优化，提高了网络的训练速度和分类效果。</li>
-</ol>
-<p>实验数据集使用ImageNet。ImageNet拥有超过1500万张高清图片，图片有22000多个类别。从2010年开始，ILSVRC(ImageNet Large-Scale Visual Recognition Challenge)每年都会举行一次。在ImageNet数据集上，我们使用两个评价标准:top-1和top5。top-1错误率是指测试的图片的真正标签没有出现在所预测出的前五个标签中的图片的比例，也就是说，连续预测5次都没有预测正确的图片的比例。ImageNet里面的图片分辨率不一，需要将图片通过缩小和裁剪得到256x256像素的图片，除此之外不对图片进行任何处理。</p>
-<h2 id="u67B6_u6784"><a href="#u67B6_u6784" class="headerlink" title="架构"></a>架构</h2><p>框架架构如下图所示，共8层，五个卷积层和三个全连接层，最后是一个1000-way的softmax分类器，将图片分成1000个类别。该实验在两个GPU上进行运算，从图中可以看到，第二，第四和第五个卷积层只和在同一块GPU上的上层连接，因此减少了GPU之间数据的交换，提高了运算效率。全连接层的神经元与上一层的全部神经元相连接。局部响应正则化层在第一和第二卷积层之后，pooling层在第一第二响应正则化层之后和第五卷积层之后。ReLU用于五个卷积层和三个全连接层的输出。</p>
-<p>第一个卷积层使用96个11x11x3的卷积核处理输入的224x224x3的图片，步长为4个像素；第二个卷积层使用256个5x5x48大小的卷积核。第三个卷积层有384个3x3x256的卷积核；第四个卷积层有3843x3x192的卷积核。第五个卷积层使用256个3x3x192的卷积核。全连接层每层有4096个神经元。<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/architecture" alt="architecture"></p>
-<p><strong> ReLU </strong> ：对神经元输出进行建模的标准方法是将它的输入x看成是f的函数：$f(x)=tanh(x)$或者sigmod函数，在用梯度下降法训练的时候，这些饱和非线性函数要比非饱和非线性函数慢很多，比如$f(x)=max(0,x)$，我们称这类非线性神经元为改正的线性单元（Rectified Linear Units），如下图所示，其训练速度比tanh函数要快很多<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/ReLU_and_tanh.png" alt="architecture"><br><strong> Training on Multiple GPUs </strong>: 框架使用多个GPU并行计算，并且GPU之间可以直接访问对方memory，不用经过主机内存。此外，框架还有一个trick：GPU通信只在某些层进行，因此可以提高运算效率。</p>
-<p><strong> Local Response Normalization </strong>: 局部响应归一化有助于提高泛化能力，计算公式如下：<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/LRN.png" alt="architecture"></p>
-<p><strong> Overlapping pooling </strong>: 传统的pooling方法只对相邻单元处理并且有重合，本文对pooling层进行了部分重合，减少了过拟合，提高了分类效果。</p>
-<h2 id="Reducing_Overfitting"><a href="#Reducing_Overfitting" class="headerlink" title="Reducing Overfitting"></a>Reducing Overfitting</h2><p>该方法的神经网络有6000万个参数，虽然ILSVRC有1000个类别，但是还是无法避免过拟合的问题，因此本文采用了两种方式来避免过拟合。</p>
-<h3 id="Data_Augmentation"><a href="#Data_Augmentation" class="headerlink" title="Data Augmentation"></a>Data Augmentation</h3><p>本文使用了两种方法来实现数据扩展，两种方法只需要很小的计算量，而且是在CPU上运算的，并不会占用GPU的计算资源。</p>
-<p>第一种是图片平移和水平翻转（image translations and horizontal reflections）,我们从246*256的图片中提取出来5个224x224的图片（四个角+一个中心），同时水平翻转后再提取出来五个子图片，共10个图片，在softmax层对这些图片分别进行预测，对预测结果求平均值作为图片的预测结果。</p>
-<p>第二种是改变图片的RGB通道的强度，对图片进行PCA分析，图片的像素值<em>（与之对应的特征值）</em>（服从均值为0标准为0.1的高斯分布的随机数），因此，对于每个RGB像素<br>Ixy=<img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/pixel.png" alt="architecture"><br>对它们添加如下量：其中，pi和是3*3协方差矩阵的RGB像素值的特征向量和特征值，a是前面提到的随机变量，一张图片在训练过程中a是固定的，这个方法能够捕捉到自然图片的重要属性，并且使top-1错误率降低了1%。</p>
-<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>后面会细讲。</p>
-<h2 id="u8BAD_u7EC3_u8FC7_u7A0B"><a href="#u8BAD_u7EC3_u8FC7_u7A0B" class="headerlink" title="训练过程"></a>训练过程</h2><p>使用随机梯度下降法进行训练，batch=128，momentum=0.9， weight decay=0.0005，权重w的更新方式如下：<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/weight_update.png" alt="architecture"></p>
-<p>i是迭代系数，v是动量值<br>每层权值的初始值为服从均值为0，标准差为0.01的高斯分布的随机数，第二，四，五卷积层和三个全连接层的biases均设置为1，其他设为0。所有层的学习率都是一样的，在训练时会调整，调整的启发式算法是：如果当前学习率下验证集的错误率不在改变时，就将学习率除以10，总共调整三次后停止，用120万张照片训练了大约90个循环。</p>
-<p>训练结果如下图所示：</p>
-<p><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/result.png" alt="architecture"></p>
-<h2 id="u7ED3_u679C_u5206_u6790"><a href="#u7ED3_u679C_u5206_u6790" class="headerlink" title="结果分析"></a>结果分析</h2><p>如下图所示，是网络学习到的卷积核，网络学习到了不同频率，方向和颜色块的核，框架中的GPU连接方式，使得GPU产生了特化，上半部分的核是GPU1学习得到的，下半部分的核是GPU2学习得到的，两者有很大的区别，GPU2 感知到了颜色而GPU1没有，这种现象每次均会发生。<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/Con.png" alt="architecture"></p>
-<p>我们可以通过计算两张图片最后一层生成的4096维向量的欧氏距离的大小来确定他们的相似度，距离越小，图片的相似度越高。</p>
-<p>此外，通过欧式距离计算向量的相似度效率不高，我们可以通过训练一个auto-encoder来将这些向量压缩为短的二值编码来提高计算效率。这种图片搜索方式比直接将auto-encoder用于原始的像素效果要好，因为后者没有利用图片的标签信息只是检索有相似的边的模式，而不是检索语义上的相似。</p>
-<p>此外，为了简化实验，本文并没有采用任何非监督的预训练，因为我们已经有足够的计算能力来增大网络的大小，因此不需要增加有标记数据的数量。</p>
+        <span itemprop="articleBody"><p>#Fully Convolutional Networks for Semantic Segmentation<br>这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic segmentation面临的固有问题是语义和定位：global information resolves what while local information resolves where。作者将目前的好的分类模型(VGG, GoogLeNet)重新构建成全连接网络然后用这些模型进行微调获得最终的网络。</p>
+<h2 id="Fully_convolutional_networks"><a href="#Fully_convolutional_networks" class="headerlink" title="Fully convolutional networks"></a>Fully convolutional networks</h2><h3 id="Adapting_classifiers_for_dense_prediction"><a href="#Adapting_classifiers_for_dense_prediction" class="headerlink" title="Adapting classifiers for dense prediction"></a>Adapting classifiers for dense prediction</h3><p>普通的CNN网络的全连接层可以看成是对整个输入regions进行卷积的过程。因此我们可以将全连接层转化为卷积层，如Figure 2所示，这样我们最终会得到一个Heatmap而不是一个预测值，这些卷积模型输出带有空间信息的map很适合segmentation问题，而且输出的真实图像已经存在，所以前向传播和后向传播也显得非常直观，并且有着更高的计算效率。<br><img src="/Figure1.png" alt="Figure1"><br><img src="/Figure2.png" alt="Figure2"></p>
+<h3 id="Shift-and-stitch_is_filter_rarefaction"><a href="#Shift-and-stitch_is_filter_rarefaction" class="headerlink" title="Shift-and-stitch is filter rarefaction"></a>Shift-and-stitch is filter rarefaction</h3><p>要做像素级别的预测，对于上文卷积后得到的heatmap，我们要把它与输入图像的像素相对应。即将输出与输入对应然后才能得到dense predictions。设原图与FCN所得输出图之间的降采样因子是f，那么对于原图的每个f<em>f的区域（不重叠），“shift the input x pixels to the right and y pixels down for every (x,y) ,0 &lt; x,y &lt; f.” 把这个f</em>f区域对应的output作为此时区域中心点像素对应的output，这样就对每个f*f的区域得到了$f^2$个output，也就是每个像素都能对应一个output，所以成为了dense prediction。</p>
+<p>还有一种方法是filter rarefaction。对于一个步长为s的filter(卷积或pooling)，我们对它进行放大，得到一个新的filter，新的filter步长为1，放大公式如下<br><img src="/Filter.png" alt="Filter"><br>按照上面的公式，对filter一层一层的进行扩大，这样所有的subsample都没有缩小图像的尺寸，于是就得到dense prediction。</p>
+<p>以上两种公式均未被采用，第二种更细节的信息能被filter看到，但是receptive fileds会相对变小，可能会损失全局信息，且会对卷积层引入更多运算。第一种receptive fileds没有变小，但是由于原图被划分成f*f的区域输入网络，使得filters无法感受更精细的信息。</p>
+<h3 id="Upsampling_is_backwards_strided_convolution"><a href="#Upsampling_is_backwards_strided_convolution" class="headerlink" title="Upsampling is backwards strided convolution"></a>Upsampling is backwards strided convolution</h3><p>为了更好将输出与原图像素对应，这里采用了bilinear interpolation，这种upsampling 可以理解成反卷积(deconvolution)，实现过程则是把卷积的前向传播和后向传播调换一下即可。</p>
+<h3 id="Patchwise_training_is_loss_sampling"><a href="#Patchwise_training_is_loss_sampling" class="headerlink" title="Patchwise training is loss sampling"></a>Patchwise training is loss sampling</h3><h2 id="Segmentation_Architecture"><a href="#Segmentation_Architecture" class="headerlink" title="Segmentation Architecture"></a>Segmentation Architecture</h2><p>论文将ILSVRC的分类器转化为FCN并且使用网络内上采样和pixelwise loss来fine-tune，使网络能够适应segmentation。然后再添加skip来融合局部全局语义等信息。Skip architecture通过end to end学习能够提高输出的语义和空间精确度。</p>
+<h3 id="From_classifier_to_dense_FCN"><a href="#From_classifier_to_dense_FCN" class="headerlink" title="From classifier to dense FCN"></a>From classifier to dense FCN</h3><p>以AlexNet, VGG-16和GoogLeNet为例进行操作，将网络的最后一层分类器去掉，将所有的全连接层替换为卷积层，最终结果如Table1所示<br><img src="/Table1.png" alt="Table1"></p>
+<h3 id="Combining_what_and_where"><a href="#Combining_what_and_where" class="headerlink" title="Combining what and where"></a>Combining what and where</h3><p>如Figure3 所示，作者提出了一个结合不同层的feature并且使输出更准确的用于segmentation的FCN。如果我们只从最后一层输出map进行步长为32的上采样，由于尺寸限制的影响，我们可能无法得到更精确的预测输出，，所以考虑加入更多前层的细节信息，也就是把倒数第几层的输出和最后的输出做一个fusion，实际上也就是加和。如图Figure4所示，FCN-8s的结果明显更为精确。<br><img src="/Figure3.png" alt="Figure3"><br><img src="/Figure4.png" alt="Figure4"></p>
+<h2 id="Experimental_framework"><a href="#Experimental_framework" class="headerlink" title="Experimental framework"></a>Experimental framework</h2><ul>
+<li>Optimization</li>
+</ul>
+<p>用带动量的SGD训练，batch=20，学习率0.001，每次下降10倍，动量为0.9，分别训练FCN-AlexNet, FCN-VGG16, and FCN-GoogLeNet。</p>
+<ul>
+<li>Fine-tuning<br>通过在整个网络中反向传播来微调所有层。</li>
+</ul>
+<p>结果的话如下表所示，比R-CNN要高很多。<br><img src="/Table3.png" alt="Table3"></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>训练一个end-to-end的FCN模型，利用卷积神经网络的很强的学习能力，得到较准确的结果。此外，直接利用现有模型进行训练，然后再upsampling，既可以得到新的模型，还有可以接收任意尺寸图片输入，但是也有不足之处，如下图所示，本文模型容易丢失较小的目标，比如下图中的救生衣就被识别为人。<br><img src="/Figure3.png" alt="Figure3"></p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/CNN/" rel="tag">#CNN</a>
-          
-            <a href="/tags/classification/" rel="tag">#classification</a>
-          
-            <a href="/tags/deep-learning/" rel="tag">#deep learning</a>
-          
-            <a href="/tags/论文笔记/" rel="tag">#论文笔记</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/" rel="next" title="Deep-learning论文笔记二：Going deeper with convolutions">
+                <i class="fa fa-chevron-left"></i> Deep-learning论文笔记二：Going deeper with convolutions
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/" rel="prev" title="Deep-learning论文笔记二：Going deeper with convolutions">
-                Deep-learning论文笔记二：Going deeper with convolutions <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/" rel="prev" title="Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation">
+                Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -359,9 +321,6 @@
         </div>
 
         
-
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
 
 
         
@@ -476,7 +435,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u67B6_u6784"><span class="nav-number">2.</span> <span class="nav-text">架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reducing_Overfitting"><span class="nav-number">3.</span> <span class="nav-text">Reducing Overfitting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data_Augmentation"><span class="nav-number">3.1.</span> <span class="nav-text">Data Augmentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dropout"><span class="nav-number">3.2.</span> <span class="nav-text">Dropout</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8BAD_u7EC3_u8FC7_u7A0B"><span class="nav-number">4.</span> <span class="nav-text">训练过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7ED3_u679C_u5206_u6790"><span class="nav-number">5.</span> <span class="nav-text">结果分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fully_convolutional_networks"><span class="nav-number">1.</span> <span class="nav-text">Fully convolutional networks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Adapting_classifiers_for_dense_prediction"><span class="nav-number">1.1.</span> <span class="nav-text">Adapting classifiers for dense prediction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shift-and-stitch_is_filter_rarefaction"><span class="nav-number">1.2.</span> <span class="nav-text">Shift-and-stitch is filter rarefaction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Upsampling_is_backwards_strided_convolution"><span class="nav-number">1.3.</span> <span class="nav-text">Upsampling is backwards strided convolution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Patchwise_training_is_loss_sampling"><span class="nav-number">1.4.</span> <span class="nav-text">Patchwise training is loss sampling</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Segmentation_Architecture"><span class="nav-number">2.</span> <span class="nav-text">Segmentation Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#From_classifier_to_dense_FCN"><span class="nav-number">2.1.</span> <span class="nav-text">From classifier to dense FCN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Combining_what_and_where"><span class="nav-number">2.2.</span> <span class="nav-text">Combining what and where</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experimental_framework"><span class="nav-number">3.</span> <span class="nav-text">Experimental framework</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">4.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -536,9 +495,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'ma123shuai-github-io';
-      var disqus_identifier = '2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/';
-      var disqus_title = 'Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks';
-      var disqus_url = 'http://yoursite.com/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/';
+      var disqus_identifier = '2015/12/21/Title2/';
+      var disqus_title = '';
+      var disqus_url = 'http://yoursite.com/2015/12/21/Title2/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -767,10 +726,6 @@
 
   
   
-
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"3","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
 
 </body>
 </html>

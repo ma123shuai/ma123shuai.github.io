@@ -220,6 +220,231 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/" itemprop="url">
+                  Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-21T16:35:42+08:00" content="2015-12-21">
+              2015-12-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>#Fully Convolutional Networks for Semantic Segmentation<br>这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic segmentation面临的固有问题是语义和定位：global information resolves what while local information resolves where。作者将目前的好的分类模型(VGG, GoogLeNet)重新构建成全连接网络然后用这些模型进行微调获得最终的网络。</p>
+<h2 id="Fully_convolutional_networks"><a href="#Fully_convolutional_networks" class="headerlink" title="Fully convolutional networks"></a>Fully convolutional networks</h2><h3 id="Adapting_classifiers_for_dense_prediction"><a href="#Adapting_classifiers_for_dense_prediction" class="headerlink" title="Adapting classifiers for dense prediction"></a>Adapting classifiers for dense prediction</h3><p>普通的CNN网络的全连接层可以看成是对整个输入regions进行卷积的过程。因此我们可以将全连接层转化为卷积层，如Figure 2所示，这样我们最终会得到一个Heatmap而不是一个预测值，这些卷积模型输出带有空间信息的map很适合segmentation问题，而且输出的真实图像已经存在，所以前向传播和后向传播也显得非常直观，并且有着更高的计算效率。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure1.png" alt="Figure1"><br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure2.png" alt="Figure2"></p>
+<h3 id="Shift-and-stitch_is_filter_rarefaction"><a href="#Shift-and-stitch_is_filter_rarefaction" class="headerlink" title="Shift-and-stitch is filter rarefaction"></a>Shift-and-stitch is filter rarefaction</h3><p>要做像素级别的预测，对于上文卷积后得到的heatmap，我们要把它与输入图像的像素相对应。即将输出与输入对应然后才能得到dense predictions。设原图与FCN所得输出图之间的降采样因子是f，那么对于原图的每个f<em>f的区域（不重叠），“shift the input x pixels to the right and y pixels down for every (x,y) ,0 &lt; x,y &lt; f.” 把这个f</em>f区域对应的output作为此时区域中心点像素对应的output，这样就对每个f*f的区域得到了$f^2$个output，也就是每个像素都能对应一个output，所以成为了dense prediction。</p>
+<p>还有一种方法是filter rarefaction。对于一个步长为s的filter(卷积或pooling)，我们对它进行放大，得到一个新的filter，新的filter步长为1，放大公式如下<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Filter.png" alt="Filter"><br>按照上面的公式，对filter一层一层的进行扩大，这样所有的subsample都没有缩小图像的尺寸，于是就得到dense prediction。</p>
+<p>以上两种公式均未被采用，第二种更细节的信息能被filter看到，但是receptive fileds会相对变小，可能会损失全局信息，且会对卷积层引入更多运算。第一种receptive fileds没有变小，但是由于原图被划分成f*f的区域输入网络，使得filters无法感受更精细的信息。</p>
+<h3 id="Upsampling_is_backwards_strided_convolution"><a href="#Upsampling_is_backwards_strided_convolution" class="headerlink" title="Upsampling is backwards strided convolution"></a>Upsampling is backwards strided convolution</h3><p>为了更好将输出与原图像素对应，这里采用了bilinear interpolation，这种upsampling 可以理解成反卷积(deconvolution)，实现过程则是把卷积的前向传播和后向传播调换一下即可。</p>
+<h3 id="Patchwise_training_is_loss_sampling"><a href="#Patchwise_training_is_loss_sampling" class="headerlink" title="Patchwise training is loss sampling"></a>Patchwise training is loss sampling</h3><h2 id="Segmentation_Architecture"><a href="#Segmentation_Architecture" class="headerlink" title="Segmentation Architecture"></a>Segmentation Architecture</h2><p>论文将ILSVRC的分类器转化为FCN并且使用网络内上采样和pixelwise loss来fine-tune，使网络能够适应segmentation。然后再添加skip来融合局部全局语义等信息。Skip architecture通过end to end学习能够提高输出的语义和空间精确度。</p>
+<h3 id="From_classifier_to_dense_FCN"><a href="#From_classifier_to_dense_FCN" class="headerlink" title="From classifier to dense FCN"></a>From classifier to dense FCN</h3><p>以AlexNet, VGG-16和GoogLeNet为例进行操作，将网络的最后一层分类器去掉，将所有的全连接层替换为卷积层，最终结果如Table1所示<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Table1.png" alt="Table1"></p>
+<h3 id="Combining_what_and_where"><a href="#Combining_what_and_where" class="headerlink" title="Combining what and where"></a>Combining what and where</h3><p>如Figure3 所示，作者提出了一个结合不同层的feature并且使输出更准确的用于segmentation的FCN。如果我们只从最后一层输出map进行步长为32的上采样，由于尺寸限制的影响，我们可能无法得到更精确的预测输出，，所以考虑加入更多前层的细节信息，也就是把倒数第几层的输出和最后的输出做一个fusion，实际上也就是加和。如图Figure4所示，FCN-8s的结果明显更为精确。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure3.png" alt="Figure3"><br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure4.png" alt="Figure4"></p>
+<h2 id="Experimental_framework"><a href="#Experimental_framework" class="headerlink" title="Experimental framework"></a>Experimental framework</h2><ul>
+<li>Optimization</li>
+</ul>
+<p>用带动量的SGD训练，batch=20，学习率0.001，每次下降10倍，动量为0.9，分别训练FCN-AlexNet, FCN-VGG16, and FCN-GoogLeNet。</p>
+<ul>
+<li>Fine-tuning<br>通过在整个网络中反向传播来微调所有层。</li>
+</ul>
+<p>结果的话如下表所示，比R-CNN要高很多。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Table3.png" alt="Table3"></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>训练一个end-to-end的FCN模型，利用卷积神经网络的很强的学习能力，得到较准确的结果。此外，直接利用现有模型进行训练，然后再upsampling，既可以得到新的模型，还有可以接收任意尺寸图片输入，但是也有不足之处，如下图所示，本文模型容易丢失较小的目标，比如下图中的救生衣就被识别为人。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure6.png" alt="Figure6"></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/21/Title2/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-21T16:34:31+08:00" content="2015-12-21">
+              2015-12-21
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/21/Title2/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/21/Title2/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>#Fully Convolutional Networks for Semantic Segmentation<br>这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic segmentation面临的固有问题是语义和定位：global information resolves what while local information resolves where。作者将目前的好的分类模型(VGG, GoogLeNet)重新构建成全连接网络然后用这些模型进行微调获得最终的网络。</p>
+<h2 id="Fully_convolutional_networks"><a href="#Fully_convolutional_networks" class="headerlink" title="Fully convolutional networks"></a>Fully convolutional networks</h2><h3 id="Adapting_classifiers_for_dense_prediction"><a href="#Adapting_classifiers_for_dense_prediction" class="headerlink" title="Adapting classifiers for dense prediction"></a>Adapting classifiers for dense prediction</h3><p>普通的CNN网络的全连接层可以看成是对整个输入regions进行卷积的过程。因此我们可以将全连接层转化为卷积层，如Figure 2所示，这样我们最终会得到一个Heatmap而不是一个预测值，这些卷积模型输出带有空间信息的map很适合segmentation问题，而且输出的真实图像已经存在，所以前向传播和后向传播也显得非常直观，并且有着更高的计算效率。<br><img src="/Figure1.png" alt="Figure1"><br><img src="/Figure2.png" alt="Figure2"></p>
+<h3 id="Shift-and-stitch_is_filter_rarefaction"><a href="#Shift-and-stitch_is_filter_rarefaction" class="headerlink" title="Shift-and-stitch is filter rarefaction"></a>Shift-and-stitch is filter rarefaction</h3><p>要做像素级别的预测，对于上文卷积后得到的heatmap，我们要把它与输入图像的像素相对应。即将输出与输入对应然后才能得到dense predictions。设原图与FCN所得输出图之间的降采样因子是f，那么对于原图的每个f<em>f的区域（不重叠），“shift the input x pixels to the right and y pixels down for every (x,y) ,0 &lt; x,y &lt; f.” 把这个f</em>f区域对应的output作为此时区域中心点像素对应的output，这样就对每个f*f的区域得到了$f^2$个output，也就是每个像素都能对应一个output，所以成为了dense prediction。</p>
+<p>还有一种方法是filter rarefaction。对于一个步长为s的filter(卷积或pooling)，我们对它进行放大，得到一个新的filter，新的filter步长为1，放大公式如下<br><img src="/Filter.png" alt="Filter"><br>按照上面的公式，对filter一层一层的进行扩大，这样所有的subsample都没有缩小图像的尺寸，于是就得到dense prediction。</p>
+<p>以上两种公式均未被采用，第二种更细节的信息能被filter看到，但是receptive fileds会相对变小，可能会损失全局信息，且会对卷积层引入更多运算。第一种receptive fileds没有变小，但是由于原图被划分成f*f的区域输入网络，使得filters无法感受更精细的信息。</p>
+<h3 id="Upsampling_is_backwards_strided_convolution"><a href="#Upsampling_is_backwards_strided_convolution" class="headerlink" title="Upsampling is backwards strided convolution"></a>Upsampling is backwards strided convolution</h3><p>为了更好将输出与原图像素对应，这里采用了bilinear interpolation，这种upsampling 可以理解成反卷积(deconvolution)，实现过程则是把卷积的前向传播和后向传播调换一下即可。</p>
+<h3 id="Patchwise_training_is_loss_sampling"><a href="#Patchwise_training_is_loss_sampling" class="headerlink" title="Patchwise training is loss sampling"></a>Patchwise training is loss sampling</h3><h2 id="Segmentation_Architecture"><a href="#Segmentation_Architecture" class="headerlink" title="Segmentation Architecture"></a>Segmentation Architecture</h2><p>论文将ILSVRC的分类器转化为FCN并且使用网络内上采样和pixelwise loss来fine-tune，使网络能够适应segmentation。然后再添加skip来融合局部全局语义等信息。Skip architecture通过end to end学习能够提高输出的语义和空间精确度。</p>
+<h3 id="From_classifier_to_dense_FCN"><a href="#From_classifier_to_dense_FCN" class="headerlink" title="From classifier to dense FCN"></a>From classifier to dense FCN</h3><p>以AlexNet, VGG-16和GoogLeNet为例进行操作，将网络的最后一层分类器去掉，将所有的全连接层替换为卷积层，最终结果如Table1所示<br><img src="/Table1.png" alt="Table1"></p>
+<h3 id="Combining_what_and_where"><a href="#Combining_what_and_where" class="headerlink" title="Combining what and where"></a>Combining what and where</h3><p>如Figure3 所示，作者提出了一个结合不同层的feature并且使输出更准确的用于segmentation的FCN。如果我们只从最后一层输出map进行步长为32的上采样，由于尺寸限制的影响，我们可能无法得到更精确的预测输出，，所以考虑加入更多前层的细节信息，也就是把倒数第几层的输出和最后的输出做一个fusion，实际上也就是加和。如图Figure4所示，FCN-8s的结果明显更为精确。<br><img src="/Figure3.png" alt="Figure3"><br><img src="/Figure4.png" alt="Figure4"></p>
+<h2 id="Experimental_framework"><a href="#Experimental_framework" class="headerlink" title="Experimental framework"></a>Experimental framework</h2><ul>
+<li>Optimization</li>
+</ul>
+<p>用带动量的SGD训练，batch=20，学习率0.001，每次下降10倍，动量为0.9，分别训练FCN-AlexNet, FCN-VGG16, and FCN-GoogLeNet。</p>
+<ul>
+<li>Fine-tuning<br>通过在整个网络中反向传播来微调所有层。</li>
+</ul>
+<p>结果的话如下表所示，比R-CNN要高很多。<br><img src="/Table3.png" alt="Table3"></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>训练一个end-to-end的FCN模型，利用卷积神经网络的很强的学习能力，得到较准确的结果。此外，直接利用现有模型进行训练，然后再upsampling，既可以得到新的模型，还有可以接收任意尺寸图片输入，但是也有不足之处，如下图所示，本文模型容易丢失较小的目标，比如下图中的救生衣就被识别为人。<br><img src="/Figure3.png" alt="Figure3"></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/" itemprop="url">
                   Deep-learning论文笔记二：Going deeper with convolutions
                 </a>
@@ -506,7 +731,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -520,7 +745,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
