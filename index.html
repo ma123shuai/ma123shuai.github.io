@@ -229,6 +229,119 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/22/2016腾讯 基础研究实习生笔试+面试/" itemprop="url">
+                  2016腾讯实习生招聘基础研究笔试＋面试经
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-04-22T15:56:25+08:00" content="2016-04-22">
+              2016-04-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/招聘/" itemprop="url" rel="index">
+                    <span itemprop="name">招聘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/04/22/2016腾讯 基础研究实习生笔试+面试/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/22/2016腾讯 基础研究实习生笔试+面试/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="u7B14_u8BD5"><a href="#u7B14_u8BD5" class="headerlink" title="笔试"></a>笔试</h2><p>笔试前几天看了一下以前的基础研究笔试题，发现大部分都是数学，便稍微突击了一下数学，可惜没记住多少，考的时候考的数学基本靠微弱的记忆去做的。笔试分两部分，第一部分60分钟，25道选择题，大部分是概率论统计学和线性代数知识，也有少数SQL和数据结构知识，笔试的时间还是比较紧的，有一定计算量，而且不能用计算器，做到后面时间有点不够了，行列式计算直接随便蒙了个选项。第二部分是三道开放题，第一题是关于大数据的，谈谈自己对大数据的理解（这是什么鬼题，根本没什么好谈的啊，表示对大数据只是了解一点概念而已），第二题是关于推荐系统的，你觉得当前的推荐系统有什么缺点，提出一些技术上的建议，我就根据自己以前做过的电影推荐写了一点技术理解，第三题是关于数据分析的。总得来说这三道题属于很开放性的题目，感觉自己答得挺一般的。不过还是收到了面试通知。</p>
+<h2 id="u4E00_u9762"><a href="#u4E00_u9762" class="headerlink" title="一面"></a>一面</h2><p>以前的面试都是在大学城，没想到这次却要跑到东圃喜来登酒店去面试，一面人好多。等了快1个小时才轮到我。面试官很随和，看着简历对简历上的项目进行提问，我做的项目比较偏深度学习，他缺一直在问我的一个文本分类的项目，项目如何特征提取，还有用到的分类算法，我说random forest，lr，SVM，最后做了集成，他问我这些算法的优缺点，适用什么样的场景。这个当时感觉答得不太好，算法原理还是懂的，各种适应场景就不太了解了。他还问我为什么降维，降维和特征有什么区别，LSA的原理。总的来说，这个面试官应该是做文本方面的，对深度学习在图像方面的应用是不怎么了解的，所以一直揪着我的文本 项目问，而那个文本项目我并没有投入太多精力，所以也没给面试官留下很好的印象吧。后面我又强行扯到我的深度学习项目上，给他描述了一番。他也问了我一些深度学习方面的问题，他说还想问一下我笔试时候的题目，不过因为已经12点半了，所以就先不问了。然后就结束了面试。面了30度分钟，出来心里感觉毛毛的。不过还是收到了二面的通知。</p>
+<h2 id="u4E8C_u9762"><a href="#u4E8C_u9762" class="headerlink" title="二面"></a>二面</h2><p>二面是在大学城雅乐轩酒店，到二面的时候就没几个人了，看来腾讯主要是一面大面积刷人。二面面试官胖胖的，一看就是骨灰级程序员啊，也有可能是部门经理。一开始也是问项目，问我如何用卷积神经网络做分割，卷积和pooling的原理，总之就是各种问项目细节。还问我如何将深度学习应用到文本分类上，我说可以用word2vec为每个词生成一个词向量，然后每个句子就可以用矩阵来表示，这样就可以像对图像那样对词矩阵进行卷积和pooling了。他问为什么这样做有用，后面又讨论一些深度学习的东西，我又给他介绍了RNN在文本和语音模型上的应用。接着他又开始问我的文本项目，问项目中的细节，顺便让我写了个lr的表达式。项目方面大概讨论了一个小时，接着他又让我随手写几个程序，第一个 是判断两个单向链表是否相交，第二个是有$2^{32}$个无符号整数，其中有一个数是重复的，求出哪个数是重复的，我说可以hash处理，不过比较耗空间，他问我有没有节省空间的方法，我想了一会没想出来，他稍微提示了一下，我才发现这数是有规律的，unsigned int的范围为0-$2^{32}-1$，所以这些数为0-$2^{32}-1$加某个重复数字，那其实可以先求均值，再全部减均值再想加，得到的和即为重复的数字。第三道题是一道概率题，有两家医院，一大一小，大医院每天有1000个新生儿，小医院每天有100个新生儿，问哪家医院男孩总数大于60%的可能性大，我觉得的是小医院，当时没证出来，回来后发现可以用中心极限定理来验证。最后又问我有什么问题，我说让他评价我有哪些需要改进的地方，他笑着说你们怎么都问这个问题，我们也很难答的，哈哈，我又问了他实习生入职培训的问题，然后就结束了面试。大概面了1个半小时。感觉自己这次面试还是不错的，有些问题跟面试官讨论的比较深入，而且刚好是自己擅长的方面，所以加分点还是很多的。感觉这个面试官应该是主管级别的，会问技术，但是更多的是看你对技术的理解程度如何，而不仅仅是调调API。</p>
+<h2 id="HR_u9762"><a href="#HR_u9762" class="headerlink" title="HR面"></a>HR面</h2><p>中午面完，下午就收到HR面的通知了。HR面就比较轻松了，聊了一下自己的的爱好，期望工作地，家庭情况，以及最自豪的事情最惋惜的事情之类的，还有自己对未来的打算，还问我作为家里面的长子在这么远的地方工作父母会不会有意见之类的。最后 还问了一下是否有女朋友。大概聊了20多分钟吧。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>数学很重要，线性代数，概率论数理统计这些基本的数学要懂，不要求做太复杂的运算。</li>
+<li>项目要熟烂于心，并且能够清晰的讲出来，项目中使用的技术、算法要懂，面试官一般会对这些进行提问，别让人觉得你只会调调API，原理要熟悉，最好自己实现过简单的算法和看着部分源码。</li>
+<li>对于做机器学习的同学来说，SVM，boosting,RF，LR，决策树，贝叶斯，EM等基本的机器学习方法要很熟悉，还有一些降维算法如PCA等，还有特征选择算法，梯度下降，拟牛顿法等优化算法。这些都要很熟悉。我有的同学面阿里的时候被狂问机器学习算法，L0,L1,L2范数各种问。这些基础一定要搞懂。</li>
+<li>计算机基础也很重要，笔试和面试的时候也会涉及很多，如数据库，程序设计语言等。</li>
+<li>最后，面试是一个双向选择的过程，最后没进不代表你实力不行，也可能是你的技能点和面试官需要的不匹配，比如做图像的去面文本类的职位，如果完全没有文本经验的话是很难进的，所以这也跟运气有关，不过也不要气馁，相信自己的实力，最后一定会拿到好的offer。</li>
+</ul>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/22/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion/" itemprop="url">
                   Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion
                 </a>
@@ -870,6 +983,125 @@
             
               
                 
+                <a class="post-title-link" href="/2015/08/16/流形学习与t-SNE/" itemprop="url">
+                  流形学习与t-SNE
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-08-16T20:48:10+08:00" content="2015-08-16">
+              2015-08-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/08/16/流形学习与t-SNE/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/16/流形学习与t-SNE/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。<br>所谓流行是指一般几何对象的总称，包括各种维度的曲线和曲面等。假设数据是均匀采样于一个高维欧氏空间中的低维流形，<strong>流形学习就是从高维采样数据中恢复低维流形结构</strong>，即找到高维空间中的低维流形，并求出相应的嵌入映射，以实现维数约简或者数据可视化。它是从观测到的现象中去寻找事物的本质，找到产生数据的内在规律。所以，流行学习可以对高维数据进行降维，一般是2或3维，这样我们就能够将数据可视化，从而了解数据内部规律。<br>和以往方法不同的是，在流形学习中有一个假设，就是所<strong>处理的数据采样于一个潜在的流形上，或是说对于这组数据存在一个潜在的流形</strong>。对于不同的方法，对于流形性质的要求各不相同，这也就产生了在流形假设下的各种不同性质的假设，比如在Laplacian Eigenmaps中要假设这个流形是紧致黎曼流形等。对于描述流形上的点，我们要用坐标，而流形上本身是没有坐标的，所以为了表示流形上的点，必须把流形放入外围空间（ambient space）中，那么流形上的点就可以用外围空间的坐标来表示。比如R^3中的球面是个2维的曲面，因为球面上只有两个自由度，但是球面上的点一般是用外围$R^3$空间中的坐标表示的，所以我们看到的R^3中球面上的点有3个数来表示的。当然球面还有柱坐标球坐标等表示。对于R^3中的球面来说，那么流形学习可以粗略的概括为给出R^3中的表示，在保持球面上点某些几何性质的条件下，找出找到一组对应的内蕴坐标（intrinsic coordinate）表示，显然这个表示应该是两维的，因为球面的维数是两维的。这个过程也叫参数化（parameterization）。直观上来说，就是把这个球面尽量好的展开在通过原点的平面上。在PAMI中，这样的低维表示也叫内蕴特征（intrinsic feature）。一般外围空间的维数也叫观察维数，其表示也叫自然坐标（外围空间是欧式空间）表示,在统计中一般叫observation。<br>流形学习方法分为线性的和非线性的两种，线性的流形学习方法如我们熟知的主成份分析（PCA），非线性的流形学习方法如等距映射（Isomap）、拉普拉斯特征映射（Laplacian eigenmaps，LE）、局部线性嵌入(Locally-linear embedding，LLE)。最近看了t-SNE这种流行学习方法，所以这篇博客就主要讲t-SNE了。</p>
+<h2 id="u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316"><a href="#u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316" class="headerlink" title="数据 降维与可视化"></a>数据 降维与可视化</h2><p>对于数据降维，有一张图总结的很好，如下图所示：<br><img src="/image/流行学习与t-SNE/img1.png" alt="img1"><br>图中基本上包括了大多数流形学习方法，不过这里面没有t-SNE,相比于其他算法，t-SNE算是比较新的一种方法，也是效果比较好的一种方法。t-SNE是深度学习大牛Hinton在2008年提出的，<a href="http://lvdmaaten.github.io/tsne/有对t-SNE有个主页介绍：tsne,包括论文以及各种编程语言的实现。" target="_blank" rel="external">http://lvdmaaten.github.io/tsne/有对t-SNE有个主页介绍：tsne,包括论文以及各种编程语言的实现。</a></p>
+<h2 id="u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29"><a href="#u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29" class="headerlink" title="相对熵 (KL散度)"></a>相对熵 (KL散度)</h2><p>在讲t-SNE之前，先讲一下KL散度。KL散度是两个概率分布P和Q差别的非对称性的度量。 KL散度是用来 度量使用基于Q的编码来编码来自P的样本平均所需的额外的比特个数。 典型情况下，P表示数据的真实分布，Q表示数据的理论分布，模型分布，或P的近似分布。<br>$D(Q||P)=∑Q(x)[log(1/P(x))] - ∑Q(x)[log[1/Q(x)]]<br>         =∑Q(x)log[Q(x)/P(x)]$</p>
+<p>∑Q(x)[log(1/P(x))] 表示使用原来的编码方式得到的比特数的期望<br>log(1/P(x)) 表示使用原来的编码方式，x出现1次的期望。编码长度Q(x) 表示现在x出现的概率<br>由于-log(u)是凸函数，因此有下面的不等式<br>$DKL(Q||P) = -∑x∈XQ(x)log[P(x)/Q(x)] = E[-logP(x)/Q(x)] ≥ -logE[P(x)/Q(x)] = -log∑x∈XQ(x)P(x)/Q(x) = 0$</p>
+<p>即KL-divergence始终是大于等于0的。当且仅当两分布相同时，KL-divergence等于0。</p>
+<p>举一个实际的例子吧：比如有四个类别，一个方法A得到四个类别的概率分别是0.1,0.2,0.3,0.4。另一种方法B（或者说是事实情况）是得到四个类别的概率分别是0.4,0.3,0.2,0.1,那么这两个分布的<br>$ KL-Distance(A,B)=0.1<em>log(0.1/0.4)+0.2</em>log(0.2/0.3)+0.3<em>log(0.3/0.2)+0.4</em>log(0.4/0.1) $<br>相对熵可以衡量两个随机分布之间的距离，当两个随机分布相同时，它们的相对熵为零，当两个随机分布的差别增大时，它们的相对熵也会增大。所以相对熵（KL散度）可以用于比较文本的相似度，先统计出词的频率，然后计算KL散度就行了。另外，在多指标系统评估中，指标权重分配是一个重点和难点，通过相对熵可以处理。</p>
+<h2 id="t-SNE"><a href="#t-SNE" class="headerlink" title="t-SNE"></a>t-SNE</h2><p>t-distributed stochastic neighbor embedding，也是一种流体学习方法（manifold learning），通过保持数据点的相邻关系把数据从高维空间中降低到2维平面上，对高维数据可视化的效果非常好。<br>它是先根据数据点在高纬度空间的距离，计算一个条件概率分布，xi和xj是数据点在高纬度空间的向量。再计算另一个条件概率分布，yi和yj是数据点映射到低纬度空间后得到的向量。用KL散度（Kullback–Leibler divergence）来衡量y分布与x分布的相似性，然后通过优化上面两个方程中的参数，使得所有点的KL散度和最小。</p>
+<h3 id="u7B97_u6CD5_u7B80_u8FF0"><a href="#u7B97_u6CD5_u7B80_u8FF0" class="headerlink" title="算法简述"></a>算法简述</h3><p><a href="http://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf" target="_blank" rel="external">Visualizing High-Dimensional Data Using t-SNE</a>这篇文章详细的阐述了t-SNE算法的原理。t-SNE是Stochastic Neighbor Embedding的变种。t-SNE与SNE的主要区别有：</p>
+<ul>
+<li>t-SNE使用了SNE cost function的对称版本</li>
+<li>在低维空间里t-SNE使用t-分布而不是高斯分布去计算相似度</li>
+</ul>
+<p>对每个数据点i，和每个潜在的邻居j，首先计算一个条件概率,表示i选择j为邻居的概率：$ p_{j|i}=\frac{exp(-||x_i-x_j||^2/2\sigma<em>i ^2)}{\sum</em>{k\neq i}exp(-||x_i-x_k||^2/2\sigma_i ^2)} $<br>$\sigma_i$是以点$x_i$为中心的高斯分布的方差，是通过二分法找到的能使分布的熵等于$ log(Perp) $，Perp是perplexity，用来衡量点$x_i$有效邻居的个数，值可以设置在5-50之间，是$\sigma_i$的单调函数。<br>$ Perp(P_i)=2^{H(P_i)} \ \ \ \ H(P_i)=-\sum<em>j p</em>{j|i}log<em>2 p</em>{j|i} $<br>接着我们定义数据点间的相似性为对称的条件概率，<br>$ p<em>{ij}=\frac{p</em>{j|i}+p_{i|j}}{2N} $<br>如下图所示，为一组数据点的距离矩阵，σ为常量的相似性矩阵和σ为变量时的相似性矩阵：<br><img src="/image/流行学习与t-SNE/img2.png" alt="img1"><br>可以看到数据已经呈现出10组，分别对应10个数字。<br>现在使用1自由度的t-分布来定义低维空间数据点的相似性矩阵，之所以uid使用自由度为1的t-分布来定义，是因为它的结果形式刚好为$(1+||y_i -y<em>j||^2)^{-1}$,于是相似度表示如下：<br>$q</em>{ij}=\frac{(1+||y_i -y<em>j||^2)^{-1}}{\sum</em>{k\neq l}(1+||y_k-y_l||^2)^{-1}}$<br>为了找到一组低维空间的坐标使这两个分布尽可能相似，可以使用KL散度来衡量：</p>
+<p>$C=KL(P||Q)=\sum <em>{i,j}p</em>{ij} \frac{p<em>{ij}}{q</em>{ij}}$</p>
+<p>可以使用梯度下降最小化这个得分，原始论文中有详细的求导过程，这里我们只写出结果：<br>$\frac{\delta C}{\delta y_i}=4\sum <em>j (p</em>{ij}-q_{ij})(y_i -y_j)(1+||y_i -y_j||^2)^{-1}$</p>
+<p>这个公式有很好物理意义。$p<em>{ij}-q</em>{ij}$为正，说明$x_i$在高维空间和$x_j$相似度高，而低维空间相似度低，$x_i$将会靠近$x_j$，反之则会远离$x_j$。参考文献[4]中有动画阐述了整个过程。<br>在论文最后的结果中，t-SNE的效果要比PCA之类的好很多。</p>
+<p>参考文献：[1]<a href="https://segmentfault.com/a/1190000000641079#articleHeader2" target="_blank" rel="external">https://segmentfault.com/a/1190000000641079#articleHeader2</a><br>[2]<a href="http://blog.csdn.net/chl033/article/details/6107042" target="_blank" rel="external">流行学习综述</a><br>[3]<a href="http://blog.csdn.net/u012162613/article/details/45920827" target="_blank" rel="external">http://blog.csdn.net/u012162613/article/details/45920827</a><br>[4]<a href="http://mtpgm.com/2015/08/17/t-sne/" target="_blank" rel="external">http://mtpgm.com/2015/08/17/t-sne/</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/07/15/top-k 第k大问题/" itemprop="url">
                   top-k/第k大问题
                 </a>
@@ -1018,21 +1250,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
