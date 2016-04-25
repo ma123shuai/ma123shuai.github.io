@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -26,13 +32,36 @@
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="CNN,classification,deep learning,论文笔记," />
@@ -44,25 +73,19 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
 
 
 
-<meta name="description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。
- 这篇文章的主要贡献如下：
-
-训练了一个大型的卷积神经网络并且效果是目前为止所">
+<meta name="description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks">
 <meta property="og:url" content="http://yoursite.com/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/index.html">
 <meta property="og:site_name" content="Shuai's blog">
-<meta property="og:description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。
- 这篇文章的主要贡献如下：
-
-训练了一个大型的卷积神经网络并且效果是目前为止所">
+<meta property="og:description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。">
 <meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/architecture">
 <meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/ReLU_and_tanh.png">
 <meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/LRN.png">
@@ -70,21 +93,24 @@
 <meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/weight_update.png">
 <meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/result.png">
 <meta property="og:image" content="http://yoursite.com/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/Con.png">
-<meta property="og:updated_time" content="2015-12-17T06:44:18.000Z">
+<meta property="og:updated_time" content="2016-04-23T03:01:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks">
-<meta name="twitter:description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。
- 这篇文章的主要贡献如下：
-
-训练了一个大型的卷积神经网络并且效果是目前为止所">
+<meta name="twitter:description" content="简介ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: '',
-    sidebar: 'always',
-    motion: true
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -93,15 +119,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -109,7 +126,16 @@
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -138,7 +164,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
@@ -157,16 +183,6 @@
               <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -192,7 +208,6 @@
       
 
       
-      
     </ul>
   
 
@@ -204,8 +219,9 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
@@ -236,7 +252,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-15T15:07:16+08:00" content="2015-12-15">
               2015-12-15
             </time>
@@ -244,7 +263,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/deep-learning/" itemprop="url" rel="index">
@@ -262,29 +285,32 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。</p>
-<p> 这篇文章的主要贡献如下：</p>
+        <h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。<br><a id="more"></a><br> 这篇文章的主要贡献如下：</p>
 <ol>
 <li>训练了一个大型的卷积神经网络并且效果是目前为止所有方法里面最好的；</li>
 <li>实现了一个基于GPU的2D卷积网络，并且我们使用该框架进行了CNN的训练。文章对CNN进行了很多的优化，提高了网络的训练速度和分类效果。</li>
@@ -308,7 +334,19 @@
 <p>我们可以通过计算两张图片最后一层生成的4096维向量的欧氏距离的大小来确定他们的相似度，距离越小，图片的相似度越高。</p>
 <p>此外，通过欧式距离计算向量的相似度效率不高，我们可以通过训练一个auto-encoder来将这些向量压缩为短的二值编码来提高计算效率。这种图片搜索方式比直接将auto-encoder用于原始的像素效果要好，因为后者没有利用图片的标签信息只是检索有相似的边的模式，而不是检索语义上的相似。</p>
 <p>此外，为了简化实验，本文并没有采用任何非监督的预训练，因为我们已经有足够的计算能力来增大网络的大小，因此不需要增加有标记数据的数量。</p>
-</span>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
       
     </div>
 
@@ -356,32 +394,39 @@
 
     <div class="post-spread">
       
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
 
-        </div>
-
-        
+          </div>
+          
 
   <p>热评文章</p>
   <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
 
 
-        
+          
   <div class="comments" id="comments">
     
       <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
 
 
-      </div>
-
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -409,10 +454,12 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="Ma Shuai" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
+               alt="Ma Shuai" />
           <p class="site-author-name" itemprop="name">Ma Shuai</p>
+          <p class="site-description motion-element" itemprop="description">专注于深度学习</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">专注于深度学习</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -421,19 +468,23 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">14</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -443,18 +494,20 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/ma123shuai" target="_blank">
+                <a href="https://github.com/ma123shuai" target="_blank" title="github">
                   
-                    <i class="fa fa-globe"></i> github
+                    <i class="fa fa-globe"></i>
                   
+                  github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/ma-shuai-41-32" target="_blank">
+                <a href="http://www.zhihu.com/people/ma-shuai-41-32" target="_blank" title="zhihu">
                   
-                    <i class="fa fa-globe"></i> zhihu
+                    <i class="fa fa-globe"></i>
                   
+                  zhihu
                 </a>
               </span>
             
@@ -464,17 +517,13 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             
               
@@ -483,9 +532,6 @@
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u67B6_u6784"><span class="nav-number">2.</span> <span class="nav-text">架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reducing_Overfitting"><span class="nav-number">3.</span> <span class="nav-text">Reducing Overfitting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data_Augmentation"><span class="nav-number">3.1.</span> <span class="nav-text">Data Augmentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dropout"><span class="nav-number">3.2.</span> <span class="nav-text">Dropout</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8BAD_u7EC3_u8FC7_u7A0B"><span class="nav-number">4.</span> <span class="nav-text">训练过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7ED3_u679C_u5206_u6790"><span class="nav-number">5.</span> <span class="nav-text">结果分析</span></a></li></ol></div>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
         </section>
       
 
@@ -493,7 +539,8 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -503,7 +550,7 @@
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Ma Shuai</span>
 </div>
@@ -515,26 +562,88 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
 
+        
 
-
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
-    
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
 
   
 
@@ -560,188 +669,8 @@
   
 
 
-  
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
-
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
-      }
-    };
-  });
-</script>
-
-
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
   <script type="text/x-mathjax-config">
@@ -762,19 +691,12 @@
       }
     });
   </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
   
+
   
-
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"3","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
 
 </body>
 </html>

@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -26,13 +32,36 @@
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="机器学习,流形学习,降维," />
@@ -44,33 +73,42 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
 
 
 
-<meta name="description" content="流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。所谓流行是指一般几何对象的总称，包括各种维度的曲线和曲面等。假设数据是均匀采样于一个高维欧氏空间中的低维流形，流形学习就是从高维采样数据中恢复低维流形结构，即找到高维空间中的低维流形，并求出相">
+<meta name="description" content="流形学习简介流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="流形学习与t-SNE">
 <meta property="og:url" content="http://yoursite.com/2015/08/16/流形学习与t-SNE/index.html">
 <meta property="og:site_name" content="Shuai's blog">
-<meta property="og:description" content="流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。所谓流行是指一般几何对象的总称，包括各种维度的曲线和曲面等。假设数据是均匀采样于一个高维欧氏空间中的低维流形，流形学习就是从高维采样数据中恢复低维流形结构，即找到高维空间中的低维流形，并求出相">
+<meta property="og:description" content="流形学习简介流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。">
 <meta property="og:image" content="http://yoursite.com/image/流行学习与t-SNE/img1.png">
 <meta property="og:image" content="http://yoursite.com/image/流行学习与t-SNE/img2.png">
-<meta property="og:updated_time" content="2016-04-23T02:09:28.000Z">
+<meta property="og:image" content="http://yoursite.com/image/流行学习与t-SNE/img3.png">
+<meta property="og:image" content="http://yoursite.com/image/流行学习与t-SNE/img4.png">
+<meta property="og:image" content="http://yoursite.com/image/流行学习与t-SNE/img5.png">
+<meta property="og:updated_time" content="2016-04-23T11:32:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="流形学习与t-SNE">
-<meta name="twitter:description" content="流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。所谓流行是指一般几何对象的总称，包括各种维度的曲线和曲面等。假设数据是均匀采样于一个高维欧氏空间中的低维流形，流形学习就是从高维采样数据中恢复低维流形结构，即找到高维空间中的低维流形，并求出相">
+<meta name="twitter:description" content="流形学习简介流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: '',
-    sidebar: 'always',
-    motion: true
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -79,15 +117,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -95,7 +124,16 @@
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -124,7 +162,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
@@ -143,16 +181,6 @@
               <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -178,7 +206,6 @@
       
 
       
-      
     </ul>
   
 
@@ -190,8 +217,9 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
@@ -222,7 +250,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-08-16T20:48:10+08:00" content="2015-08-16">
               2015-08-16
             </time>
@@ -230,7 +261,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/机器学习/" itemprop="url" rel="index">
@@ -248,45 +283,67 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/16/流形学习与t-SNE/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/16/流形学习与t-SNE/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/08/16/流形学习与t-SNE/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/16/流形学习与t-SNE/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><p>流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。<br>所谓流行是指一般几何对象的总称，包括各种维度的曲线和曲面等。假设数据是均匀采样于一个高维欧氏空间中的低维流形，<strong>流形学习就是从高维采样数据中恢复低维流形结构</strong>，即找到高维空间中的低维流形，并求出相应的嵌入映射，以实现维数约简或者数据可视化。它是从观测到的现象中去寻找事物的本质，找到产生数据的内在规律。所以，流行学习可以对高维数据进行降维，一般是2或3维，这样我们就能够将数据可视化，从而了解数据内部规律。<br>和以往方法不同的是，在流形学习中有一个假设，就是所<strong>处理的数据采样于一个潜在的流形上，或是说对于这组数据存在一个潜在的流形</strong>。对于不同的方法，对于流形性质的要求各不相同，这也就产生了在流形假设下的各种不同性质的假设，比如在Laplacian Eigenmaps中要假设这个流形是紧致黎曼流形等。对于描述流形上的点，我们要用坐标，而流形上本身是没有坐标的，所以为了表示流形上的点，必须把流形放入外围空间（ambient space）中，那么流形上的点就可以用外围空间的坐标来表示。比如R^3中的球面是个2维的曲面，因为球面上只有两个自由度，但是球面上的点一般是用外围$R^3$空间中的坐标表示的，所以我们看到的R^3中球面上的点有3个数来表示的。当然球面还有柱坐标球坐标等表示。对于R^3中的球面来说，那么流形学习可以粗略的概括为给出R^3中的表示，在保持球面上点某些几何性质的条件下，找出找到一组对应的内蕴坐标（intrinsic coordinate）表示，显然这个表示应该是两维的，因为球面的维数是两维的。这个过程也叫参数化（parameterization）。直观上来说，就是把这个球面尽量好的展开在通过原点的平面上。在PAMI中，这样的低维表示也叫内蕴特征（intrinsic feature）。一般外围空间的维数也叫观察维数，其表示也叫自然坐标（外围空间是欧式空间）表示,在统计中一般叫observation。<br>流形学习方法分为线性的和非线性的两种，线性的流形学习方法如我们熟知的主成份分析（PCA），非线性的流形学习方法如等距映射（Isomap）、拉普拉斯特征映射（Laplacian eigenmaps，LE）、局部线性嵌入(Locally-linear embedding，LLE)。最近看了t-SNE这种流行学习方法，所以这篇博客就主要讲t-SNE了。</p>
+        <h2 id="u6D41_u5F62_u5B66_u4E60_u7B80_u4ECB"><a href="#u6D41_u5F62_u5B66_u4E60_u7B80_u4ECB" class="headerlink" title="流形学习简介"></a>流形学习简介</h2><p>流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。<br><a id="more"></a></p>
+<p>所谓流行是指一般几何对象的总称，包括各种维度的曲线和曲面等。假设数据是均匀采样于一个高维欧氏空间中的低维流形，<strong>流形学习就是从高维采样数据中恢复低维流形结构</strong>，即找到高维空间中的低维流形，并求出相应的嵌入映射，以实现维数约简或者数据可视化。它是从观测到的现象中去寻找事物的本质，找到产生数据的内在规律。所以，流行学习可以对高维数据进行降维，一般是2或3维，这样我们就能够将数据可视化，从而了解数据内部规律。<br>和以往方法不同的是，在流形学习中有一个假设，就是所<strong>处理的数据采样于一个潜在的流形上，或是说对于这组数据存在一个潜在的流形</strong>。对于不同的方法，对于流形性质的要求各不相同，这也就产生了在流形假设下的各种不同性质的假设，比如在Laplacian Eigenmaps中要假设这个流形是紧致黎曼流形等。对于描述流形上的点，我们要用坐标，而流形上本身是没有坐标的，所以为了表示流形上的点，必须把流形放入外围空间（ambient space）中，那么流形上的点就可以用外围空间的坐标来表示。比如R^3中的球面是个2维的曲面，因为球面上只有两个自由度，但是球面上的点一般是用外围$R^3$空间中的坐标表示的，所以我们看到的R^3中球面上的点有3个数来表示的。当然球面还有柱坐标球坐标等表示。对于R^3中的球面来说，那么流形学习可以粗略的概括为给出R^3中的表示，在保持球面上点某些几何性质的条件下，找出找到一组对应的内蕴坐标（intrinsic coordinate）表示，显然这个表示应该是两维的，因为球面的维数是两维的。这个过程也叫参数化（parameterization）。直观上来说，就是把这个球面尽量好的展开在通过原点的平面上。在PAMI中，这样的低维表示也叫内蕴特征（intrinsic feature）。一般外围空间的维数也叫观察维数，其表示也叫自然坐标（外围空间是欧式空间）表示,在统计中一般叫observation。<br>流形学习方法分为线性的和非线性的两种，线性的流形学习方法如我们熟知的主成份分析（PCA），非线性的流形学习方法如等距映射（Isomap）、拉普拉斯特征映射（Laplacian eigenmaps，LE）、局部线性嵌入(Locally-linear embedding，LLE)。最近看了t-SNE这种流行学习方法，所以这篇博客就主要讲t-SNE了。</p>
 <h2 id="u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316"><a href="#u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316" class="headerlink" title="数据 降维与可视化"></a>数据 降维与可视化</h2><p>对于数据降维，有一张图总结的很好，如下图所示：<br><img src="/image/流行学习与t-SNE/img1.png" alt="img1"><br>图中基本上包括了大多数流形学习方法，不过这里面没有t-SNE,相比于其他算法，t-SNE算是比较新的一种方法，也是效果比较好的一种方法。t-SNE是深度学习大牛Hinton在2008年提出的，<a href="http://lvdmaaten.github.io/tsne/有对t-SNE有个主页介绍：tsne,包括论文以及各种编程语言的实现。" target="_blank" rel="external">http://lvdmaaten.github.io/tsne/有对t-SNE有个主页介绍：tsne,包括论文以及各种编程语言的实现。</a></p>
 <h2 id="u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29"><a href="#u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29" class="headerlink" title="相对熵 (KL散度)"></a>相对熵 (KL散度)</h2><p>在讲t-SNE之前，先讲一下KL散度。KL散度是两个概率分布P和Q差别的非对称性的度量。 KL散度是用来 度量使用基于Q的编码来编码来自P的样本平均所需的额外的比特个数。 典型情况下，P表示数据的真实分布，Q表示数据的理论分布，模型分布，或P的近似分布。<br>$D(Q||P)=∑Q(x)[log(1/P(x))] - ∑Q(x)[log[1/Q(x)]]<br>         =∑Q(x)log[Q(x)/P(x)]$</p>
-<p>∑Q(x)[log(1/P(x))] 表示使用原来的编码方式得到的比特数的期望<br>log(1/P(x)) 表示使用原来的编码方式，x出现1次的期望。编码长度Q(x) 表示现在x出现的概率<br>由于-log(u)是凸函数，因此有下面的不等式<br>$DKL(Q||P) = -∑x∈XQ(x)log[P(x)/Q(x)] = E[-logP(x)/Q(x)] ≥ -logE[P(x)/Q(x)] = -log∑x∈XQ(x)P(x)/Q(x) = 0$</p>
+<p>∑Q(x)[log(1/P(x))] 表示使用原来的编码方式得到的比特数的期望<br>log(1/P(x)) 表示使用原来的编码方式，x出现1次的期望。编码长度Q(x) 表示现在x出现的概率<br>由于-log(u)是凸函数，因此有下面的不等式<br>$$DKL(Q||P) = -∑x∈XQ(x)log[P(x)/Q(x)] = E[-logP(x)/Q(x)] ≥ -logE[P(x)/Q(x)] = -log∑x∈XQ(x)P(x)/Q(x) = 0$$</p>
 <p>即KL-divergence始终是大于等于0的。当且仅当两分布相同时，KL-divergence等于0。</p>
-<p>举一个实际的例子吧：比如有四个类别，一个方法A得到四个类别的概率分别是0.1,0.2,0.3,0.4。另一种方法B（或者说是事实情况）是得到四个类别的概率分别是0.4,0.3,0.2,0.1,那么这两个分布的<br>$ KL-Distance(A,B)=0.1<em>log(0.1/0.4)+0.2</em>log(0.2/0.3)+0.3<em>log(0.3/0.2)+0.4</em>log(0.4/0.1) $<br>相对熵可以衡量两个随机分布之间的距离，当两个随机分布相同时，它们的相对熵为零，当两个随机分布的差别增大时，它们的相对熵也会增大。所以相对熵（KL散度）可以用于比较文本的相似度，先统计出词的频率，然后计算KL散度就行了。另外，在多指标系统评估中，指标权重分配是一个重点和难点，通过相对熵可以处理。</p>
+<p>举一个实际的例子吧：比如有四个类别，一个方法A得到四个类别的概率分别是0.1,0.2,0.3,0.4。另一种方法B（或者说是事实情况）是得到四个类别的概率分别是0.4,0.3,0.2,0.1,那么这两个分布的<br>KL-Distance(A,B)=0.1<em>log {0.1/0.4}+0.2</em>log {0.2/0.3}+0.3<em>log {0.3/0.2}+0.4</em>log {0.4/0.1}<br>相对熵可以衡量两个随机分布之间的距离，当两个随机分布相同时，它们的相对熵为零，当两个随机分布的差别增大时，它们的相对熵也会增大。所以相对熵（KL散度）可以用于比较文本的相似度，先统计出词的频率，然后计算KL散度就行了。另外，在多指标系统评估中，指标权重分配是一个重点和难点，通过相对熵可以处理。</p>
 <h2 id="t-SNE"><a href="#t-SNE" class="headerlink" title="t-SNE"></a>t-SNE</h2><p>t-distributed stochastic neighbor embedding，也是一种流体学习方法（manifold learning），通过保持数据点的相邻关系把数据从高维空间中降低到2维平面上，对高维数据可视化的效果非常好。<br>它是先根据数据点在高纬度空间的距离，计算一个条件概率分布，xi和xj是数据点在高纬度空间的向量。再计算另一个条件概率分布，yi和yj是数据点映射到低纬度空间后得到的向量。用KL散度（Kullback–Leibler divergence）来衡量y分布与x分布的相似性，然后通过优化上面两个方程中的参数，使得所有点的KL散度和最小。</p>
 <h3 id="u7B97_u6CD5_u7B80_u8FF0"><a href="#u7B97_u6CD5_u7B80_u8FF0" class="headerlink" title="算法简述"></a>算法简述</h3><p><a href="http://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf" target="_blank" rel="external">Visualizing High-Dimensional Data Using t-SNE</a>这篇文章详细的阐述了t-SNE算法的原理。t-SNE是Stochastic Neighbor Embedding的变种。t-SNE与SNE的主要区别有：</p>
 <ul>
 <li>t-SNE使用了SNE cost function的对称版本</li>
 <li>在低维空间里t-SNE使用t-分布而不是高斯分布去计算相似度</li>
 </ul>
-<p>对每个数据点i，和每个潜在的邻居j，首先计算一个条件概率,表示i选择j为邻居的概率：$ p_{j|i}=\frac{exp(-||x_i-x_j||^2/2\sigma<em>i ^2)}{\sum</em>{k\neq i}exp(-||x_i-x_k||^2/2\sigma_i ^2)} $<br>$\sigma_i$是以点$x_i$为中心的高斯分布的方差，是通过二分法找到的能使分布的熵等于$ log(Perp) $，Perp是perplexity，用来衡量点$x_i$有效邻居的个数，值可以设置在5-50之间，是$\sigma_i$的单调函数。<br>$ Perp(P_i)=2^{H(P_i)} \ \ \ \ H(P_i)=-\sum<em>j p</em>{j|i}log<em>2 p</em>{j|i} $<br>接着我们定义数据点间的相似性为对称的条件概率，<br>$ p<em>{ij}=\frac{p</em>{j|i}+p_{i|j}}{2N} $<br>如下图所示，为一组数据点的距离矩阵，σ为常量的相似性矩阵和σ为变量时的相似性矩阵：<br><img src="/image/流行学习与t-SNE/img2.png" alt="img1"><br>可以看到数据已经呈现出10组，分别对应10个数字。<br>现在使用1自由度的t-分布来定义低维空间数据点的相似性矩阵，之所以uid使用自由度为1的t-分布来定义，是因为它的结果形式刚好为$(1+||y_i -y<em>j||^2)^{-1}$,于是相似度表示如下：<br>$q</em>{ij}=\frac{(1+||y_i -y<em>j||^2)^{-1}}{\sum</em>{k\neq l}(1+||y_k-y_l||^2)^{-1}}$<br>为了找到一组低维空间的坐标使这两个分布尽可能相似，可以使用KL散度来衡量：</p>
-<p>$C=KL(P||Q)=\sum <em>{i,j}p</em>{ij} \frac{p<em>{ij}}{q</em>{ij}}$</p>
-<p>可以使用梯度下降最小化这个得分，原始论文中有详细的求导过程，这里我们只写出结果：<br>$\frac{\delta C}{\delta y_i}=4\sum <em>j (p</em>{ij}-q_{ij})(y_i -y_j)(1+||y_i -y_j||^2)^{-1}$</p>
-<p>这个公式有很好物理意义。$p<em>{ij}-q</em>{ij}$为正，说明$x_i$在高维空间和$x_j$相似度高，而低维空间相似度低，$x_i$将会靠近$x_j$，反之则会远离$x_j$。参考文献[4]中有动画阐述了整个过程。<br>在论文最后的结果中，t-SNE的效果要比PCA之类的好很多。</p>
+<p>对每个数据点i，和每个潜在的邻居j，首先计算一个条件概率,表示i选择j为邻居的概率：$$p_{j|i}=\frac{exp(-||x_i-x_j||^2/2\sigma_i ^2)}{\sum_{k\neq i}exp(-||x_i-x_k||^2/2\sigma_i ^2)}$$<br>$\sigma_i$是以点$x_i$为中心的高斯分布的方差，是通过二分法找到的能使分布的熵等于$log Perp$，Perp是perplexity，用来衡量点$x_i$有效邻居的个数，值可以设置在5-50之间，是$sigma_i$的单调函数。<br>$$ Perp(P_i)=2^{H(P_i)} \ \ \ \ H(P_i)=-\sum_j p_{j|i}log_2 p_{j|i} $$<br>接着我们定义数据点间的相似性为对称的条件概率，<br>$$ p_{ij}=\frac{p_{j|i}+p_{i|j}}{2N} $$<br>如下图所示，为一组数据点的距离矩阵，σ为常量的相似性矩阵和σ为变量时的相似性矩阵：<br><img src="/image/流行学习与t-SNE/img2.png" alt="img1"><br>可以看到数据已经呈现出10组，分别对应10个数字。<br>现在使用1自由度的t-分布来定义低维空间数据点的相似性矩阵，之所以uid使用自由度为1的t-分布来定义，是因为它的结果形式刚好为$(1+||y_i -y_j||^2)^{-1}$,于是相似度表示如下：<br>$$q_{ij}=\frac{(1+||y_i -y_j||^2)^{-1}}{\sum_{k\neq l}(1+||y_k-y_l||^2)^{-1}}$$<br>为了找到一组低维空间的坐标使这两个分布尽可能相似，可以使用KL散度来衡量：</p>
+<p>$$C=KL(P||Q)=\sum_{i,j}p_{ij} \frac{p_{ij}}{q_{ij}}$$</p>
+<p>可以使用梯度下降最小化这个得分，原始论文中有详细的求导过程，这里我们只写出结果：<br>$$\frac{\delta C}{\delta y_i}=4\sum _j (p_{ij}-q_{ij})(y_i -y_j)(1+||y_i -y_j||^2)^{-1}$$</p>
+<p>这个公式有很好物理意义。$p_{ij}-q_{ij}$为正，说明$x_i$在高维空间和$x_j$相似度高，而低维空间相似度低，$x_i$将会靠近$x_j$，反之则会远离$x_j$。参考文献[4]中有动画阐述了整个过程。<br>在论文最后的结果中，t-SNE的效果要比PCA之类的好很多。</p>
+<h3 id="u5B9E_u9A8C"><a href="#u5B9E_u9A8C" class="headerlink" title="实验"></a>实验</h3><p>实验使用sklearn自带的手写数据集，首先加载数据，代码如下:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d.axes3d <span class="keyword">import</span> Axes3D</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> (manifold, datasets, decomposition, ensemble, lda,random_projection)</span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment">#加载数据，显示数据</span></span><br><span class="line">digits = datasets.load_digits(n_class=<span class="number">7</span>)</span><br><span class="line">X = digits.data</span><br><span class="line">y = digits.target</span><br><span class="line"><span class="keyword">print</span> X.shape</span><br><span class="line">n_img_per_row = <span class="number">20</span></span><br><span class="line">img = np.zeros((<span class="number">10</span> * n_img_per_row, <span class="number">10</span> * n_img_per_row))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(n_img_per_row):</span><br><span class="line">    ix = <span class="number">10</span> * i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(n_img_per_row):</span><br><span class="line">        iy = <span class="number">10</span> * j + <span class="number">1</span></span><br><span class="line">        img[ix:ix + <span class="number">8</span>, iy:iy + <span class="number">8</span>] = X[i * n_img_per_row + j].reshape((<span class="number">8</span>, <span class="number">8</span>))</span><br><span class="line">plt.imshow(img, cmap=plt.cm.binary)</span><br><span class="line">plt.title(<span class="string">'A selection from the 64-dimensional digits dataset'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#LLE,Isomap,LTSA需要设置n_neighbors这个参数</span></span><br><span class="line">n_neighbors = <span class="number">30</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/image/流行学习与t-SNE/img3.png" alt="img3"><br>将降维后的数据可视化，分别可视化成二维和三维：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment"># 将降维后的数据可视化,2维</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_embedding_2d</span><span class="params">(X, title=None)</span>:</span></span><br><span class="line">    <span class="comment">#坐标缩放到[0,1]区间</span></span><br><span class="line">    x_min, x_max = np.min(X,axis=<span class="number">0</span>), np.max(X,axis=<span class="number">0</span>)</span><br><span class="line">    X = (X - x_min) / (x_max - x_min)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#降维后的坐标为（X[i, 0], X[i, 1]），在该位置画出对应的digits</span></span><br><span class="line">    fig = plt.figure()</span><br><span class="line">    ax = fig.add_subplot(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(X.shape[<span class="number">0</span>]):</span><br><span class="line">        ax.text(X[i, <span class="number">0</span>], X[i, <span class="number">1</span>],str(digits.target[i]),</span><br><span class="line">                 color=plt.cm.Set1(y[i] / <span class="number">10.</span>),</span><br><span class="line">                 fontdict=&#123;<span class="string">'weight'</span>: <span class="string">'bold'</span>, <span class="string">'size'</span>: <span class="number">9</span>&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> title <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">        plt.title(title)</span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment">#将降维后的数据可视化,3维</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_embedding_3d</span><span class="params">(X, title=None)</span>:</span></span><br><span class="line">    <span class="comment">#坐标缩放到[0,1]区间</span></span><br><span class="line">    x_min, x_max = np.min(X,axis=<span class="number">0</span>), np.max(X,axis=<span class="number">0</span>)</span><br><span class="line">    X = (X - x_min) / (x_max - x_min)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#降维后的坐标为（X[i, 0], X[i, 1],X[i,2]），在该位置画出对应的digits</span></span><br><span class="line">    fig = plt.figure()</span><br><span class="line">    ax = fig.add_subplot(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, projection=<span class="string">'3d'</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(X.shape[<span class="number">0</span>]):</span><br><span class="line">        ax.text(X[i, <span class="number">0</span>], X[i, <span class="number">1</span>], X[i,<span class="number">2</span>],str(digits.target[i]),</span><br><span class="line">                 color=plt.cm.Set1(y[i] / <span class="number">10.</span>),</span><br><span class="line">                 fontdict=&#123;<span class="string">'weight'</span>: <span class="string">'bold'</span>, <span class="string">'size'</span>: <span class="number">9</span>&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> title <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">        plt.title(title)</span><br></pre></td></tr></table></figure></p>
+<p>用PCA, LDA t-SNE等方法分别对数据进行降维，并将其可视化：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment">#随机映射</span></span><br><span class="line">print(<span class="string">"Computing random projection"</span>)</span><br><span class="line">rp = random_projection.SparseRandomProjection(n_components=<span class="number">2</span>, random_state=<span class="number">42</span>)</span><br><span class="line">X_projected = rp.fit_transform(X)</span><br><span class="line">plot_embedding_2d(X_projected, <span class="string">"Random Projection"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment">#PCA</span></span><br><span class="line">print(<span class="string">"Computing PCA projection"</span>)</span><br><span class="line">t0 = time()</span><br><span class="line">X_pca = decomposition.TruncatedSVD(n_components=<span class="number">3</span>).fit_transform(X)</span><br><span class="line">plot_embedding_2d(X_pca[:,<span class="number">0</span>:<span class="number">2</span>],<span class="string">"PCA 2D"</span>)</span><br><span class="line">plot_embedding_3d(X_pca,<span class="string">"PCA 3D (time %.2fs)"</span> %(time() - t0))</span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment">#LDA</span></span><br><span class="line">print(<span class="string">"Computing LDA projection"</span>)</span><br><span class="line">X2 = X.copy()</span><br><span class="line">X2.flat[::X.shape[<span class="number">1</span>] + <span class="number">1</span>] += <span class="number">0.01</span>  <span class="comment"># Make X invertible</span></span><br><span class="line">t0 = time()</span><br><span class="line">X_lda = lda.LDA(n_components=<span class="number">3</span>).fit_transform(X2, y)</span><br><span class="line">plot_embedding_2d(X_lda[:,<span class="number">0</span>:<span class="number">2</span>],<span class="string">"LDA 2D"</span> )</span><br><span class="line">plot_embedding_3d(X_lda,<span class="string">"LDA 3D (time %.2fs)"</span> %(time() - t0))</span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment"># LTSA</span></span><br><span class="line">print(<span class="string">"Computing LTSA embedding"</span>)</span><br><span class="line">clf = manifold.LocallyLinearEmbedding(n_neighbors, n_components=<span class="number">2</span>,method=<span class="string">'ltsa'</span>)</span><br><span class="line">t0 = time()</span><br><span class="line">X_ltsa = clf.fit_transform(X)</span><br><span class="line">print(<span class="string">"Done. Reconstruction error: %g"</span> % clf.reconstruction_error_)</span><br><span class="line">plot_embedding_2d(X_ltsa,<span class="string">"Local Tangent Space Alignment (time %.2fs)"</span> %(time() - t0))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment"># t-SNE</span></span><br><span class="line">print(<span class="string">"Computing t-SNE embedding"</span>)</span><br><span class="line">tsne = manifold.TSNE(n_components=<span class="number">3</span>, init=<span class="string">'pca'</span>, random_state=<span class="number">0</span>)</span><br><span class="line">t0 = time()</span><br><span class="line">X_tsne = tsne.fit_transform(X)</span><br><span class="line"><span class="keyword">print</span> X_tsne.shape</span><br><span class="line">plot_embedding_2d(X_tsne[:,<span class="number">0</span>:<span class="number">2</span>],<span class="string">"t-SNE 2D"</span>)</span><br><span class="line">plot_embedding_3d(X_tsne,<span class="string">"t-SNE 3D (time %.2fs)"</span> %(time() - t0))</span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment">#Isomap</span></span><br><span class="line">print(<span class="string">"Computing Isomap embedding"</span>)</span><br><span class="line">t0 = time()</span><br><span class="line">X_iso = manifold.Isomap(n_neighbors, n_components=<span class="number">2</span>).fit_transform(X)</span><br><span class="line">print(<span class="string">"Done."</span>)</span><br><span class="line">plot_embedding_2d(X_iso,<span class="string">"Isomap (time %.2fs)"</span> %(time() - t0))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#%%</span></span><br><span class="line"><span class="comment">#standard LLE</span></span><br><span class="line">print(<span class="string">"Computing LLE embedding"</span>)</span><br><span class="line">clf = manifold.LocallyLinearEmbedding(n_neighbors, n_components=<span class="number">2</span>,method=<span class="string">'standard'</span>)</span><br><span class="line">t0 = time()</span><br><span class="line">X_lle = clf.fit_transform(X)</span><br><span class="line">print(<span class="string">"Done. Reconstruction error: %g"</span> % clf.reconstruction_error_)</span><br><span class="line">plot_embedding_2d(X_lle,<span class="string">"Locally Linear Embedding (time %.2fs)"</span> %(time() - t0))</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<p>相关的结果图如下，可以看到，t-SNE的虽然耗时较长，但是效果很好。</p>
+<p><img src="/image/流行学习与t-SNE/img4.png" alt="img4"><br><img src="/image/流行学习与t-SNE/img5.png" alt="img5"></p>
 <p>参考文献：[1]<a href="https://segmentfault.com/a/1190000000641079#articleHeader2" target="_blank" rel="external">https://segmentfault.com/a/1190000000641079#articleHeader2</a><br>[2]<a href="http://blog.csdn.net/chl033/article/details/6107042" target="_blank" rel="external">流行学习综述</a><br>[3]<a href="http://blog.csdn.net/u012162613/article/details/45920827" target="_blank" rel="external">http://blog.csdn.net/u012162613/article/details/45920827</a><br>[4]<a href="http://mtpgm.com/2015/08/17/t-sne/" target="_blank" rel="external">http://mtpgm.com/2015/08/17/t-sne/</a></p>
-</span>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
       
     </div>
 
@@ -332,32 +389,39 @@
 
     <div class="post-spread">
       
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
 
-        </div>
-
-        
+          </div>
+          
 
   <p>热评文章</p>
   <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
 
 
-        
+          
   <div class="comments" id="comments">
     
       <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
 
 
-      </div>
-
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -385,10 +449,12 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="Ma Shuai" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
+               alt="Ma Shuai" />
           <p class="site-author-name" itemprop="name">Ma Shuai</p>
+          <p class="site-description motion-element" itemprop="description">专注于深度学习</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">专注于深度学习</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -397,19 +463,23 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">14</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -419,18 +489,20 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/ma123shuai" target="_blank">
+                <a href="https://github.com/ma123shuai" target="_blank" title="github">
                   
-                    <i class="fa fa-globe"></i> github
+                    <i class="fa fa-globe"></i>
                   
+                  github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/ma-shuai-41-32" target="_blank">
+                <a href="http://www.zhihu.com/people/ma-shuai-41-32" target="_blank" title="zhihu">
                   
-                    <i class="fa fa-globe"></i> zhihu
+                    <i class="fa fa-globe"></i>
                   
+                  zhihu
                 </a>
               </span>
             
@@ -440,27 +512,20 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316"><span class="nav-number">1.</span> <span class="nav-text">数据 降维与可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29"><span class="nav-number">2.</span> <span class="nav-text">相对熵 (KL散度)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#t-SNE"><span class="nav-number">3.</span> <span class="nav-text">t-SNE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7B97_u6CD5_u7B80_u8FF0"><span class="nav-number">3.1.</span> <span class="nav-text">算法简述</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u6D41_u5F62_u5B66_u4E60_u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">流形学习简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316"><span class="nav-number">2.</span> <span class="nav-text">数据 降维与可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29"><span class="nav-number">3.</span> <span class="nav-text">相对熵 (KL散度)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#t-SNE"><span class="nav-number">4.</span> <span class="nav-text">t-SNE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7B97_u6CD5_u7B80_u8FF0"><span class="nav-number">4.1.</span> <span class="nav-text">算法简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B9E_u9A8C"><span class="nav-number">4.2.</span> <span class="nav-text">实验</span></a></li></ol></li></ol></div>
             
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
           </div>
         </section>
       
@@ -469,7 +534,8 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -479,7 +545,7 @@
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Ma Shuai</span>
 </div>
@@ -491,26 +557,88 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
 
+        
 
-
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
-    
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
 
   
 
@@ -536,188 +664,8 @@
   
 
 
-  
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
-
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
-      }
-    };
-  });
-</script>
-
-
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
   <script type="text/x-mathjax-config">
@@ -738,19 +686,12 @@
       }
     });
   </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
   
+
   
-
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"3","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
 
 </body>
 </html>

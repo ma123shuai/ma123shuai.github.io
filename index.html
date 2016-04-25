@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -26,13 +32,36 @@
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -44,7 +73,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -64,10 +93,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: '',
-    sidebar: 'always',
-    motion: true
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -76,15 +111,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -92,9 +118,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -123,7 +158,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
@@ -142,16 +177,6 @@
               <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -177,7 +202,6 @@
       
 
       
-      
     </ul>
   
 
@@ -189,24 +213,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-      
-      
-        
-        
-        
-      
-
-      
-    
-
     
       
 
@@ -239,7 +249,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-04-22T15:56:25+08:00" content="2016-04-22">
               2016-04-22
             </time>
@@ -247,7 +260,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/招聘/" itemprop="url" rel="index">
@@ -265,45 +282,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/04/22/2016腾讯 基础研究实习生笔试+面试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/22/2016腾讯 基础研究实习生笔试+面试/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2016/04/22/2016腾讯 基础研究实习生笔试+面试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/22/2016腾讯 基础研究实习生笔试+面试/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="u7B14_u8BD5"><a href="#u7B14_u8BD5" class="headerlink" title="笔试"></a>笔试</h2><p>笔试前几天看了一下以前的基础研究笔试题，发现大部分都是数学，便稍微突击了一下数学，可惜没记住多少，考的时候考的数学基本靠微弱的记忆去做的。笔试分两部分，第一部分60分钟，25道选择题，大部分是概率论统计学和线性代数知识，也有少数SQL和数据结构知识，笔试的时间还是比较紧的，有一定计算量，而且不能用计算器，做到后面时间有点不够了，行列式计算直接随便蒙了个选项。第二部分是三道开放题，第一题是关于大数据的，谈谈自己对大数据的理解（这是什么鬼题，根本没什么好谈的啊，表示对大数据只是了解一点概念而已），第二题是关于推荐系统的，你觉得当前的推荐系统有什么缺点，提出一些技术上的建议，我就根据自己以前做过的电影推荐写了一点技术理解，第三题是关于数据分析的。总得来说这三道题属于很开放性的题目，感觉自己答得挺一般的。不过还是收到了面试通知。</p>
-<h2 id="u4E00_u9762"><a href="#u4E00_u9762" class="headerlink" title="一面"></a>一面</h2><p>以前的面试都是在大学城，没想到这次却要跑到东圃喜来登酒店去面试，一面人好多。等了快1个小时才轮到我。面试官很随和，看着简历对简历上的项目进行提问，我做的项目比较偏深度学习，他缺一直在问我的一个文本分类的项目，项目如何特征提取，还有用到的分类算法，我说random forest，lr，SVM，最后做了集成，他问我这些算法的优缺点，适用什么样的场景。这个当时感觉答得不太好，算法原理还是懂的，各种适应场景就不太了解了。他还问我为什么降维，降维和特征有什么区别，LSA的原理。总的来说，这个面试官应该是做文本方面的，对深度学习在图像方面的应用是不怎么了解的，所以一直揪着我的文本 项目问，而那个文本项目我并没有投入太多精力，所以也没给面试官留下很好的印象吧。后面我又强行扯到我的深度学习项目上，给他描述了一番。他也问了我一些深度学习方面的问题，他说还想问一下我笔试时候的题目，不过因为已经12点半了，所以就先不问了。然后就结束了面试。面了30度分钟，出来心里感觉毛毛的。不过还是收到了二面的通知。</p>
-<h2 id="u4E8C_u9762"><a href="#u4E8C_u9762" class="headerlink" title="二面"></a>二面</h2><p>二面是在大学城雅乐轩酒店，到二面的时候就没几个人了，看来腾讯主要是一面大面积刷人。二面面试官胖胖的，一看就是骨灰级程序员啊，也有可能是部门经理。一开始也是问项目，问我如何用卷积神经网络做分割，卷积和pooling的原理，总之就是各种问项目细节。还问我如何将深度学习应用到文本分类上，我说可以用word2vec为每个词生成一个词向量，然后每个句子就可以用矩阵来表示，这样就可以像对图像那样对词矩阵进行卷积和pooling了。他问为什么这样做有用，后面又讨论一些深度学习的东西，我又给他介绍了RNN在文本和语音模型上的应用。接着他又开始问我的文本项目，问项目中的细节，顺便让我写了个lr的表达式。项目方面大概讨论了一个小时，接着他又让我随手写几个程序，第一个 是判断两个单向链表是否相交，第二个是有$2^{32}$个无符号整数，其中有一个数是重复的，求出哪个数是重复的，我说可以hash处理，不过比较耗空间，他问我有没有节省空间的方法，我想了一会没想出来，他稍微提示了一下，我才发现这数是有规律的，unsigned int的范围为0-$2^{32}-1$，所以这些数为0-$2^{32}-1$加某个重复数字，那其实可以先求均值，再全部减均值再想加，得到的和即为重复的数字。第三道题是一道概率题，有两家医院，一大一小，大医院每天有1000个新生儿，小医院每天有100个新生儿，问哪家医院男孩总数大于60%的可能性大，我觉得的是小医院，当时没证出来，回来后发现可以用中心极限定理来验证。最后又问我有什么问题，我说让他评价我有哪些需要改进的地方，他笑着说你们怎么都问这个问题，我们也很难答的，哈哈，我又问了他实习生入职培训的问题，然后就结束了面试。大概面了1个半小时。感觉自己这次面试还是不错的，有些问题跟面试官讨论的比较深入，而且刚好是自己擅长的方面，所以加分点还是很多的。感觉这个面试官应该是主管级别的，会问技术，但是更多的是看你对技术的理解程度如何，而不仅仅是调调API。</p>
-<h2 id="HR_u9762"><a href="#HR_u9762" class="headerlink" title="HR面"></a>HR面</h2><p>中午面完，下午就收到HR面的通知了。HR面就比较轻松了，聊了一下自己的的爱好，期望工作地，家庭情况，以及最自豪的事情最惋惜的事情之类的，还有自己对未来的打算，还问我作为家里面的长子在这么远的地方工作父母会不会有意见之类的。最后 还问了一下是否有女朋友。大概聊了20多分钟吧。</p>
-<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>数学很重要，线性代数，概率论数理统计这些基本的数学要懂，不要求做太复杂的运算。</li>
-<li>项目要熟烂于心，并且能够清晰的讲出来，项目中使用的技术、算法要懂，面试官一般会对这些进行提问，别让人觉得你只会调调API，原理要熟悉，最好自己实现过简单的算法和看着部分源码。</li>
-<li>对于做机器学习的同学来说，SVM，boosting,RF，LR，决策树，贝叶斯，EM等基本的机器学习方法要很熟悉，还有一些降维算法如PCA等，还有特征选择算法，梯度下降，拟牛顿法等优化算法。这些都要很熟悉。我有的同学面阿里的时候被狂问机器学习算法，L0,L1,L2范数各种问。这些基础一定要搞懂。</li>
-<li>计算机基础也很重要，笔试和面试的时候也会涉及很多，如数据库，程序设计语言等。</li>
-<li>最后，面试是一个双向选择的过程，最后没进不代表你实力不行，也可能是你的技能点和面试官需要的不匹配，比如做图像的去面文本类的职位，如果完全没有文本经验的话是很难进的，所以这也跟运气有关，不过也不要气馁，相信自己的实力，最后一定会拿到好的offer。</li>
-</ul>
-
-            
-          </span>
+          <h2 id="u7B14_u8BD5"><a href="#u7B14_u8BD5" class="headerlink" title="笔试"></a>笔试</h2><p>笔试前几天看了一下以前的基础研究笔试题，发现大部分都是数学，便稍微突击了一下数学，可惜没记住多少，考的时候考的数学基本靠微弱的记忆去做的。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/22/2016腾讯 基础研究实习生笔试+面试/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -352,7 +371,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-22T20:02:03+08:00" content="2016-01-22">
               2016-01-22
             </time>
@@ -360,7 +382,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/deep-learning/" itemprop="url" rel="index">
@@ -378,43 +404,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/01/22/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/22/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2016/01/22/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/22/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>#SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation<br>这篇论文是剑桥大学做road scene understanding applications的小组发表的，主要是在FCN的基础上提出了一种全新的semantic pixel-wise segmentation框架，叫做SegNet。segNet包含Encoder network和对应的decoder network两部分，后面还有一个pixel-wise classification layer（softmax）。encoder network是VGG16去掉三个全连接层后剩下的13层网络，decoder network是与encoder network相对应的13层卷积层，encoder中每个max-pooling都在decoder中对应一个unpooling。SegNet设计的目的是用于road scene understanding applications，因此它在效率和内存使用方面都很高效，SegNet 在路面场景分割效果如下图，web demo link <a href="http://mi.eng.cam.ac.uk/projects/segnet/" target="_blank" rel="external">http://mi.eng.cam.ac.uk/projects/segnet/</a><br><img src="/image/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion/Figure1.png" alt="Figure1"></p>
-<h1 id="ARCHITECTURE"><a href="#ARCHITECTURE" class="headerlink" title="ARCHITECTURE"></a>ARCHITECTURE</h1><p><img src="/image/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion//Figure2.png" alt="Figure2"><br>框架图如上图所示，前13层卷积层与VGG16的卷积层相同，后面的decoder network部分，作者使用了Reusing max-pooling indices技术，简单地说，就是在每次max-pooling的时候，因为做的是2x2pooling，所以可以用2bit来记录最大值的位置，然后在decoder network中upsampling的时候进行unpooling，把输入的每个值放入记录的2x2块中最大值的位置，其他位置设为0，这样就完成了upsampling的过程，然后就可以继续卷积了，如下图所示。<br><img src="/image/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion//Figure3.png" alt="Figure3"><br>复用max-pooling的优点如下：</p>
-<ul>
-<li>It improves boundary delineation.</li>
-<li>it reduces the number of parameters enabling end-to-end training.</li>
-<li><p>This form of upsampling can be incorporated into any encoder-decoder architecture with only a little modification.</p>
-<p>其实早在Learning Deconvolution Network for Semantic Segmentation这篇论文中，作者就在FCN的基础上提出了这种对称的convolution-deconvolution network，还有max-pooling- unpooling技术，不过在那篇文章里面在decoder部分用的是deconvolution，而在本篇文章里面用的是convolution技术，不过unsampling都是由unpooling完成的，所以convolution部分并没有改变feature map的尺寸，所以用deconvolution还是convolution已经没什么区别了吧，个人见解。<br>大致技术就这么多，剩下的就是实验部分了。</p>
-</li>
-</ul>
-
-            
-          </span>
+          <p>#SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation<br>这篇论文是剑桥大学做road scene understanding applications的小组发表的，主要是在FCN的基础上提出了一种全新的semantic pixel-wise segmentation框架，叫做SegNet。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/22/Deep learning论文笔记四： SegNet：A deep convolutional encoder-decoder architecture for image Segmentaion/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -463,7 +493,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-23T19:51:16+08:00" content="2015-12-23">
               2015-12-23
             </time>
@@ -471,7 +504,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/deep-learning/" itemprop="url" rel="index">
@@ -489,77 +526,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/23/A-Fully-Convolutional-Network-for-Left-Ventricle-Segmentation/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/23/A-Fully-Convolutional-Network-for-Left-Ventricle-Segmentation/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/12/23/A-Fully-Convolutional-Network-for-Left-Ventricle-Segmentation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/23/A-Fully-Convolutional-Network-for-Left-Ventricle-Segmentation/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h1 id="A_Fully_Convolutional_Network_for_Left_Ventricle_Segmentation"><a href="#A_Fully_Convolutional_Network_for_Left_Ventricle_Segmentation" class="headerlink" title="A Fully Convolutional Network for Left Ventricle Segmentation"></a>A Fully Convolutional Network for Left Ventricle Segmentation</h1><p><strong> by Vu Tran, Data Scientist, Booz Allen Hamilton </strong></p>
-<h2 id="Development_Environment"><a href="#Development_Environment" class="headerlink" title="Development Environment"></a>Development Environment</h2><p>获得FCN的步骤如下,FCN尚未合并到caffe中去，因此需要单独切换branch，然后编译<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/longjon/caffe.git</span><br><span class="line">mv caffe caffe_FCN</span><br><span class="line">cd caffe_FCN</span><br><span class="line">git checkout future</span><br></pre></td></tr></table></figure></p>
-<p>为了能够查看DICOM格式的图片，要安装如下软件：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> pydicom</span><br></pre></td></tr></table></figure></p>
-<p>输入ipython notebook pylib inline，打开ipython，然后运行如下代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dicom, lmdb, cv2, re, sys</span><br><span class="line"><span class="keyword">import</span> os, fnmatch, shutil, subprocess</span><br><span class="line"><span class="keyword">from</span> IPython.utils <span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random.seed(<span class="number">1234</span>)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">%matplotlib inline</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">'ignore'</span>) <span class="comment"># we ignore a RuntimeWarning produced from dividing by zero</span></span><br><span class="line"></span><br><span class="line">CAFFE_ROOT = <span class="string">"/path/to/caffe_FCN/"</span></span><br><span class="line">caffe_path = os.path.join(CAFFE_ROOT, <span class="string">"python"</span>)</span><br><span class="line"><span class="keyword">if</span> caffe_path <span class="keyword">not</span> <span class="keyword">in</span> sys.path:</span><br><span class="line">    sys.path.insert(<span class="number">0</span>, caffe_path)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> caffe</span><br><span class="line"></span><br><span class="line">print(<span class="string">"\nSuccessfully imported packages, hooray!\n"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>运行上面一步的时候发现python lmdb没装，安装命令如下：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip <span class="keyword">install</span> lmdb</span><br></pre></td></tr></table></figure></p>
-<h2 id="Tutorial_Walkthrough"><a href="#Tutorial_Walkthrough" class="headerlink" title="Tutorial Walkthrough"></a>Tutorial Walkthrough</h2><h3 id="Step_1_3A_Load_the_Sunnybrook_dataset"><a href="#Step_1_3A_Load_the_Sunnybrook_dataset" class="headerlink" title="Step 1: Load the Sunnybrook dataset"></a>Step 1: Load the Sunnybrook dataset</h3><p>Sunnybrook数据集包含了训练集和对应的ground truth contours(轮廓)，用来评价自动对 MRI SAX扫描的DICOM格式图片进行自动LV分割的方法。数据集提供了如下ground truth contours：the endocardium, the epicardium, and the two largest papillary muscles.本文只关注心内膜endocardium，对应着对应者心脏收缩舒张周期中 contours文件名中i部分。这部分代码主要是将数据集转化为lmdb格式：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line">SAX_SERIES = &#123;</span><br><span class="line">    <span class="comment"># challenge training</span></span><br><span class="line">    <span class="string">"SC-HF-I-1"</span>: <span class="string">"0004"</span>,</span><br><span class="line">    <span class="string">"SC-HF-I-2"</span>: <span class="string">"0106"</span>,</span><br><span class="line">    <span class="string">"SC-HF-I-4"</span>: <span class="string">"0116"</span>,</span><br><span class="line">    <span class="string">"SC-HF-I-40"</span>: <span class="string">"0134"</span>,</span><br><span class="line">    <span class="string">"SC-HF-NI-3"</span>: <span class="string">"0379"</span>,</span><br><span class="line">    <span class="string">"SC-HF-NI-4"</span>: <span class="string">"0501"</span>,</span><br><span class="line">    <span class="string">"SC-HF-NI-34"</span>: <span class="string">"0446"</span>,</span><br><span class="line">    <span class="string">"SC-HF-NI-36"</span>: <span class="string">"0474"</span>,</span><br><span class="line">    <span class="string">"SC-HYP-1"</span>: <span class="string">"0550"</span>,</span><br><span class="line">    <span class="string">"SC-HYP-3"</span>: <span class="string">"0650"</span>,</span><br><span class="line">    <span class="string">"SC-HYP-38"</span>: <span class="string">"0734"</span>,</span><br><span class="line">    <span class="string">"SC-HYP-40"</span>: <span class="string">"0755"</span>,</span><br><span class="line">    <span class="string">"SC-N-2"</span>: <span class="string">"0898"</span>,</span><br><span class="line">    <span class="string">"SC-N-3"</span>: <span class="string">"0915"</span>,</span><br><span class="line">    <span class="string">"SC-N-40"</span>: <span class="string">"0944"</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SUNNYBROOK_ROOT_PATH = <span class="string">"./data/Sunnybrook_data/"</span></span><br><span class="line"></span><br><span class="line">TRAIN_CONTOUR_PATH = os.path.join(SUNNYBROOK_ROOT_PATH,</span><br><span class="line">                            <span class="string">"Sunnybrook Cardiac MR Database ContoursPart3"</span>,</span><br><span class="line">                            <span class="string">"TrainingDataContours"</span>)</span><br><span class="line">TRAIN_IMG_PATH = os.path.join(SUNNYBROOK_ROOT_PATH,</span><br><span class="line">                        <span class="string">"challenge_training"</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">shrink_case</span><span class="params">(case)</span>:</span></span><br><span class="line">    toks = case.split(<span class="string">"-"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shrink_if_number</span><span class="params">(x)</span>:</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            cvt = int(x)</span><br><span class="line">            <span class="keyword">return</span> str(cvt)</span><br><span class="line">        <span class="keyword">except</span> ValueError:</span><br><span class="line">            <span class="keyword">return</span> x</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"-"</span>.join([shrink_if_number(t) <span class="keyword">for</span> t <span class="keyword">in</span> toks])</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Contour</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, ctr_path)</span>:</span></span><br><span class="line">        self.ctr_path = ctr_path</span><br><span class="line">        match = re.search(<span class="string">r"/([^/]*)/contours-manual/IRCCI-expert/IM-0001-(\d&#123;4&#125;)-icontour-manual.txt"</span>, ctr_path)</span><br><span class="line">        self.case = shrink_case(match.group(<span class="number">1</span>))</span><br><span class="line">        self.img_no = int(match.group(<span class="number">2</span>))</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"&lt;Contour for case %s, image %d&gt;"</span> % (self.case, self.img_no)</span><br><span class="line">    </span><br><span class="line">    __repr__ = __str__</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_contour</span><span class="params">(contour, img_path)</span>:</span></span><br><span class="line"></span><br><span class="line">    filename = <span class="string">"IM-%s-%04d.dcm"</span> % (SAX_SERIES[contour.case], contour.img_no)</span><br><span class="line">    full_path = os.path.join(img_path, contour.case, filename)</span><br><span class="line">    <span class="comment">#print full_path</span></span><br><span class="line">    f = dicom.read_file(full_path)</span><br><span class="line">    img = f.pixel_array.astype(np.int)</span><br><span class="line">    ctrs = np.loadtxt(contour.ctr_path, delimiter=<span class="string">" "</span>).astype(np.int)</span><br><span class="line">    label = np.zeros_like(img, dtype=<span class="string">"uint8"</span>)</span><br><span class="line"></span><br><span class="line">    cv2.fillPoly(label, [ctrs], <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> img, label</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_all_contours</span><span class="params">(contour_path)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> contour_path</span><br><span class="line">    contours = [os.path.join(dirpath, f)</span><br><span class="line">        <span class="keyword">for</span> dirpath, dirnames, files <span class="keyword">in</span> os.walk(contour_path)</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> fnmatch.filter(files, <span class="string">'IM-0001-*-icontour-manual.txt'</span>)]</span><br><span class="line">    print(<span class="string">"Shuffle data"</span>)</span><br><span class="line">    np.random.shuffle(contours)</span><br><span class="line">    print(<span class="string">"Number of examples: &#123;:d&#125;"</span>.format(len(contours)))</span><br><span class="line">    extracted = map(Contour, contours)</span><br><span class="line">    <span class="keyword">return</span> extracted</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">export_all_contours</span><span class="params">(contours, img_path, lmdb_img_name, lmdb_label_name)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> lmdb_name <span class="keyword">in</span> [lmdb_img_name, lmdb_label_name]:</span><br><span class="line">        db_path = os.path.abspath(lmdb_name)</span><br><span class="line">        <span class="keyword">if</span> os.path.exists(db_path):</span><br><span class="line">            shutil.rmtree(db_path)</span><br><span class="line">    counter_img = <span class="number">0</span></span><br><span class="line">    counter_label = <span class="number">0</span></span><br><span class="line">    batchsz = <span class="number">100</span></span><br><span class="line">    print(<span class="string">"Processing &#123;:d&#125; images and labels..."</span>.format(len(contours)))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> xrange(int(np.ceil(len(contours) / float(batchsz)))):</span><br><span class="line">        batch = contours[(batchsz*i):(batchsz*(i+<span class="number">1</span>))]</span><br><span class="line">        <span class="keyword">if</span> len(batch) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        imgs, labels = [], []</span><br><span class="line">        <span class="keyword">for</span> idx,ctr <span class="keyword">in</span> enumerate(batch):</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                img, label = load_contour(ctr, img_path)</span><br><span class="line">                imgs.append(img)</span><br><span class="line">                labels.append(label)</span><br><span class="line">                <span class="keyword">if</span> idx % <span class="number">20</span> == <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">print</span> ctr</span><br><span class="line">                    plt.imshow(img)</span><br><span class="line">                    plt.show()</span><br><span class="line">                    plt.imshow(label)</span><br><span class="line">                    plt.show()</span><br><span class="line">            <span class="keyword">except</span> IOError:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">        db_imgs = lmdb.open(lmdb_img_name, map_size=<span class="number">1e12</span>)</span><br><span class="line">        <span class="keyword">with</span> db_imgs.begin(write=<span class="keyword">True</span>) <span class="keyword">as</span> txn_img:</span><br><span class="line">            <span class="keyword">for</span> img <span class="keyword">in</span> imgs:</span><br><span class="line">                datum = caffe.io.array_to_datum(np.expand_dims(img, axis=<span class="number">0</span>))</span><br><span class="line">                txn_img.put(<span class="string">"&#123;:0&gt;10d&#125;"</span>.format(counter_img), datum.SerializeToString())</span><br><span class="line">                counter_img += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"Processed &#123;:d&#125; images"</span>.format(counter_img))</span><br><span class="line">        db_labels = lmdb.open(lmdb_label_name, map_size=<span class="number">1e12</span>)</span><br><span class="line">        <span class="keyword">with</span> db_labels.begin(write=<span class="keyword">True</span>) <span class="keyword">as</span> txn_label:</span><br><span class="line">            <span class="keyword">for</span> lbl <span class="keyword">in</span> labels:</span><br><span class="line">                datum = caffe.io.array_to_datum(np.expand_dims(lbl, axis=<span class="number">0</span>))</span><br><span class="line">                txn_label.put(<span class="string">"&#123;:0&gt;10d&#125;"</span>.format(counter_label), datum.SerializeToString())</span><br><span class="line">                counter_label += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"Processed &#123;:d&#125; labels"</span>.format(counter_label))</span><br><span class="line">    db_imgs.close()</span><br><span class="line">    db_labels.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__== <span class="string">"__main__"</span>:</span><br><span class="line">    SPLIT_RATIO = <span class="number">0.1</span></span><br><span class="line">    print(<span class="string">"Mapping ground truth contours to images..."</span>)</span><br><span class="line">    ctrs = get_all_contours(TRAIN_CONTOUR_PATH)</span><br><span class="line">    val_ctrs = ctrs[<span class="number">0</span>:int(SPLIT_RATIO*len(ctrs))]</span><br><span class="line">    train_ctrs = ctrs[int(SPLIT_RATIO*len(ctrs)):]</span><br><span class="line">    print(<span class="string">"Done mapping ground truth contours to images"</span>)</span><br><span class="line">    print(<span class="string">"\nBuilding LMDB for train..."</span>)</span><br><span class="line">    export_all_contours(train_ctrs, TRAIN_IMG_PATH, <span class="string">"train_images_lmdb"</span>, <span class="string">"train_labels_lmdb"</span>)</span><br><span class="line">    print(<span class="string">"\nBuilding LMDB for val..."</span>)</span><br><span class="line">    export_all_contours(val_ctrs, TRAIN_IMG_PATH, <span class="string">"val_images_lmdb"</span>, <span class="string">"val_labels_lmdb"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>运行这段代码的时候遇到以下错误：</p>
-<ul>
-<li>解压数据的时候多了一层目录，比如应该是sunnybrook_data/challenge_training/xxx，然而解压完后变成sunnybrook_data/challenge_training／challenge_training/xxx，因此出错</li>
-</ul>
-<p>###Step 2: Instantiate and solve a Caffe FCN model<br>以下代码使用python 调用caffe的API来定义FCN网络，过程与<a href="https://github.com/BVLC/caffe/blob/master/examples/01-learning-lenet.ipynb" target="_blank" rel="external">https://github.com/BVLC/caffe/blob/master/examples/01-learning-lenet.ipynb</a> 类似,这段代码会自动生成fcn_train.prototxt and fcn_test.prototxt：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> caffe <span class="keyword">import</span> layers <span class="keyword">as</span> L</span><br><span class="line"><span class="keyword">from</span> caffe <span class="keyword">import</span> params <span class="keyword">as</span> P</span><br><span class="line"></span><br><span class="line">n = caffe.NetSpec()</span><br><span class="line"></span><br><span class="line"><span class="comment"># helper functions for common structures</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">conv_relu</span><span class="params">(bottom, ks, nout, weight_init=<span class="string">'gaussian'</span>, weight_std=<span class="number">0.01</span>, bias_value=<span class="number">0</span>, mult=<span class="number">1</span>, stride=<span class="number">1</span>, pad=<span class="number">0</span>, group=<span class="number">1</span>)</span>:</span></span><br><span class="line">    conv = L.Convolution(bottom, kernel_size=ks, stride=stride,</span><br><span class="line">                         num_output=nout, pad=pad, group=group,</span><br><span class="line">                         weight_filler=dict(type=weight_init, mean=<span class="number">0.0</span>, std=weight_std),</span><br><span class="line">                         bias_filler=dict(type=<span class="string">'constant'</span>, value=bias_value),</span><br><span class="line">                         param=[dict(lr_mult=mult, decay_mult=mult), dict(lr_mult=<span class="number">2</span>*mult, decay_mult=<span class="number">0</span>*mult)])</span><br><span class="line">    <span class="keyword">return</span> conv, L.ReLU(conv, in_place=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">max_pool</span><span class="params">(bottom, ks, stride=<span class="number">1</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> L.Pooling(bottom, pool=P.Pooling.MAX, kernel_size=ks, stride=stride)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FCN</span><span class="params">(images_lmdb, labels_lmdb, batch_size, include_acc=False)</span>:</span></span><br><span class="line">    <span class="comment"># net definition</span></span><br><span class="line">    n.data = L.Data(source=images_lmdb, backend=P.Data.LMDB, batch_size=batch_size, ntop=<span class="number">1</span>,</span><br><span class="line">                    transform_param=dict(crop_size=<span class="number">0</span>, mean_value=[<span class="number">77</span>], mirror=<span class="keyword">False</span>))</span><br><span class="line">    n.label = L.Data(source=labels_lmdb, backend=P.Data.LMDB, batch_size=batch_size, ntop=<span class="number">1</span>)</span><br><span class="line">    n.conv1, n.relu1 = conv_relu(n.data, ks=<span class="number">5</span>, nout=<span class="number">100</span>, stride=<span class="number">2</span>, pad=<span class="number">50</span>, bias_value=<span class="number">0.1</span>)</span><br><span class="line">    n.pool1 = max_pool(n.relu1, ks=<span class="number">2</span>, stride=<span class="number">2</span>)</span><br><span class="line">    n.conv2, n.relu2 = conv_relu(n.pool1, ks=<span class="number">5</span>, nout=<span class="number">200</span>, stride=<span class="number">2</span>, bias_value=<span class="number">0.1</span>)</span><br><span class="line">    n.pool2 = max_pool(n.relu2, ks=<span class="number">2</span>, stride=<span class="number">2</span>)</span><br><span class="line">    n.conv3, n.relu3 = conv_relu(n.pool2, ks=<span class="number">3</span>, nout=<span class="number">300</span>, stride=<span class="number">1</span>, bias_value=<span class="number">0.1</span>)</span><br><span class="line">    n.conv4, n.relu4 = conv_relu(n.relu3, ks=<span class="number">3</span>, nout=<span class="number">300</span>, stride=<span class="number">1</span>, bias_value=<span class="number">0.1</span>)</span><br><span class="line">    n.drop = L.Dropout(n.relu4, dropout_ratio=<span class="number">0.1</span>, in_place=<span class="keyword">True</span>)</span><br><span class="line">    n.score_classes, _= conv_relu(n.drop, ks=<span class="number">1</span>, nout=<span class="number">2</span>, weight_std=<span class="number">0.01</span>, bias_value=<span class="number">0.1</span>)</span><br><span class="line">    n.upscore = L.Deconvolution(n.score_classes)</span><br><span class="line">    n.score = L.Crop(n.upscore,n.data)</span><br><span class="line">    n.loss = L.SoftmaxWithLoss(n.score, n.label, loss_param=dict(normalize=<span class="keyword">True</span>))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> include_acc:</span><br><span class="line">        n.accuracy = L.Accuracy(n.score, n.label)</span><br><span class="line">        <span class="keyword">return</span> n.to_proto()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n.to_proto()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_nets</span><span class="params">()</span>:</span></span><br><span class="line">    header = <span class="string">'name: "FCN"\nforce_backward: true\n'</span></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'fcn_train.prototxt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(header + str(FCN(<span class="string">'train_images_lmdb/'</span>, <span class="string">'train_labels_lmdb/'</span>, batch_size=<span class="number">1</span>, include_acc=<span class="keyword">False</span>)))</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'fcn_test.prototxt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(header + str(FCN(<span class="string">'val_images_lmdb/'</span>, <span class="string">'val_labels_lmdb/'</span>, batch_size=<span class="number">1</span>, include_acc=<span class="keyword">True</span>)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    make_nets()</span><br></pre></td></tr></table></figure></p>
-<p>由于现在还不是正式版本的caffe，所以这里的Deconvolution要自己手动修改，将其中的train和test中的Deconvolution改为以下代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"upscore"</span></span><br><span class="line">  type: <span class="string">"Deconvolution"</span></span><br><span class="line">  bottom: <span class="string">"score_classes"</span></span><br><span class="line">  top: <span class="string">"upscore"</span></span><br><span class="line">  param &#123;</span><br><span class="line">    lr_mult: <span class="number">1</span></span><br><span class="line">    decay_mult: <span class="number">1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">lr_mult</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    decay_mult: <span class="number">0</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">convolution_param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">num_output</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    bias_term: true</span><br><span class="line">    kernel_size: <span class="number">31</span></span><br><span class="line">    pad: <span class="number">8</span></span><br><span class="line">    stride: <span class="number">16</span></span><br><span class="line">    weight_filler &#123; type: <span class="string">"bilinear"</span> </span></span></span>&#125;</span><br><span class="line">    <span class="tag">bias_filler</span> <span class="rules">&#123; <span class="rule"><span class="attribute">type</span>:<span class="value"> <span class="string">"constant"</span> value: <span class="number">0.1</span> </span></span></span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>接着手动创建fcn_solver.prototxt，内容如下：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor"># The train/test net protocol buffers definition</span></span><br><span class="line"><span class="label">train_net:</span> <span class="string">"fcn_train.prototxt"</span></span><br><span class="line"><span class="label">test_net:</span> <span class="string">"fcn_test.prototxt"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># test_iter specifies how many forward passes the test should carry out.</span></span><br><span class="line"><span class="preprocessor"># In our case, we have test batch size 1 and 26 test iterations,</span></span><br><span class="line"><span class="preprocessor"># covering the full size of testing images.</span></span><br><span class="line"><span class="label">test_iter:</span> <span class="number">26</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Carry out testing every 200 training iterations.</span></span><br><span class="line"><span class="label">test_interval:</span> <span class="number">200</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># display interval</span></span><br><span class="line"><span class="label">display:</span> <span class="number">200</span></span><br><span class="line"><span class="label">average_loss:</span> <span class="number">200</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># The learning rate policy</span></span><br><span class="line"><span class="label">lr_policy:</span> <span class="string">"multistep"</span></span><br><span class="line"><span class="label">stepvalue:</span> <span class="number">10000</span></span><br><span class="line"><span class="label">gamma:</span> <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># The base learning rate, momentum and the weight decay of the network.</span></span><br><span class="line"><span class="label">base_lr:</span> <span class="number">0.01</span></span><br><span class="line"><span class="label">momentum:</span> <span class="number">0.9</span></span><br><span class="line"><span class="label">weight_decay:</span> <span class="number">0.0005</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># The maximum number of iterations</span></span><br><span class="line"><span class="label">max_iter:</span> <span class="number">15000</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># snapshot intervals to disk</span></span><br><span class="line"><span class="label">snapshot:</span> <span class="number">2500</span></span><br><span class="line"><span class="label">snapshot_prefix:</span> <span class="string">"./model_logs/fcn"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># misc settings</span></span><br><span class="line"><span class="label">test_initialization:</span> true</span><br><span class="line"><span class="label">random_seed:</span> <span class="number">5</span></span><br><span class="line"><span class="preprocessor">#solver_type: NESTEROV</span></span><br></pre></td></tr></table></figure></p>
-<p>然后用caffe提供的SGDSolver进行训练<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">caffe.set_mode_gpu() <span class="comment"># or caffe.set_mode_cpu() for machines without a GPU</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">del</span> solver <span class="comment"># it is a good idea to delete the solver object to free up memory before instantiating another one</span></span><br><span class="line">    solver = caffe.SGDSolver(<span class="string">'fcn_solver.prototxt'</span>)</span><br><span class="line"><span class="keyword">except</span> NameError:</span><br><span class="line">    solver = caffe.SGDSolver(<span class="string">'fcn_solver.prototxt'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>根据caffe文档的描述：</p>
-<blockquote>
-<p>A blob is an N-dimensional array stored in a C-contiguous fashion. Caffe stores and communicates data using blobs. Blobs provide a unified memory interface holding data; e.g., batches of images, model parameters, and derivatives for optimization. The conventional blob dimensions for batches of image data are number N x channel K x height H x width W.</p>
-</blockquote>
-<p>所以我们的data blob维度是1x1x256x256<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># each blob has dimensions batch_size x channel_dim x height x width</span></span><br><span class="line">[(k, v.data.shape) <span class="keyword">for</span> k,v <span class="keyword">in</span> solver.net.blobs.items()]</span><br></pre></td></tr></table></figure></p>
-<p>接下来我们检测blob的参数，也就是模型的权重，拥有可学习的参数的层都有weight_filler配置，并且需要初始化而且在训练过程中要通过梯度下降法进行更新。每个blob的参数集合更新都有一个对应的维度相同的diff　blob集合。diff blob存储对应层的反向传播计算的损失函数的梯度，访问diff blob有两个目的：</p>
-<ul>
-<li>model debugging and diagnosis . a model with zero diffs does not compute gradients and hence does not learn anything, which may indicate a vanishing-gradient problem; </li>
-<li>visualization of class saliency maps for input images, as suggested in the paper<a href="http://arxiv.org/pdf/1312.6034.pdf" target="_blank" rel="external">Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps</a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print the layers with learnable weights and their dimensions</span></span><br><span class="line">[(k, v[<span class="number">0</span>].data.shape) <span class="keyword">for</span> k, v <span class="keyword">in</span> solver.net.params.items()]</span><br><span class="line"><span class="comment">#######################</span></span><br><span class="line"><span class="comment"># print the biases associated with the weights</span></span><br><span class="line">[(k, v[<span class="number">1</span>].data.shape) <span class="keyword">for</span> k, v <span class="keyword">in</span> solver.net.params.items()]</span><br><span class="line"><span class="comment"># params and diffs have the same dimensions</span></span><br><span class="line">[(k, v[<span class="number">0</span>].diff.shape) <span class="keyword">for</span> k, v <span class="keyword">in</span> solver.net.params.items()]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>开始训练之前先验证梯度能正确传递并且能更新权值<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># forward pass with randomly initialized weights</span></span><br><span class="line">solver.net.forward()  <span class="comment"># train net</span></span><br><span class="line">solver.test_nets[<span class="number">0</span>].forward()  <span class="comment"># test net (more than one net is supported)</span></span><br><span class="line"><span class="comment"># visualize the image data and its correpsonding label from the train net</span></span><br><span class="line">img_train = solver.net.blobs[<span class="string">'data'</span>].data[<span class="number">0</span>,<span class="number">0</span>,...]</span><br><span class="line">plt.imshow(img_train)</span><br><span class="line">plt.show()</span><br><span class="line">label_train = solver.net.blobs[<span class="string">'label'</span>].data[<span class="number">0</span>,<span class="number">0</span>,...]</span><br><span class="line">plt.imshow(label_train)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># visualize the image data and its correpsonding label from the test net</span></span><br><span class="line">img_test = solver.test_nets[<span class="number">0</span>].blobs[<span class="string">'data'</span>].data[<span class="number">0</span>,<span class="number">0</span>,...]</span><br><span class="line">plt.imshow(img_test)</span><br><span class="line">plt.show()</span><br><span class="line">label_test = solver.test_nets[<span class="number">0</span>].blobs[<span class="string">'label'</span>].data[<span class="number">0</span>,<span class="number">0</span>,...]</span><br><span class="line">plt.imshow(label_test)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment"># take one step of stochastic gradient descent consisting of both forward pass and backprop</span></span><br><span class="line">solver.step(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># visualize gradients after backprop. If non-zero, then gradients are properly propagating and the nets are learning something</span></span><br><span class="line"><span class="comment"># gradients are shown here as 10 x 10 grid of 5 x 5 filters</span></span><br><span class="line">plt.imshow(solver.net.params[<span class="string">'conv1'</span>][<span class="number">0</span>].diff[:,<span class="number">0</span>,...].reshape(<span class="number">10</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">5</span>).transpose(<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>).reshape(<span class="number">10</span>*<span class="number">5</span>,<span class="number">10</span>*<span class="number">5</span>), <span class="string">'gray'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
-<p>现在开始训练模型：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%%time</span><br><span class="line">ret = subprocess.call(os.path.join(CAFFE_ROOT, <span class="string">'build/tools/caffe'</span>) + <span class="string">' '</span> + <span class="string">'train -solver=fcn_solver.prototxt -gpu 0 2&gt; fcn_train.log'</span>, shell=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure></p>
-<p>教程这里用的是二元精度，这实际上是一种误导，因为对于LV分割问题，每个像素都属于一个label：0 for background and 1 for LV。但是在整个图像中属于lV部分的像素不到2%，所以这是一个class imbalance问题。where the class distribution is highly skewed and binary accuracy is not a meaningful performance metric. Suppose a model simply predicts all pixels to be background, then its accuracy performance is still greater than 0.98, even though the model is not able to actually detect pixels belonging to the LV object. The reader is encouraged to consider the following alternative performance metrics for LV segmentation: <a href="https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient" target="_blank" rel="external">Sørensen–Dice index</a> and <a href="http://smial.sri.utoronto.ca/LV_Challenge/Evaluation.html" target="_blank" rel="external">average perpendicular distance</a>.</p>
-<h2 id="Step_3_3A_Apply_trained_Caffe_FCN_model_to_compute_EF"><a href="#Step_3_3A_Apply_trained_Caffe_FCN_model_to_compute_EF" class="headerlink" title="Step 3: Apply trained Caffe FCN model to compute EF"></a>Step 3: Apply trained Caffe FCN model to compute EF</h2><p>这部分内容是关于如何将我们在Sunnybrook数据集上训练的模型应用到DSB数据集上去做LV 分割。先创建文件fcn_deploy.prototxt，该文件与fcn_train.prototxt文件类似，不过要去掉data layers并且将SoftmaxWithLoss layer 替换为 the Softmax layer</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">name</span>: "<span class="tag">FCN</span>"</span><br><span class="line"><span class="tag">force_backward</span>: <span class="tag">true</span></span><br><span class="line"><span class="tag">input</span>: "<span class="tag">data</span>"</span><br><span class="line"># <span class="tag">We</span> <span class="tag">will</span> <span class="tag">manipulate</span> <span class="tag">the</span> <span class="tag">input_dim</span> <span class="tag">fields</span> <span class="tag">below</span> <span class="tag">in</span> <span class="tag">Python</span> <span class="tag">during</span> <span class="tag">testing</span>. <span class="tag">They</span> <span class="tag">appear</span> <span class="tag">here</span> <span class="tag">only</span> <span class="tag">for</span> <span class="tag">syntactic</span> <span class="tag">reasons</span>.</span><br><span class="line"><span class="tag">input_dim</span>: 1</span><br><span class="line"><span class="tag">input_dim</span>: 1</span><br><span class="line"><span class="tag">input_dim</span>: 1</span><br><span class="line"><span class="tag">input_dim</span>: 1</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"conv1"</span></span><br><span class="line">  type: <span class="string">"Convolution"</span></span><br><span class="line">  bottom: <span class="string">"data"</span></span><br><span class="line">  top: <span class="string">"conv1"</span></span><br><span class="line">  param &#123;</span><br><span class="line">    lr_mult: <span class="number">1</span></span><br><span class="line">    decay_mult: <span class="number">1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">lr_mult</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    decay_mult: <span class="number">0</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">convolution_param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">num_output</span>:<span class="value"> <span class="number">100</span></span><br><span class="line">    pad: <span class="number">50</span></span><br><span class="line">    kernel_size: <span class="number">5</span></span><br><span class="line">    group: <span class="number">1</span></span><br><span class="line">    stride: <span class="number">2</span></span><br><span class="line">    weight_filler &#123;</span><br><span class="line">      type: <span class="string">"gaussian"</span></span><br><span class="line">      mean: <span class="number">0.0</span></span><br><span class="line">      std: <span class="number">0.01</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">    <span class="tag">bias_filler</span> <span class="rules">&#123;</span><br><span class="line">      <span class="rule"><span class="attribute">type</span>:<span class="value"> <span class="string">"constant"</span></span><br><span class="line">      value: <span class="number">0.1</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"relu1"</span></span><br><span class="line">  type: <span class="string">"ReLU"</span></span><br><span class="line">  bottom: <span class="string">"conv1"</span></span><br><span class="line">  top: <span class="string">"conv1"</span></span><br><span class="line"></span></span></span>&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"pool1"</span></span><br><span class="line">  type: <span class="string">"Pooling"</span></span><br><span class="line">  bottom: <span class="string">"conv1"</span></span><br><span class="line">  top: <span class="string">"pool1"</span></span><br><span class="line">  pooling_param &#123;</span><br><span class="line">    pool: MAX</span><br><span class="line">    kernel_size: <span class="number">2</span></span><br><span class="line">    stride: <span class="number">2</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"conv2"</span></span><br><span class="line">  type: <span class="string">"Convolution"</span></span><br><span class="line">  bottom: <span class="string">"pool1"</span></span><br><span class="line">  top: <span class="string">"conv2"</span></span><br><span class="line">  param &#123;</span><br><span class="line">    lr_mult: <span class="number">1</span></span><br><span class="line">    decay_mult: <span class="number">1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">lr_mult</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    decay_mult: <span class="number">0</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">convolution_param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">num_output</span>:<span class="value"> <span class="number">200</span></span><br><span class="line">    pad: <span class="number">0</span></span><br><span class="line">    kernel_size: <span class="number">5</span></span><br><span class="line">    group: <span class="number">1</span></span><br><span class="line">    stride: <span class="number">2</span></span><br><span class="line">    weight_filler &#123;</span><br><span class="line">      type: <span class="string">"gaussian"</span></span><br><span class="line">      mean: <span class="number">0.0</span></span><br><span class="line">      std: <span class="number">0.01</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">    <span class="tag">bias_filler</span> <span class="rules">&#123;</span><br><span class="line">      <span class="rule"><span class="attribute">type</span>:<span class="value"> <span class="string">"constant"</span></span><br><span class="line">      value: <span class="number">0.1</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"relu2"</span></span><br><span class="line">  type: <span class="string">"ReLU"</span></span><br><span class="line">  bottom: <span class="string">"conv2"</span></span><br><span class="line">  top: <span class="string">"conv2"</span></span><br><span class="line"></span></span></span>&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"pool2"</span></span><br><span class="line">  type: <span class="string">"Pooling"</span></span><br><span class="line">  bottom: <span class="string">"conv2"</span></span><br><span class="line">  top: <span class="string">"pool2"</span></span><br><span class="line">  pooling_param &#123;</span><br><span class="line">    pool: MAX</span><br><span class="line">    kernel_size: <span class="number">2</span></span><br><span class="line">    stride: <span class="number">2</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"conv3"</span></span><br><span class="line">  type: <span class="string">"Convolution"</span></span><br><span class="line">  bottom: <span class="string">"pool2"</span></span><br><span class="line">  top: <span class="string">"conv3"</span></span><br><span class="line">  param &#123;</span><br><span class="line">    lr_mult: <span class="number">1</span></span><br><span class="line">    decay_mult: <span class="number">1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">lr_mult</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    decay_mult: <span class="number">0</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">convolution_param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">num_output</span>:<span class="value"> <span class="number">300</span></span><br><span class="line">    pad: <span class="number">0</span></span><br><span class="line">    kernel_size: <span class="number">3</span></span><br><span class="line">    group: <span class="number">1</span></span><br><span class="line">    stride: <span class="number">1</span></span><br><span class="line">    weight_filler &#123;</span><br><span class="line">      type: <span class="string">"gaussian"</span></span><br><span class="line">      mean: <span class="number">0.0</span></span><br><span class="line">      std: <span class="number">0.01</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">    <span class="tag">bias_filler</span> <span class="rules">&#123;</span><br><span class="line">      <span class="rule"><span class="attribute">type</span>:<span class="value"> <span class="string">"constant"</span></span><br><span class="line">      value: <span class="number">0.1</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"relu3"</span></span><br><span class="line">  type: <span class="string">"ReLU"</span></span><br><span class="line">  bottom: <span class="string">"conv3"</span></span><br><span class="line">  top: <span class="string">"conv3"</span></span><br><span class="line"></span></span></span>&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"conv4"</span></span><br><span class="line">  type: <span class="string">"Convolution"</span></span><br><span class="line">  bottom: <span class="string">"conv3"</span></span><br><span class="line">  top: <span class="string">"conv4"</span></span><br><span class="line">  param &#123;</span><br><span class="line">    lr_mult: <span class="number">1</span></span><br><span class="line">    decay_mult: <span class="number">1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">lr_mult</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    decay_mult: <span class="number">0</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">convolution_param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">num_output</span>:<span class="value"> <span class="number">300</span></span><br><span class="line">    pad: <span class="number">0</span></span><br><span class="line">    kernel_size: <span class="number">3</span></span><br><span class="line">    group: <span class="number">1</span></span><br><span class="line">    stride: <span class="number">1</span></span><br><span class="line">    weight_filler &#123;</span><br><span class="line">      type: <span class="string">"gaussian"</span></span><br><span class="line">      mean: <span class="number">0.0</span></span><br><span class="line">      std: <span class="number">0.01</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">    <span class="tag">bias_filler</span> <span class="rules">&#123;</span><br><span class="line">      <span class="rule"><span class="attribute">type</span>:<span class="value"> <span class="string">"constant"</span></span><br><span class="line">      value: <span class="number">0.1</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"relu4"</span></span><br><span class="line">  type: <span class="string">"ReLU"</span></span><br><span class="line">  bottom: <span class="string">"conv4"</span></span><br><span class="line">  top: <span class="string">"conv4"</span></span><br><span class="line"></span></span></span>&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"drop"</span></span><br><span class="line">  type: <span class="string">"Dropout"</span></span><br><span class="line">  bottom: <span class="string">"conv4"</span></span><br><span class="line">  top: <span class="string">"conv4"</span></span><br><span class="line">  dropout_param &#123;</span><br><span class="line">    dropout_ratio: <span class="number">0.1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"score_classes"</span></span><br><span class="line">  type: <span class="string">"Convolution"</span></span><br><span class="line">  bottom: <span class="string">"conv4"</span></span><br><span class="line">  top: <span class="string">"score_classes"</span></span><br><span class="line">  param &#123;</span><br><span class="line">    lr_mult: <span class="number">1</span></span><br><span class="line">    decay_mult: <span class="number">1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">lr_mult</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    decay_mult: <span class="number">0</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">convolution_param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">num_output</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    pad: <span class="number">0</span></span><br><span class="line">    kernel_size: <span class="number">1</span></span><br><span class="line">    group: <span class="number">1</span></span><br><span class="line">    stride: <span class="number">1</span></span><br><span class="line">    weight_filler &#123;</span><br><span class="line">      type: <span class="string">"gaussian"</span></span><br><span class="line">      mean: <span class="number">0.0</span></span><br><span class="line">      std: <span class="number">0.01</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">    <span class="tag">bias_filler</span> <span class="rules">&#123;</span><br><span class="line">      <span class="rule"><span class="attribute">type</span>:<span class="value"> <span class="string">"constant"</span></span><br><span class="line">      value: <span class="number">0.1</span></span><br><span class="line">    </span></span></span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"upscore"</span></span><br><span class="line">  type: <span class="string">"Deconvolution"</span></span><br><span class="line">  bottom: <span class="string">"score_classes"</span></span><br><span class="line">  top: <span class="string">"upscore"</span></span><br><span class="line">  param &#123;</span><br><span class="line">    lr_mult: <span class="number">1</span></span><br><span class="line">    decay_mult: <span class="number">1</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">lr_mult</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    decay_mult: <span class="number">0</span></span><br><span class="line">  </span></span></span>&#125;</span><br><span class="line">  <span class="tag">convolution_param</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">num_output</span>:<span class="value"> <span class="number">2</span></span><br><span class="line">    bias_term: true</span><br><span class="line">    kernel_size: <span class="number">31</span></span><br><span class="line">    pad: <span class="number">8</span></span><br><span class="line">    stride: <span class="number">16</span></span><br><span class="line">    weight_filler &#123; type: <span class="string">"bilinear"</span> </span></span></span>&#125;</span><br><span class="line">    <span class="tag">bias_filler</span> <span class="rules">&#123; <span class="rule"><span class="attribute">type</span>:<span class="value"> <span class="string">"constant"</span> value: <span class="number">0.1</span> </span></span></span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"score"</span></span><br><span class="line">  type: <span class="string">"Crop"</span></span><br><span class="line">  bottom: <span class="string">"upscore"</span></span><br><span class="line">  bottom: <span class="string">"data"</span></span><br><span class="line">  top: <span class="string">"score"</span></span><br><span class="line"></span></span></span>&#125;</span><br><span class="line"><span class="tag">layer</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">name</span>:<span class="value"> <span class="string">"prob"</span></span><br><span class="line">  type: <span class="string">"Softmax"</span></span><br><span class="line">  bottom: <span class="string">"score"</span></span><br><span class="line">  top: <span class="string">"prob"</span></span><br><span class="line"></span></span></span>&#125;</span><br></pre></td></tr></table></figure>
-<p>我们用训练的fcn_iter_15000.caffemodel来进行LV segmentation和EF计算，Dataset类是将DICOM文件加载到内存方便后面使用<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dataset</span><span class="params">(object)</span>:</span></span><br><span class="line">    dataset_count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, directory, subdir)</span>:</span></span><br><span class="line">        <span class="comment"># deal with any intervening directories</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            subdirs = next(os.walk(directory))[<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span> len(subdirs) == <span class="number">1</span>:</span><br><span class="line">                directory = os.path.join(directory, subdirs[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">        slices = []</span><br><span class="line">        <span class="keyword">for</span> s <span class="keyword">in</span> subdirs:</span><br><span class="line">            m = re.match(<span class="string">'sax_(\d+)'</span>, s)</span><br><span class="line">            <span class="keyword">if</span> m <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">                slices.append(int(m.group(<span class="number">1</span>)))</span><br><span class="line"></span><br><span class="line">        slices_map = &#123;&#125;</span><br><span class="line">        first = <span class="keyword">True</span></span><br><span class="line">        times = []</span><br><span class="line">        <span class="keyword">for</span> s <span class="keyword">in</span> slices:</span><br><span class="line">            files = next(os.walk(os.path.join(directory, <span class="string">'sax_%d'</span> % s)))[<span class="number">2</span>]</span><br><span class="line">            offset = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> f <span class="keyword">in</span> files:</span><br><span class="line">                m = re.match(<span class="string">'IM-(\d&#123;4,&#125;)-(\d&#123;4&#125;)\.dcm'</span>, f)</span><br><span class="line">                <span class="keyword">if</span> m <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">                    <span class="keyword">if</span> first:</span><br><span class="line">                        times.append(int(m.group(<span class="number">2</span>)))</span><br><span class="line">                    <span class="keyword">if</span> offset <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">                        offset = int(m.group(<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">            first = <span class="keyword">False</span></span><br><span class="line">            slices_map[s] = offset</span><br><span class="line"></span><br><span class="line">        self.directory = directory</span><br><span class="line">        self.time = sorted(times)</span><br><span class="line">        self.slices = sorted(slices)</span><br><span class="line">        self.slices_map = slices_map</span><br><span class="line">        Dataset.dataset_count += <span class="number">1</span></span><br><span class="line">        self.name = subdir</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_filename</span><span class="params">(self, s, t)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> os.path.join(self.directory,</span><br><span class="line">                            <span class="string">'sax_%d'</span> % s,</span><br><span class="line">                            <span class="string">'IM-%04d-%04d.dcm'</span> % (self.slices_map[s], t))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_read_dicom_image</span><span class="params">(self, filename)</span>:</span></span><br><span class="line">        d = dicom.read_file(filename)</span><br><span class="line">        img = d.pixel_array.astype(<span class="string">'int'</span>)</span><br><span class="line">        <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_read_all_dicom_images</span><span class="params">(self)</span>:</span></span><br><span class="line">        f1 = self._filename(self.slices[<span class="number">0</span>], self.time[<span class="number">0</span>])</span><br><span class="line">        d1 = dicom.read_file(f1)</span><br><span class="line">        (x, y) = d1.PixelSpacing</span><br><span class="line">        (x, y) = (float(x), float(y))</span><br><span class="line">        f2 = self._filename(self.slices[<span class="number">1</span>], self.time[<span class="number">0</span>])</span><br><span class="line">        d2 = dicom.read_file(f2)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># try a couple of things to measure distance between slices</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            dist = np.abs(d2.SliceLocation - d1.SliceLocation)</span><br><span class="line">        <span class="keyword">except</span> AttributeError:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                dist = d1.SliceThickness</span><br><span class="line">            <span class="keyword">except</span> AttributeError:</span><br><span class="line">                dist = <span class="number">8</span>  <span class="comment"># better than nothing...</span></span><br><span class="line"></span><br><span class="line">        self.images = np.array([[self._read_dicom_image(self._filename(d, i))</span><br><span class="line">                                 <span class="keyword">for</span> i <span class="keyword">in</span> self.time]</span><br><span class="line">                                <span class="keyword">for</span> d <span class="keyword">in</span> self.slices])</span><br><span class="line">        self.dist = dist</span><br><span class="line">        self.area_multiplier = x * y</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">load</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._read_all_dicom_images()</span><br></pre></td></tr></table></figure></p>
-<p>以下两个为helper函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">MEAN_VALUE = <span class="number">77</span></span><br><span class="line">THRESH = <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc_all_areas</span><span class="params">(images)</span>:</span></span><br><span class="line">    (num_images, times, _, _) = images.shape</span><br><span class="line">    </span><br><span class="line">    all_masks = [&#123;&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(times)]</span><br><span class="line">    all_areas = [&#123;&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(times)]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(times):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(num_images):</span><br><span class="line">            <span class="comment"># print 'Calculating area for time %d and slice %d...' % (i, j)</span></span><br><span class="line">            img = images[j][i]</span><br><span class="line">            in_ = np.expand_dims(img, axis=<span class="number">0</span>)</span><br><span class="line">            in_ -= np.array([MEAN_VALUE])</span><br><span class="line">            net.blobs[<span class="string">'data'</span>].reshape(<span class="number">1</span>, *in_.shape)</span><br><span class="line">            net.blobs[<span class="string">'data'</span>].data[...] = in_</span><br><span class="line">            net.forward()</span><br><span class="line">            prob = net.blobs[<span class="string">'prob'</span>].data</span><br><span class="line">            obj = prob[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">            preds = np.where(obj &gt; THRESH, <span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">            all_masks[i][j] = preds</span><br><span class="line">            all_areas[i][j] = np.count_nonzero(preds)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> all_masks, all_areas</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc_total_volume</span><span class="params">(areas, area_multiplier, dist)</span>:</span></span><br><span class="line">    slices = np.array(sorted(areas.keys()))</span><br><span class="line">    modified = [areas[i] * area_multiplier <span class="keyword">for</span> i <span class="keyword">in</span> slices]</span><br><span class="line">    vol = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> slices[:-<span class="number">1</span>]:</span><br><span class="line">        a, b = modified[i], modified[i+<span class="number">1</span>]</span><br><span class="line">        subvol = (dist/<span class="number">3.0</span>) * (a + np.sqrt(a*b) + b)</span><br><span class="line">        vol += subvol / <span class="number">1000.0</span>  <span class="comment"># conversion to mL</span></span><br><span class="line">    <span class="keyword">return</span> vol</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">segment_dataset</span><span class="params">(dataset)</span>:</span></span><br><span class="line">    <span class="comment"># shape: num slices, num snapshots, rows, columns</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Calculating areas...'</span></span><br><span class="line">    all_masks, all_areas = calc_all_areas(dataset.images)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Calculating volumes...'</span></span><br><span class="line">    area_totals = [calc_total_volume(a, dataset.area_multiplier, dataset.dist)</span><br><span class="line">                   <span class="keyword">for</span> a <span class="keyword">in</span> all_areas]</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Calculating EF...'</span></span><br><span class="line">    edv = max(area_totals)</span><br><span class="line">    esv = min(area_totals)</span><br><span class="line">    ef = (edv - esv) / edv</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Done, EF is &#123;:0.4f&#125;'</span>.format(ef)</span><br><span class="line">    </span><br><span class="line">    dataset.edv = edv</span><br><span class="line">    dataset.esv = esv</span><br><span class="line">    dataset.ef = ef</span><br></pre></td></tr></table></figure></p>
-<p>然后就可以进行计算<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">%%time</span><br><span class="line"><span class="comment"># We capture all standard output from IPython so it does not flood the interface.</span></span><br><span class="line"><span class="keyword">with</span> io.capture_output() <span class="keyword">as</span> captured:</span><br><span class="line">    <span class="comment"># edit this so it matches where you download the DSB data</span></span><br><span class="line">    DATA_PATH = <span class="string">'competition_data'</span></span><br><span class="line"></span><br><span class="line">    caffe.set_mode_gpu()</span><br><span class="line">    net = caffe.Net(<span class="string">'fcn_deploy.prototxt'</span>, <span class="string">'./model_logs/fcn_iter_15000.caffemodel'</span>, caffe.TEST)</span><br><span class="line"></span><br><span class="line">    train_dir = os.path.join(DATA_PATH, <span class="string">'train'</span>)</span><br><span class="line">    studies = next(os.walk(train_dir))[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    labels = np.loadtxt(os.path.join(DATA_PATH, <span class="string">'train.csv'</span>), delimiter=<span class="string">','</span>,</span><br><span class="line">                        skiprows=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    label_map = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> l <span class="keyword">in</span> labels:</span><br><span class="line">        label_map[l[<span class="number">0</span>]] = (l[<span class="number">2</span>], l[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(<span class="string">'output'</span>):</span><br><span class="line">        shutil.rmtree(<span class="string">'output'</span>)</span><br><span class="line">    os.mkdir(<span class="string">'output'</span>)</span><br><span class="line"></span><br><span class="line">    accuracy_csv = open(<span class="string">'accuracy.csv'</span>, <span class="string">'w'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> studies:</span><br><span class="line">        dset = Dataset(os.path.join(train_dir, s), s)</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'Processing dataset %s...'</span> % dset.name</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            dset.load()</span><br><span class="line">            segment_dataset(dset)</span><br><span class="line">            (edv, esv) = label_map[int(dset.name)]</span><br><span class="line">            accuracy_csv.write(<span class="string">'%s,%f,%f,%f,%f\n'</span> %</span><br><span class="line">                               (dset.name, edv, esv, dset.edv, dset.esv))</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">'***ERROR***: Exception %s thrown by dataset %s'</span> % (str(e), dset.name)</span><br><span class="line"></span><br><span class="line">    accuracy_csv.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># We redirect the captured stdout to a log file on disk.</span></span><br><span class="line"><span class="comment"># This log file is very useful in identifying potential dataset irregularities that throw errors/exceptions in the code.</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'logs.txt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(captured.stdout)</span><br></pre></td></tr></table></figure></p>
-<h2 id="Step_4_3A_Evaluate_performance"><a href="#Step_4_3A_Evaluate_performance" class="headerlink" title="Step 4: Evaluate performance"></a>Step 4: Evaluate performance</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># calculate some error metrics to evaluate actual vs. predicted EF values obtained from FCN model</span></span><br><span class="line">data = np.transpose(np.loadtxt(<span class="string">'accuracy.csv'</span>, delimiter=<span class="string">','</span>)).astype(<span class="string">'float'</span>)</span><br><span class="line">ids, actual_edv, actual_esv, predicted_edv, predicted_esv = data</span><br><span class="line">actual_ef = (actual_edv - actual_esv) / actual_edv</span><br><span class="line">actual_ef_std = np.std(actual_ef)</span><br><span class="line">actual_ef_median = np.median(actual_ef)</span><br><span class="line">predicted_ef = (predicted_edv - predicted_esv) / predicted_edv <span class="comment"># potential of dividing by zero, where there is no predicted EDV value</span></span><br><span class="line">nan_idx = np.isnan(predicted_ef)</span><br><span class="line">actual_ef = actual_ef[~nan_idx]</span><br><span class="line">predicted_ef = predicted_ef[~nan_idx]</span><br><span class="line">MAE = np.mean(np.abs(actual_ef - predicted_ef))</span><br><span class="line">RMSE = np.sqrt(np.mean((actual_ef - predicted_ef)**<span class="number">2</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'Mean absolute error (MAE) for predicted EF: &#123;:0.4f&#125;'</span>.format(MAE)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'Root mean square error (RMSE) for predicted EF: &#123;:0.4f&#125;'</span>.format(RMSE)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'Standard deviation of actual EF: &#123;:0.4f&#125;'</span>.format(actual_ef_std)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'Median value of actual EF: &#123;:0.4f&#125;'</span>.format(actual_ef_median)</span><br></pre></td></tr></table></figure>
-<h2 id="Some_ideas_for_improvement"><a href="#Some_ideas_for_improvement" class="headerlink" title="Some ideas for improvement"></a>Some ideas for improvement</h2><ul>
-<li>通过增加网络的长度和宽度来扩大FCN</li>
-<li>测试不同的学习率，权重初始化策略，solver type，kernel sizes, strides, dropout ratio, and other network hyper-parameters that could positively impact its learning performance.</li>
-<li>尝试其他的非线性函数， leaky ReLUs, parametric ReLUs, or exponential linear units (ELUs).</li>
-<li>Combine multiple models through bagging, boosting, stacking, and other methods in ensemble learning to improve predictive performance.</li>
-<li>尝试其它的方法</li>
-</ul>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>The following references on Caffe may be useful:<br>Deconvolution layer - <a href="https://github.com/BVLC/caffe/pull/1615" target="_blank" rel="external">https://github.com/BVLC/caffe/pull/1615</a><br>Crop layer - <a href="https://github.com/BVLC/caffe/pull/1976" target="_blank" rel="external">https://github.com/BVLC/caffe/pull/1976</a><br>Bilinear upsampling - <a href="https://github.com/BVLC/caffe/pull/2213" target="_blank" rel="external">https://github.com/BVLC/caffe/pull/2213</a><br>On-the-fly net resizing - <a href="https://github.com/BVLC/caffe/pull/594" target="_blank" rel="external">https://github.com/BVLC/caffe/pull/594</a><br>Main Caffe tutorial - <a href="http://caffe.berkeleyvision.org/tutorial/" target="_blank" rel="external">http://caffe.berkeleyvision.org/tutorial/</a><br>Caffe examples - <a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">http://caffe.berkeleyvision.org/</a><br>Caffe net specification - <a href="https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto" target="_blank" rel="external">https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto</a><br>Caffe users group - <a href="https://groups.google.com/forum/#!forum/caffe-users" target="_blank" rel="external">https://groups.google.com/forum/#!forum/caffe-users</a><br>Caffe GitHub page - <a href="https://github.com/BVLC/caffe" target="_blank" rel="external">https://github.com/BVLC/caffe</a></p>
-<p>原文链接：<a href="https://www.kaggle.com/c/second-annual-data-science-bowl/details/deep-learning-tutorial" target="_blank" rel="external">https://www.kaggle.com/c/second-annual-data-science-bowl/details/deep-learning-tutorial</a></p>
-
-            
-          </span>
+          <h1 id="A_Fully_Convolutional_Network_for_Left_Ventricle_Segmentation"><a href="#A_Fully_Convolutional_Network_for_Left_Ventricle_Segmentation" class="headerlink" title="A Fully Convolutional Network for Left Ventricle Segmentation"></a>A Fully Convolutional Network for Left Ventricle Segmentation</h1><p><strong> by Vu Tran, Data Scientist, Booz Allen Hamilton </strong><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/23/A-Fully-Convolutional-Network-for-Left-Ventricle-Segmentation/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -608,7 +615,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-21T16:35:42+08:00" content="2015-12-21">
               2015-12-21
             </time>
@@ -616,7 +626,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/deep-learning/" itemprop="url" rel="index">
@@ -634,52 +648,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>#Fully Convolutional Networks for Semantic Segmentation<br>这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic segmentation面临的固有问题是语义和定位：global information resolves what while local information resolves where。作者将目前的好的分类模型(VGG, GoogLeNet)重新构建成全连接网络然后用这些模型进行微调获得最终的网络。</p>
-<h2 id="Fully_convolutional_networks"><a href="#Fully_convolutional_networks" class="headerlink" title="Fully convolutional networks"></a>Fully convolutional networks</h2><h3 id="Adapting_classifiers_for_dense_prediction"><a href="#Adapting_classifiers_for_dense_prediction" class="headerlink" title="Adapting classifiers for dense prediction"></a>Adapting classifiers for dense prediction</h3><p>普通的CNN网络的全连接层可以看成是对整个输入regions进行卷积的过程。因此我们可以将全连接层转化为卷积层，如Figure 2所示，这样我们最终会得到一个Heatmap而不是一个预测值，这些卷积模型输出带有空间信息的map很适合segmentation问题，而且输出的真实图像已经存在，所以前向传播和后向传播也显得非常直观，并且有着更高的计算效率。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure1.png" alt="Figure1"><br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure2.png" alt="Figure2"></p>
-<h3 id="Shift-and-stitch_is_filter_rarefaction"><a href="#Shift-and-stitch_is_filter_rarefaction" class="headerlink" title="Shift-and-stitch is filter rarefaction"></a>Shift-and-stitch is filter rarefaction</h3><p>要做像素级别的预测，对于上文卷积后得到的heatmap，我们要把它与输入图像的像素相对应。即将输出与输入对应然后才能得到dense predictions。设原图与FCN所得输出图之间的降采样因子是f，那么对于原图的每个f<em>f的区域（不重叠），“shift the input x pixels to the right and y pixels down for every (x,y) ,0 &lt; x,y &lt; f.” 把这个f</em>f区域对应的output作为此时区域中心点像素对应的output，这样就对每个f*f的区域得到了$f^2$个output，也就是每个像素都能对应一个output，所以成为了dense prediction。</p>
-<p>还有一种方法是filter rarefaction。对于一个步长为s的filter(卷积或pooling)，我们对它进行放大，得到一个新的filter，新的filter步长为1，放大公式如下<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Filter.png" alt="Filter"><br>按照上面的公式，对filter一层一层的进行扩大，这样所有的subsample都没有缩小图像的尺寸，于是就得到dense prediction。</p>
-<p>以上两种公式均未被采用，第二种更细节的信息能被filter看到，但是receptive fileds会相对变小，可能会损失全局信息，且会对卷积层引入更多运算。第一种receptive fileds没有变小，但是由于原图被划分成f*f的区域输入网络，使得filters无法感受更精细的信息。</p>
-<h3 id="Upsampling_is_backwards_strided_convolution"><a href="#Upsampling_is_backwards_strided_convolution" class="headerlink" title="Upsampling is backwards strided convolution"></a>Upsampling is backwards strided convolution</h3><p>为了更好将输出与原图像素对应，这里采用了bilinear interpolation，这种upsampling 可以理解成反卷积(deconvolution)，实现过程则是把卷积的前向传播和后向传播调换一下即可。</p>
-<h3 id="Patchwise_training_is_loss_sampling"><a href="#Patchwise_training_is_loss_sampling" class="headerlink" title="Patchwise training is loss sampling"></a>Patchwise training is loss sampling</h3><h2 id="Segmentation_Architecture"><a href="#Segmentation_Architecture" class="headerlink" title="Segmentation Architecture"></a>Segmentation Architecture</h2><p>论文将ILSVRC的分类器转化为FCN并且使用网络内上采样和pixelwise loss来fine-tune，使网络能够适应segmentation。然后再添加skip来融合局部全局语义等信息。Skip architecture通过end to end学习能够提高输出的语义和空间精确度。</p>
-<h3 id="From_classifier_to_dense_FCN"><a href="#From_classifier_to_dense_FCN" class="headerlink" title="From classifier to dense FCN"></a>From classifier to dense FCN</h3><p>以AlexNet, VGG-16和GoogLeNet为例进行操作，将网络的最后一层分类器去掉，将所有的全连接层替换为卷积层，最终结果如Table1所示<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Table1.png" alt="Table1"></p>
-<h3 id="Combining_what_and_where"><a href="#Combining_what_and_where" class="headerlink" title="Combining what and where"></a>Combining what and where</h3><p>如Figure3 所示，作者提出了一个结合不同层的feature并且使输出更准确的用于segmentation的FCN。如果我们只从最后一层输出map进行步长为32的上采样，由于尺寸限制的影响，我们可能无法得到更精确的预测输出，，所以考虑加入更多前层的细节信息，也就是把倒数第几层的输出和最后的输出做一个fusion，实际上也就是加和。如图Figure4所示，FCN-8s的结果明显更为精确。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure3.png" alt="Figure3"><br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure4.png" alt="Figure4"></p>
-<h2 id="Experimental_framework"><a href="#Experimental_framework" class="headerlink" title="Experimental framework"></a>Experimental framework</h2><ul>
-<li>Optimization</li>
-</ul>
-<p>用带动量的SGD训练，batch=20，学习率0.001，每次下降10倍，动量为0.9，分别训练FCN-AlexNet, FCN-VGG16, and FCN-GoogLeNet。</p>
-<ul>
-<li>Fine-tuning<br>通过在整个网络中反向传播来微调所有层。</li>
-</ul>
-<p>结果的话如下表所示，比R-CNN要高很多。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Table3.png" alt="Table3"></p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>训练一个end-to-end的FCN模型，利用卷积神经网络的很强的学习能力，得到较准确的结果。此外，直接利用现有模型进行训练，然后再upsampling，既可以得到新的模型，还有可以接收任意尺寸图片输入，但是也有不足之处，如下图所示，本文模型容易丢失较小的目标，比如下图中的救生衣就被识别为人。<br><img src="/image/Deep learning论文笔记三：Fully Convolutional Networks for Semantic Segmentation/Figure6.png" alt="Figure6"></p>
-
-            
-          </span>
+          <p>这篇文章是CVPR 2015 Best Paper Honorable Mention，提出了一种end to end，pixels-to-pixels的全卷积的网络并把它应用到semantic segmentation，结果自然是state of the art。semantic segmentation面临的固有问题是语义和定位：global information resolves what while local information resolves where。作者将目前的好的分类模型(VGG, GoogLeNet)重新构建成全连接网络然后用这些模型进行微调获得最终的网络。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/21/Deep-learning论文笔记三：Fully-Convolutional-Networks-for-Semantic-Segmentation/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -728,7 +737,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-16T15:56:25+08:00" content="2015-12-16">
               2015-12-16
             </time>
@@ -736,7 +748,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/deep-learning/" itemprop="url" rel="index">
@@ -754,70 +770,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/16/Deep learning论文笔记：Going deeper with convolutions/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/16/Deep learning论文笔记：Going deeper with convolutions/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>提出了一种代号为”Inception(盗梦空间电影名)”的deep CNN，在ILSVRC 2014 ImageNet数据集上是目前分类效果最好的。该框架在保持计算复杂度不变的情况下，增加网络的宽度和深度，充分利用了网络内的计算资源。GoogLeNet共有22层。</p>
-<p>随着移动设备和嵌入式计算的大规模普及，算法的效率，尤其是算法所需要的内存和计算资源的数目显得很重要。GoogLeNet虽然增加了层数，但是所消耗的计算资源并没有增加，因此这不仅有学术价值，而且可以应用到实际应用中，即使在很大的数据集上，也会保持在一个合适的代价。<br>GoogLeNet中deep 有两个意思：</p>
-<ol>
-<li>Introduce a new level of organization in the form of the “Inception module”</li>
-<li>Increased network depth.<h2 id="Related_Work"><a href="#Related_Work" class="headerlink" title="Related Work"></a>Related Work</h2></li>
-</ol>
-<p>Lin等人提出了Network-in-Network来提升NN的特征表示能力，在卷积的时候使用1x1的卷积层，GoogLeNet大规模使用了这种方法，主要是用作降维模块来减少计算消耗，因为过多的计算消耗会限制我们网络的大小，这不仅使我们能够增加深度，而且能够在不增加计算复杂度的情况下增加网络宽度。</p>
-<h2 id="Motivation_and_High_Level_Considerations"><a href="#Motivation_and_High_Level_Considerations" class="headerlink" title="Motivation and High Level Considerations"></a>Motivation and High Level Considerations</h2><p>提升DNN性能最直接的方式是增加网络深度，但是增加网络深度会有两个问题：一是需要更多的参数会造成过拟合，二是会增大计算量。为了解决上面的问题，GoogLeNet将全连接层移到稀疏连接层或者卷积层。Arora等人的研究表明如果数据集的概率分布是用很稀疏的深度神经网络来表示，那么最优的的网络可以通过分析每层网络的统计特征并将神经元进行聚合。聚合结果也符合Hebbian principle: neurons that fire together, wire together(Hebbian principle是说在神经递质传递的时候有些神经元的响应基本是一致的，即同时兴奋或同时抑制，而表现在googlenet里面就是将上层网络的一些通道连接到同一个网络通道上输出)。然而这种不均匀的稀疏数据结构在今天的硬件上面效率很低。因此，本文将“Inception architecture”应用到CNN中并且取得了很好的效果，既能保证网络的稀疏性，又能充分利用密集矩阵的计算能力。</p>
-<h2 id="Architectural_Details"><a href="#Architectural_Details" class="headerlink" title="Architectural Details"></a>Architectural Details</h2><p>Inception architecture主要是为了找出如何将卷积网络里面最优的局部稀疏结构组成一个可用的密集结构。Arora提出层与层的结构，分析最后一层的相关性并将相关性强的神经元聚合成一个group。这些group组成下一层并与上一层的单元相连接。为了避免patch-alignment问题，Inception architecture限制只使用1x1,3x3,5x5的卷积核（主要是为了方便，不是必要的）。此外，在inception中添加一个可选的平行的pooling也有一定的效果（如Figure 2(a)）。</p>
-<p>这些”Inception modules“都相互堆在其它模块上面，它们输出的相关性一定会变化，较高的层会学习到特征更高级的抽象，随着层次的越来越高，3x3, 5x5的卷积核会越来越多而且它们空间上集中度会降低。</p>
-<p>上述model有个很大的问题是即使5x5的卷积核数量不多也会因为卷积层太多的filters而需要很大的代价，与pooling层的输出单元混合就变得更为复杂，pooling层的输出和卷积层的输出合并后必然会增大输出的数量，使计算量增大。</p>
-<p>作者提出了第二种框架：在模型中谨慎地使用降维和投影操作，这是因为即使很低维的embedding也可能包含了很多一个较大的image patch的信息，然而以dense, compressed form来embedding表示信息对模型来说是很难的，因此我们只在必须要聚合在一起的地方使用压缩方法，在代价很高的3x3,5x5的卷积之前使用1x1的卷积核来降维，除了降维之外，1x1的卷积核也可以用来修正线性激活单元(相当于多了一次ReLU)，结构图如Figure 2(b)。<br><img src="/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Figure2.png" alt="Figure2"></p>
-<p>总的来说，”Inception”网络就是指包含了上文提到的相互堆积的模块和部分stride为２的pooling层的网络，考虑到内存训练效率等因素，该文章只在较高的层使用了”Inception modules”，在较低层仍然保留了传统的卷积结构。这样设计的好处有可以在可控的计算复杂度的情况下增加每层单元的数量，先降维然后再使用很多filters。这也符合我们的直觉：视觉信息应该在多种尺寸下处理然后再聚合，这样下一阶段才能从不同的尺寸上同时抽取特征，此外，我们还可以提升每阶段的宽度和数量。</p>
-<h2 id="GoogLeNet"><a href="#GoogLeNet" class="headerlink" title="GoogLeNet"></a>GoogLeNet</h2><p>GoogLeNet是Google在ILSVRC-2014的队伍名，最终分类结果排在第一名。GoogLeNet使用了”Inception”架构，并且使用了更深和更广的”Inception”网络，结构如Table1所示</p>
-<p><img src="/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table1.png" alt="Figure2"><br>所有的卷积都使用ReLU激活函数，receptive field大小是224x224，RGB通道做均值减法，”#3x3 reduce”,”#5x5 reduce”意思是在3x3,5x5卷积之前先使用1x1 filters进行降维，此外在max-pooling之后会使用1x1的卷积核进行投影。</p>
-<p>作者在设计网络的时候就考虑到了计算效率和实用性，因此该网络甚至可以在计算能力较低和内存较小的设备上使用，网络大约有100M个参数，22层。由于网络很深，从后向前的梯度传播能力是个问题，作者认为网络的中间层提取的特征有很大的识别能力，于是作者在Inception(4a),Inception(4d)两个模块后面添加了分类器来辅助进行训练，训练的时候辅助分类器的loss以一定比例权重添加到总的loss中(辅助分类器权重是0.3)，在测试的时候辅助网络被丢弃。<br>辅助网络和分类器设置如下：</p>
-<ul>
-<li>一个5x5，stride=3的average pooling层</li>
-<li>128个1x1的卷积核，用于降维和修正线性激活</li>
-<li>一个有1024个单元的全连接层和修正线性激活</li>
-<li>一个有70%输出的dropout层</li>
-<li>用1000-way softmax作为分类器，在测试的时候移除</li>
-</ul>
-<p>架构图如Figure3所示：<br><img src="/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Figure3.jpg" alt="Figure３"></p>
-<h2 id="Training_Methodology"><a href="#Training_Methodology" class="headerlink" title="Training Methodology"></a>Training Methodology</h2><p>使用异步随机梯度下降法训练，动量为0.9，学习率每８个epochs降低4%，测试时使用Polyak averaging来构建最终模型。</p>
-<h2 id="ILSVRC_2014_Classification_Results"><a href="#ILSVRC_2014_Classification_Results" class="headerlink" title="ILSVRC 2014 Classification Results"></a>ILSVRC 2014 Classification Results</h2><ol>
-<li><p>训练了７个网络对预测进行集成，７个网络区别在与采样方法和输入图像的随机顺序不同。</p>
-</li>
-<li><p>将图片较短边裁剪为256,288,320,352四个尺寸，然后从这些图片的左边，中间和右边分别提取正方形(对于肖像图，我们从上中下提取正方形)，对于每个正方形，从四个角和中心提取224x224图像并将正方形缩放到224x224，还有水平翻转版本，于是一张图片就得到4x3x6x2=144个裁剪图（在实际应用中这么多的裁剪图也不一定有必要的）。</p>
-</li>
-<li><p>最终预测值是通过对每个裁剪图和每个分类器的输出进行求平均值得到的。</p>
-</li>
-</ol>
-<p>结果如Table2和Table3所示，结果是Top-16.67%，排在第一名。<br><img src="/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table3.png" alt="Figure3"></p>
-<h2 id="ILSVRC_2014_Detection_Results"><a href="#ILSVRC_2014_Detection_Results" class="headerlink" title="ILSVRC 2014 Detection Results"></a>ILSVRC 2014 Detection Results</h2><p>GoogLeNet detection方法类似于R-CNN，但是regional proposal 通过将Selective search和multi-box预测结合用于更高级的对象选择。为了降低正样本错误的数目，将superpixel size变为２倍，然后再从multi-box结果增加了２００个 region proposals。最后在对每个region进行分类的时候对６个网络进行了集成。结果如Table5所示。<br><img src="/image/Deep-learning论文笔记二：Going-deeper-with-convolutions/Table5.png" alt="Table5"></p>
-<h2 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h2><p>结果显示将最优稀疏结构组成现成的稠密块是一个可行的在计算机视觉领域提高神经网络的方法。该方法优点是在较低计算复杂度的情况下取得了比浅层网络更好的效果。该方法表面稀疏结构是有可用性的，下一阶段会研究在现在的基础上如果创造更稀疏和精确的结构。</p>
-
-            
-          </span>
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>提出了一种代号为”Inception(盗梦空间电影名)”的deep CNN，在ILSVRC 2014 ImageNet数据集上是目前分类效果最好的。该框架在保持计算复杂度不变的情况下，增加网络的宽度和深度，充分利用了网络内的计算资源。GoogLeNet共有22层。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/16/Deep learning论文笔记：Going deeper with convolutions/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -866,7 +859,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-15T15:07:16+08:00" content="2015-12-15">
               2015-12-15
             </time>
@@ -874,7 +870,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/deep-learning/" itemprop="url" rel="index">
@@ -892,59 +892,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。</p>
-<p> 这篇文章的主要贡献如下：</p>
-<ol>
-<li>训练了一个大型的卷积神经网络并且效果是目前为止所有方法里面最好的；</li>
-<li>实现了一个基于GPU的2D卷积网络，并且我们使用该框架进行了CNN的训练。文章对CNN进行了很多的优化，提高了网络的训练速度和分类效果。</li>
-</ol>
-<p>实验数据集使用ImageNet。ImageNet拥有超过1500万张高清图片，图片有22000多个类别。从2010年开始，ILSVRC(ImageNet Large-Scale Visual Recognition Challenge)每年都会举行一次。在ImageNet数据集上，我们使用两个评价标准:top-1和top5。top-1错误率是指测试的图片的真正标签没有出现在所预测出的前五个标签中的图片的比例，也就是说，连续预测5次都没有预测正确的图片的比例。ImageNet里面的图片分辨率不一，需要将图片通过缩小和裁剪得到256x256像素的图片，除此之外不对图片进行任何处理。</p>
-<h2 id="u67B6_u6784"><a href="#u67B6_u6784" class="headerlink" title="架构"></a>架构</h2><p>框架架构如下图所示，共8层，五个卷积层和三个全连接层，最后是一个1000-way的softmax分类器，将图片分成1000个类别。该实验在两个GPU上进行运算，从图中可以看到，第二，第四和第五个卷积层只和在同一块GPU上的上层连接，因此减少了GPU之间数据的交换，提高了运算效率。全连接层的神经元与上一层的全部神经元相连接。局部响应正则化层在第一和第二卷积层之后，pooling层在第一第二响应正则化层之后和第五卷积层之后。ReLU用于五个卷积层和三个全连接层的输出。</p>
-<p>第一个卷积层使用96个11x11x3的卷积核处理输入的224x224x3的图片，步长为4个像素；第二个卷积层使用256个5x5x48大小的卷积核。第三个卷积层有384个3x3x256的卷积核；第四个卷积层有3843x3x192的卷积核。第五个卷积层使用256个3x3x192的卷积核。全连接层每层有4096个神经元。<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/architecture" alt="architecture"></p>
-<p><strong> ReLU </strong> ：对神经元输出进行建模的标准方法是将它的输入x看成是f的函数：$f(x)=tanh(x)$或者sigmod函数，在用梯度下降法训练的时候，这些饱和非线性函数要比非饱和非线性函数慢很多，比如$f(x)=max(0,x)$，我们称这类非线性神经元为改正的线性单元（Rectified Linear Units），如下图所示，其训练速度比tanh函数要快很多<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/ReLU_and_tanh.png" alt="architecture"><br><strong> Training on Multiple GPUs </strong>: 框架使用多个GPU并行计算，并且GPU之间可以直接访问对方memory，不用经过主机内存。此外，框架还有一个trick：GPU通信只在某些层进行，因此可以提高运算效率。</p>
-<p><strong> Local Response Normalization </strong>: 局部响应归一化有助于提高泛化能力，计算公式如下：<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/LRN.png" alt="architecture"></p>
-<p><strong> Overlapping pooling </strong>: 传统的pooling方法只对相邻单元处理并且有重合，本文对pooling层进行了部分重合，减少了过拟合，提高了分类效果。</p>
-<h2 id="Reducing_Overfitting"><a href="#Reducing_Overfitting" class="headerlink" title="Reducing Overfitting"></a>Reducing Overfitting</h2><p>该方法的神经网络有6000万个参数，虽然ILSVRC有1000个类别，但是还是无法避免过拟合的问题，因此本文采用了两种方式来避免过拟合。</p>
-<h3 id="Data_Augmentation"><a href="#Data_Augmentation" class="headerlink" title="Data Augmentation"></a>Data Augmentation</h3><p>本文使用了两种方法来实现数据扩展，两种方法只需要很小的计算量，而且是在CPU上运算的，并不会占用GPU的计算资源。</p>
-<p>第一种是图片平移和水平翻转（image translations and horizontal reflections）,我们从246*256的图片中提取出来5个224x224的图片（四个角+一个中心），同时水平翻转后再提取出来五个子图片，共10个图片，在softmax层对这些图片分别进行预测，对预测结果求平均值作为图片的预测结果。</p>
-<p>第二种是改变图片的RGB通道的强度，对图片进行PCA分析，图片的像素值<em>（与之对应的特征值）</em>（服从均值为0标准为0.1的高斯分布的随机数），因此，对于每个RGB像素<br>Ixy=<img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/pixel.png" alt="architecture"><br>对它们添加如下量：其中，pi和是3*3协方差矩阵的RGB像素值的特征向量和特征值，a是前面提到的随机变量，一张图片在训练过程中a是固定的，这个方法能够捕捉到自然图片的重要属性，并且使top-1错误率降低了1%。</p>
-<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>后面会细讲。</p>
-<h2 id="u8BAD_u7EC3_u8FC7_u7A0B"><a href="#u8BAD_u7EC3_u8FC7_u7A0B" class="headerlink" title="训练过程"></a>训练过程</h2><p>使用随机梯度下降法进行训练，batch=128，momentum=0.9， weight decay=0.0005，权重w的更新方式如下：<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/weight_update.png" alt="architecture"></p>
-<p>i是迭代系数，v是动量值<br>每层权值的初始值为服从均值为0，标准差为0.01的高斯分布的随机数，第二，四，五卷积层和三个全连接层的biases均设置为1，其他设为0。所有层的学习率都是一样的，在训练时会调整，调整的启发式算法是：如果当前学习率下验证集的错误率不在改变时，就将学习率除以10，总共调整三次后停止，用120万张照片训练了大约90个循环。</p>
-<p>训练结果如下图所示：</p>
-<p><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/result.png" alt="architecture"></p>
-<h2 id="u7ED3_u679C_u5206_u6790"><a href="#u7ED3_u679C_u5206_u6790" class="headerlink" title="结果分析"></a>结果分析</h2><p>如下图所示，是网络学习到的卷积核，网络学习到了不同频率，方向和颜色块的核，框架中的GPU连接方式，使得GPU产生了特化，上半部分的核是GPU1学习得到的，下半部分的核是GPU2学习得到的，两者有很大的区别，GPU2 感知到了颜色而GPU1没有，这种现象每次均会发生。<br><img src="/image/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/Con.png" alt="architecture"></p>
-<p>我们可以通过计算两张图片最后一层生成的4096维向量的欧氏距离的大小来确定他们的相似度，距离越小，图片的相似度越高。</p>
-<p>此外，通过欧式距离计算向量的相似度效率不高，我们可以通过训练一个auto-encoder来将这些向量压缩为短的二值编码来提高计算效率。这种图片搜索方式比直接将auto-encoder用于原始的像素效果要好，因为后者没有利用图片的标签信息只是检索有相似的边的模式，而不是检索语义上的相似。</p>
-<p>此外，为了简化实验，本文并没有采用任何非监督的预训练，因为我们已经有足够的计算能力来增大网络的大小，因此不需要增加有标记数据的数量。</p>
-
-            
-          </span>
+          <h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>ImageNet Classification with Deep Convolutional Neural Networks 发表在NIPS2012上面，在当时引起了不小的轰动，因为这篇文章的方法在ImageNet LSVRC-2010数据集上的分类效果比其他分类效果好很多，Top 5的错误率由25%降到17%。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/15/Deep-learning论文笔记一：ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -993,7 +981,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-08-16T20:48:10+08:00" content="2015-08-16">
               2015-08-16
             </time>
@@ -1001,7 +992,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/机器学习/" itemprop="url" rel="index">
@@ -1019,51 +1014,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/16/流形学习与t-SNE/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/16/流形学习与t-SNE/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/08/16/流形学习与t-SNE/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/16/流形学习与t-SNE/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。<br>所谓流行是指一般几何对象的总称，包括各种维度的曲线和曲面等。假设数据是均匀采样于一个高维欧氏空间中的低维流形，<strong>流形学习就是从高维采样数据中恢复低维流形结构</strong>，即找到高维空间中的低维流形，并求出相应的嵌入映射，以实现维数约简或者数据可视化。它是从观测到的现象中去寻找事物的本质，找到产生数据的内在规律。所以，流行学习可以对高维数据进行降维，一般是2或3维，这样我们就能够将数据可视化，从而了解数据内部规律。<br>和以往方法不同的是，在流形学习中有一个假设，就是所<strong>处理的数据采样于一个潜在的流形上，或是说对于这组数据存在一个潜在的流形</strong>。对于不同的方法，对于流形性质的要求各不相同，这也就产生了在流形假设下的各种不同性质的假设，比如在Laplacian Eigenmaps中要假设这个流形是紧致黎曼流形等。对于描述流形上的点，我们要用坐标，而流形上本身是没有坐标的，所以为了表示流形上的点，必须把流形放入外围空间（ambient space）中，那么流形上的点就可以用外围空间的坐标来表示。比如R^3中的球面是个2维的曲面，因为球面上只有两个自由度，但是球面上的点一般是用外围$R^3$空间中的坐标表示的，所以我们看到的R^3中球面上的点有3个数来表示的。当然球面还有柱坐标球坐标等表示。对于R^3中的球面来说，那么流形学习可以粗略的概括为给出R^3中的表示，在保持球面上点某些几何性质的条件下，找出找到一组对应的内蕴坐标（intrinsic coordinate）表示，显然这个表示应该是两维的，因为球面的维数是两维的。这个过程也叫参数化（parameterization）。直观上来说，就是把这个球面尽量好的展开在通过原点的平面上。在PAMI中，这样的低维表示也叫内蕴特征（intrinsic feature）。一般外围空间的维数也叫观察维数，其表示也叫自然坐标（外围空间是欧式空间）表示,在统计中一般叫observation。<br>流形学习方法分为线性的和非线性的两种，线性的流形学习方法如我们熟知的主成份分析（PCA），非线性的流形学习方法如等距映射（Isomap）、拉普拉斯特征映射（Laplacian eigenmaps，LE）、局部线性嵌入(Locally-linear embedding，LLE)。最近看了t-SNE这种流行学习方法，所以这篇博客就主要讲t-SNE了。</p>
-<h2 id="u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316"><a href="#u6570_u636E__u964D_u7EF4_u4E0E_u53EF_u89C6_u5316" class="headerlink" title="数据 降维与可视化"></a>数据 降维与可视化</h2><p>对于数据降维，有一张图总结的很好，如下图所示：<br><img src="/image/流行学习与t-SNE/img1.png" alt="img1"><br>图中基本上包括了大多数流形学习方法，不过这里面没有t-SNE,相比于其他算法，t-SNE算是比较新的一种方法，也是效果比较好的一种方法。t-SNE是深度学习大牛Hinton在2008年提出的，<a href="http://lvdmaaten.github.io/tsne/有对t-SNE有个主页介绍：tsne,包括论文以及各种编程语言的实现。" target="_blank" rel="external">http://lvdmaaten.github.io/tsne/有对t-SNE有个主页介绍：tsne,包括论文以及各种编程语言的实现。</a></p>
-<h2 id="u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29"><a href="#u76F8_u5BF9_u71B5__28KL_u6563_u5EA6_29" class="headerlink" title="相对熵 (KL散度)"></a>相对熵 (KL散度)</h2><p>在讲t-SNE之前，先讲一下KL散度。KL散度是两个概率分布P和Q差别的非对称性的度量。 KL散度是用来 度量使用基于Q的编码来编码来自P的样本平均所需的额外的比特个数。 典型情况下，P表示数据的真实分布，Q表示数据的理论分布，模型分布，或P的近似分布。<br>$D(Q||P)=∑Q(x)[log(1/P(x))] - ∑Q(x)[log[1/Q(x)]]<br>         =∑Q(x)log[Q(x)/P(x)]$</p>
-<p>∑Q(x)[log(1/P(x))] 表示使用原来的编码方式得到的比特数的期望<br>log(1/P(x)) 表示使用原来的编码方式，x出现1次的期望。编码长度Q(x) 表示现在x出现的概率<br>由于-log(u)是凸函数，因此有下面的不等式<br>$DKL(Q||P) = -∑x∈XQ(x)log[P(x)/Q(x)] = E[-logP(x)/Q(x)] ≥ -logE[P(x)/Q(x)] = -log∑x∈XQ(x)P(x)/Q(x) = 0$</p>
-<p>即KL-divergence始终是大于等于0的。当且仅当两分布相同时，KL-divergence等于0。</p>
-<p>举一个实际的例子吧：比如有四个类别，一个方法A得到四个类别的概率分别是0.1,0.2,0.3,0.4。另一种方法B（或者说是事实情况）是得到四个类别的概率分别是0.4,0.3,0.2,0.1,那么这两个分布的<br>$ KL-Distance(A,B)=0.1<em>log(0.1/0.4)+0.2</em>log(0.2/0.3)+0.3<em>log(0.3/0.2)+0.4</em>log(0.4/0.1) $<br>相对熵可以衡量两个随机分布之间的距离，当两个随机分布相同时，它们的相对熵为零，当两个随机分布的差别增大时，它们的相对熵也会增大。所以相对熵（KL散度）可以用于比较文本的相似度，先统计出词的频率，然后计算KL散度就行了。另外，在多指标系统评估中，指标权重分配是一个重点和难点，通过相对熵可以处理。</p>
-<h2 id="t-SNE"><a href="#t-SNE" class="headerlink" title="t-SNE"></a>t-SNE</h2><p>t-distributed stochastic neighbor embedding，也是一种流体学习方法（manifold learning），通过保持数据点的相邻关系把数据从高维空间中降低到2维平面上，对高维数据可视化的效果非常好。<br>它是先根据数据点在高纬度空间的距离，计算一个条件概率分布，xi和xj是数据点在高纬度空间的向量。再计算另一个条件概率分布，yi和yj是数据点映射到低纬度空间后得到的向量。用KL散度（Kullback–Leibler divergence）来衡量y分布与x分布的相似性，然后通过优化上面两个方程中的参数，使得所有点的KL散度和最小。</p>
-<h3 id="u7B97_u6CD5_u7B80_u8FF0"><a href="#u7B97_u6CD5_u7B80_u8FF0" class="headerlink" title="算法简述"></a>算法简述</h3><p><a href="http://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf" target="_blank" rel="external">Visualizing High-Dimensional Data Using t-SNE</a>这篇文章详细的阐述了t-SNE算法的原理。t-SNE是Stochastic Neighbor Embedding的变种。t-SNE与SNE的主要区别有：</p>
-<ul>
-<li>t-SNE使用了SNE cost function的对称版本</li>
-<li>在低维空间里t-SNE使用t-分布而不是高斯分布去计算相似度</li>
-</ul>
-<p>对每个数据点i，和每个潜在的邻居j，首先计算一个条件概率,表示i选择j为邻居的概率：$ p_{j|i}=\frac{exp(-||x_i-x_j||^2/2\sigma<em>i ^2)}{\sum</em>{k\neq i}exp(-||x_i-x_k||^2/2\sigma_i ^2)} $<br>$\sigma_i$是以点$x_i$为中心的高斯分布的方差，是通过二分法找到的能使分布的熵等于$ log(Perp) $，Perp是perplexity，用来衡量点$x_i$有效邻居的个数，值可以设置在5-50之间，是$\sigma_i$的单调函数。<br>$ Perp(P_i)=2^{H(P_i)} \ \ \ \ H(P_i)=-\sum<em>j p</em>{j|i}log<em>2 p</em>{j|i} $<br>接着我们定义数据点间的相似性为对称的条件概率，<br>$ p<em>{ij}=\frac{p</em>{j|i}+p_{i|j}}{2N} $<br>如下图所示，为一组数据点的距离矩阵，σ为常量的相似性矩阵和σ为变量时的相似性矩阵：<br><img src="/image/流行学习与t-SNE/img2.png" alt="img1"><br>可以看到数据已经呈现出10组，分别对应10个数字。<br>现在使用1自由度的t-分布来定义低维空间数据点的相似性矩阵，之所以uid使用自由度为1的t-分布来定义，是因为它的结果形式刚好为$(1+||y_i -y<em>j||^2)^{-1}$,于是相似度表示如下：<br>$q</em>{ij}=\frac{(1+||y_i -y<em>j||^2)^{-1}}{\sum</em>{k\neq l}(1+||y_k-y_l||^2)^{-1}}$<br>为了找到一组低维空间的坐标使这两个分布尽可能相似，可以使用KL散度来衡量：</p>
-<p>$C=KL(P||Q)=\sum <em>{i,j}p</em>{ij} \frac{p<em>{ij}}{q</em>{ij}}$</p>
-<p>可以使用梯度下降最小化这个得分，原始论文中有详细的求导过程，这里我们只写出结果：<br>$\frac{\delta C}{\delta y_i}=4\sum <em>j (p</em>{ij}-q_{ij})(y_i -y_j)(1+||y_i -y_j||^2)^{-1}$</p>
-<p>这个公式有很好物理意义。$p<em>{ij}-q</em>{ij}$为正，说明$x_i$在高维空间和$x_j$相似度高，而低维空间相似度低，$x_i$将会靠近$x_j$，反之则会远离$x_j$。参考文献[4]中有动画阐述了整个过程。<br>在论文最后的结果中，t-SNE的效果要比PCA之类的好很多。</p>
-<p>参考文献：[1]<a href="https://segmentfault.com/a/1190000000641079#articleHeader2" target="_blank" rel="external">https://segmentfault.com/a/1190000000641079#articleHeader2</a><br>[2]<a href="http://blog.csdn.net/chl033/article/details/6107042" target="_blank" rel="external">流行学习综述</a><br>[3]<a href="http://blog.csdn.net/u012162613/article/details/45920827" target="_blank" rel="external">http://blog.csdn.net/u012162613/article/details/45920827</a><br>[4]<a href="http://mtpgm.com/2015/08/17/t-sne/" target="_blank" rel="external">http://mtpgm.com/2015/08/17/t-sne/</a></p>
-
-            
-          </span>
+          <h2 id="u6D41_u5F62_u5B66_u4E60_u7B80_u4ECB"><a href="#u6D41_u5F62_u5B66_u4E60_u7B80_u4ECB" class="headerlink" title="流形学习简介"></a>流形学习简介</h2><p>流形学习方法(Manifold Learning)，简称流形学习，自2000年在著名的科学杂志《Science》被首次提出以来，已成为信息科学领域的研究热点。在理论和应用上，流形学习方法都具有重要的研究意义。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/08/16/流形学习与t-SNE/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1112,7 +1103,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-07-15T15:07:16+08:00" content="2015-07-15">
               2015-07-15
             </time>
@@ -1120,7 +1114,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/算法/" itemprop="url" rel="index">
@@ -1138,59 +1136,47 @@
           
             
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/15/top-k 第k大问题/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/15/top-k 第k大问题/" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="/2015/07/15/top-k 第k大问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/15/top-k 第k大问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>设计一组N个数，确定其中第k个最大值，这是一个选择问题，当然，解决这个问题的方法很多，本人在网上搜索了一番，查找到以下的方式，决定很好，推荐给大家。</p>
-<p>所谓“第（前）k大数问题”指的是在长度为n(n&gt;=k)的乱序数组中S找出从大到小顺序的第（前）k个数的问题。</p>
-<p>解法1： 我们可以对这个乱序数组按照从大到小先行排序，然后取出前k大，总的时间复杂度为O(n<em>logn + k)。<br>解法2： 利用选择排序或交互排序，K次选择后即可得到第k大的数。总的时间复杂度为O(n</em>k)<br>解法3： 利用快速排序的思想，从数组S中随机找出一个元素X，把数组分为两部分Sa和Sb。Sa中的元素大于等于X，Sb中元素小于X。这时有两种情况：</p>
-<pre><code>1. Sa中元素的个数小于k，则Sb中的第k-|Sa|个元素即为第k大数；
-2. Sa中元素的个数大于等于k，则返回Sa中的第k大数。时间复杂度近似为O(n)
-</code></pre><p>解法4： 二分[Smin,Smax]查找结果X，统计X在数组中出现，且整个数组中比X大的数目为k-1的数即为第k大数。时间复杂度平均情况为O(n<em>logn)<br>解法5：用O(4</em>n)的方法对原数组建最大堆，然后pop出k次即可。时间复杂度为O(4<em>n + k</em>logn)<br>解法6：维护一个k大小的最小堆，对于数组中的每一个元素判断与堆顶的大小，若堆顶较大，则不管，否则，弹出堆顶，将当前值插入到堆中。时间复杂度O(n * logk)<br>解法7：利用hash保存数组中元素Si出现的次数，利用计数排序的思想，线性从大到小扫描过程中，前面有k-1个数则为第k大数，平均情况下时间复杂度O(n)</p>
-<p>附注：</p>
-<ol>
-<li>STL中可以用nth_element求得类似的第n大的数（由谓词决定），使用的是解法3中的思想，还可以用partial_sort对区间进行部分排序，得到类似前k大的数（由谓词决定），它采用的是解法5的思想。</li>
-<li>求中位数实际上是第k大数的特例。<pre><code>《编程之美》2.5节课后习题：
- 1. 如果需要找出N个数中最大的K个不同的浮点数呢？比如，含有10个浮点数的数组（1.5，1.5，2.5，3.5，3.5，5，0，- 1.5，3.5）中最大的3个不同的浮点数是（5，3.5，2.5）。
- 解答：上面的解法均适用，需要注意的是浮点数比较时和整数不同，另外求hashkey的方法也会略有不同。
- 2. 如果是找第k到第m（0&lt;k&lt;=m&lt;=n)大的数呢？
- 解答：如果把问题看做m-k+1个第k大问题，则前面解法均适用。但是对于类似前k大这样的问题，最好使用解法5或者解法7，总体复杂度较低。
-</code></pre></li>
-<li><p>在搜索引擎中，网络上的每个网页都有“权威性”权重，如page rank。如果我们需要寻找权重最大的K个网页，而网页的权重会不断地更新，那么算法要如何变动以达到快速更新（incremental update）并及时返回权重最大的K个网页？<br>提示：堆排序？当每一个网页权重更新的时候，更新堆。还有更好的方法吗？<br>解答：要达到快速的更新，我们可以解法5，使用映射二分堆，可以使更新的操作达到O(logn)</p>
-</li>
-<li><p>在实际应用中，还有一个“精确度”的问题。我们可能并不需要返回严格意义上的最大的K个元素，在边界位置允许出现一些误差。当用户输入一个query的时候，对于每一个文档d来说，它跟这个query之间都有一个相关性衡量权重f (query, d)。搜索引擎需要返回给用户的就是相关性权重最大的K个网页。如果每页10个网页，用户不会关心第1000页开外搜索结果的“精确度”，稍有误差是可以接受的。比如我们可以返回相关性第10 001大的网页，而不是第9999大的。在这种情况下，算法该如何改进才能更快更有效率呢？网页的数目可能大到一台机器无法容纳得下，这时怎么办呢？</p>
-<p>提示：归并排序？如果每台机器都返回最相关的K个文档，那么所有机器上最相关K个文档的并集肯定包含全集中最相关的K个文档。由于边界情况并不需要非常精确，如果每台机器返回最好的K’个文档，那么K’应该如何取值，以达到我们返回最相关的90%<em>K个文档是完全精确的，或者最终返回的最相关的K个文档精确度超过90%（最相关的K个文档中90%以上在全集中相关性的确排在前K），或者最终返回的最相关的K个文档最差的相关性排序没有超出110%</em>K。<br>解答：正如提示中所说，可以让每台机器返回最相关的K’个文档，然后利用归并排序的思想，得到所有文档中最相关的K个。 最好的情况是这K个文档在所有机器中平均分布，这时每台机器只要K’ = K / n （n为所有机器总数）；最坏情况，所有最相关的K个文档只出现在其中的某一台机器上，这时K’需近似等于K了。我觉得比较好的做法可以在每台机器上维护一个堆，然后对堆顶元素实行归并排序。</p>
-</li>
-<li><p>如第4点所说，对于每个文档d，相对于不同的关键字q1, q2, …, qm，分别有相关性权重f（d, q1），f（d, q2）, …, f（d, qm）。如果用户输入关键字qi之后，我们已经获得了最相关的K个文档，而已知关键字qj跟关键字qi相似，文档跟这两个关键字的权重大小比较靠近，那么关键字qi的最相关的K个文档，对寻找qj最相关的K个文档有没有帮助呢？</p>
-</li>
-</ol>
-<p>解答：肯定是有帮助的。在搜索关键字qj最相关的K个文档时，可以在qj的“近义词”相关文档中搜索部分，然后在全局的所有文档中在搜索部分。</p>
-<p>参考链接：<a href="http://www.cnblogs.com/zhjp11/archive/2010/02/26/1674227.html" target="_blank" rel="external">http://www.cnblogs.com/zhjp11/archive/2010/02/26/1674227.html</a></p>
-
-            
-          </span>
+          <p>设计一组N个数，确定其中第k个最大值，这是一个选择问题，当然，解决这个问题的方法很多，本人在网上搜索了一番，查找到以下的方式，决定很好，推荐给大家。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/15/top-k 第k大问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1208,23 +1194,20 @@
 
 
     
-
   </section>
 
   
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1243,10 +1226,12 @@
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="Ma Shuai" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
+               alt="Ma Shuai" />
           <p class="site-author-name" itemprop="name">Ma Shuai</p>
+          <p class="site-description motion-element" itemprop="description">专注于深度学习</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">专注于深度学习</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1255,19 +1240,23 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">14</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1277,18 +1266,20 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/ma123shuai" target="_blank">
+                <a href="https://github.com/ma123shuai" target="_blank" title="github">
                   
-                    <i class="fa fa-globe"></i> github
+                    <i class="fa fa-globe"></i>
                   
+                  github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/ma-shuai-41-32" target="_blank">
+                <a href="http://www.zhihu.com/people/ma-shuai-41-32" target="_blank" title="zhihu">
                   
-                    <i class="fa fa-globe"></i> zhihu
+                    <i class="fa fa-globe"></i>
                   
+                  zhihu
                 </a>
               </span>
             
@@ -1298,9 +1289,8 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
 
       </section>
 
@@ -1310,7 +1300,8 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1320,7 +1311,7 @@
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Ma Shuai</span>
 </div>
@@ -1332,26 +1323,84 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
 
+        
 
-
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
 
   
 
@@ -1375,27 +1424,8 @@
   
 
 
-  
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
-
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
   <script type="text/x-mathjax-config">
@@ -1416,14 +1446,11 @@
       }
     });
   </script>
-
-  
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
-  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
   
+
   
 
 </body>
